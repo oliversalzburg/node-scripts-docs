@@ -38,14 +38,16 @@
       "projectName": "node-scripts-docs",
       "scriptName": "npm:publish",
       "scriptCode": "yarn build && npm publish",
-      "isGlobal": true
+      "isGlobal": true,
+      "description": "Build the latest sources and then `npm publish` the current state."
     },
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "nsd-debug",
       "scriptCode": "yarn build && node output/node-scripts-docs.js",
-      "isGlobal": false
+      "isGlobal": false,
+      "description": "Build the latest sources and then use the build output to execute your command. Parameters are passed through by `yarn`."
     }
   ],
   "version": 1
