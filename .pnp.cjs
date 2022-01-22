@@ -35,20 +35,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["@types/common-tags", "npm:1.8.1"],
             ["@types/marked", "npm:4.0.1"],
             ["@types/minimist", "npm:1.2.2"],
             ["@types/node", "npm:17.0.10"],
             ["@types/prettier", "npm:2.4.3"],
             ["@types/prettier-package-json", "npm:2.1.1"],
             ["@yarnpkg/sdks", "npm:2.5.0"],
-            ["common-tags", "npm:1.8.2"],
             ["elapsed-time", "npm:0.0.1"],
             ["eslint", "npm:8.7.0"],
-            ["execa", "npm:5.1.1"],
             ["globby", "npm:11.1.0"],
             ["lint-staged", "npm:12.2.2"],
             ["marked", "npm:4.0.10"],
+            ["minimist", "npm:1.2.5"],
             ["prettier", "npm:2.5.1"],
             ["prettier-package-json", "npm:2.6.0"],
             ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:2.3.4"],
@@ -216,15 +214,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/keyv", "npm:3.1.3"],
             ["@types/node", "npm:17.0.10"],
             ["@types/responselike", "npm:1.0.0"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["@types/common-tags", [
-        ["npm:1.8.1", {
-          "packageLocation": "./.yarn/cache/@types-common-tags-npm-1.8.1-cb81ee674b-bec6f68c8c.zip/node_modules/@types/common-tags/",
-          "packageDependencies": [
-            ["@types/common-tags", "npm:1.8.1"]
           ],
           "linkType": "HARD",
         }]
@@ -949,15 +938,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["esprima", "npm:4.0.1"],
             ["has-own-prop", "npm:2.0.0"],
             ["repeat-string", "npm:1.6.1"]
-          ],
-          "linkType": "HARD",
-        }]
-      ]],
-      ["common-tags", [
-        ["npm:1.8.2", {
-          "packageLocation": "./.yarn/cache/common-tags-npm-1.8.2-2c30ba69b3-767a6255a8.zip/node_modules/common-tags/",
-          "packageDependencies": [
-            ["common-tags", "npm:1.8.2"]
           ],
           "linkType": "HARD",
         }]
@@ -2253,20 +2233,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["node-scripts-docs", "workspace:."],
-            ["@types/common-tags", "npm:1.8.1"],
             ["@types/marked", "npm:4.0.1"],
             ["@types/minimist", "npm:1.2.2"],
             ["@types/node", "npm:17.0.10"],
             ["@types/prettier", "npm:2.4.3"],
             ["@types/prettier-package-json", "npm:2.1.1"],
             ["@yarnpkg/sdks", "npm:2.5.0"],
-            ["common-tags", "npm:1.8.2"],
             ["elapsed-time", "npm:0.0.1"],
             ["eslint", "npm:8.7.0"],
-            ["execa", "npm:5.1.1"],
             ["globby", "npm:11.1.0"],
             ["lint-staged", "npm:12.2.2"],
             ["marked", "npm:4.0.10"],
+            ["minimist", "npm:1.2.5"],
             ["prettier", "npm:2.5.1"],
             ["prettier-package-json", "npm:2.6.0"],
             ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:2.3.4"],

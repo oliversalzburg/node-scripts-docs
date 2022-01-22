@@ -145,13 +145,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/common-tags@npm:1.8.1":
-  version: 1.8.1
-  resolution: "@types/common-tags@npm:1.8.1"
-  checksum: bec6f68c8c434834380abd1dc057aa6ba26661bb0c65c700b65049e9b104d7be96a987d93dbe8726be68554a23a52514a6967d8903fdb51fb8c78cf909d1e4c1
-  languageName: node
-  linkType: hard
-
 "@types/emscripten@npm:^1.38.0":
   version: 1.39.6
   resolution: "@types/emscripten@npm:1.39.6"
@@ -781,13 +774,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"common-tags@npm:1.8.2":
-  version: 1.8.2
-  resolution: "common-tags@npm:1.8.2"
-  checksum: 767a6255a84bbc47df49a60ab583053bb29a7d9687066a18500a516188a062c4e4cd52de341f22de0b07062e699b1b8fe3cfa1cb55b241cb9301aeb4f45b4dff
-  languageName: node
-  linkType: hard
-
 "concat-map@npm:0.0.1":
   version: 0.0.1
   resolution: "concat-map@npm:0.0.1"
@@ -1114,7 +1100,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"execa@npm:5.1.1, execa@npm:^5.1.1":
+"execa@npm:^5.1.1":
   version: 5.1.1
   resolution: "execa@npm:5.1.1"
   dependencies:
@@ -1819,7 +1805,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.2.5":
+"minimist@npm:1.2.5, minimist@npm:^1.2.5":
   version: 1.2.5
   resolution: "minimist@npm:1.2.5"
   checksum: 86706ce5b36c16bfc35c5fe3dbb01d5acdc9a22f2b6cc810b6680656a1d2c0e44a0159c9a3ba51fb072bb5c203e49e10b51dcd0eec39c481f4c42086719bae52
@@ -1890,20 +1876,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "node-scripts-docs@workspace:."
   dependencies:
-    "@types/common-tags": 1.8.1
     "@types/marked": ^4
     "@types/minimist": 1.2.2
     "@types/node": 17.0.10
     "@types/prettier": ^2
     "@types/prettier-package-json": 2.1.1
     "@yarnpkg/sdks": 2.5.0
-    common-tags: 1.8.2
     elapsed-time: 0.0.1
     eslint: 8.7.0
-    execa: 5.1.1
     globby: 11
     lint-staged: 12.2.2
     marked: 4.0.10
+    minimist: 1.2.5
     prettier: 2.5.1
     prettier-package-json: 2.6.0
     prettier-plugin-organize-imports: 2.3.4
