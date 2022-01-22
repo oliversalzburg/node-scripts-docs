@@ -56,7 +56,9 @@ const argv = minimist(process.argv.slice(2));
     await scriptScanner.loadManifests();
     console.info(`Found ${scriptScanner.manifests.length} manifest(s).`);
     scriptStoreFromScan = await scriptScanner.loadScripts();
-    console.info(`Manifests contain ${scriptStoreFromScan.scripts.length} script(s).`);
+    console.info(
+      `Manifests contain ${scriptStoreFromScan.scripts.length} script(s), ${scriptStoreFromScan.globalScripts.length} as global.`
+    );
   }
 
   let scriptStore;
@@ -81,74 +83,78 @@ const argv = minimist(process.argv.slice(2));
     process.exit(1);
   }
 
-  const validator = new Validator(
-    scriptStore ?? new ScriptStore(rootDirectory),
-    scriptStoreFromScan ?? new ScriptStore(rootDirectory),
-    fragmentStore ?? new FragmentStore(fragmentStorePath)
-  );
+  if (scriptStoreFromScan) {
+    const validator = new Validator(
+      scriptStore ?? new ScriptStore(rootDirectory),
+      scriptStoreFromScan,
+      fragmentStore ?? new FragmentStore(fragmentStorePath)
+    );
 
-  const report = validator.generateReport();
+    const report = validator.generateReport();
 
-  if (0 < report.missingFragments.size) {
-    console.info(` --- Missing fragments (will be generated) --- `);
-    for (const scriptMeta of report.missingFragments) {
-      console.info(
-        `  ${FragmentStore.scriptToFragmentFilename(scriptMeta.scriptName)} (${
-          scriptMeta.scriptName
-        })`
-      );
+    if (0 < report.missingFragments.size) {
+      console.info(` --- Missing fragments (will be generated) --- `);
+      for (const scriptMeta of report.missingFragments) {
+        console.info(
+          `  ${FragmentStore.scriptToFragmentFilename(scriptMeta.scriptName)} (${
+            scriptMeta.scriptName
+          })`
+        );
+      }
+      console.info("");
     }
-    console.info("");
-  }
 
-  if (0 < report.corruptedMetadataRecords.size) {
-    console.info(` --- Outdated metadata (will be updated) --- `);
-    for (const scriptMeta of report.corruptedMetadataRecords) {
-      console.info(
-        `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
-      );
+    if (0 < report.corruptedMetadataRecords.size) {
+      console.info(` --- Outdated metadata (will be updated) --- `);
+      for (const scriptMeta of report.corruptedMetadataRecords) {
+        console.info(
+          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
+        );
+      }
+      console.info("");
     }
-    console.info("");
-  }
 
-  if (0 < report.obsoleteFragments.size) {
-    console.info(` --- Obsolete fragments (delete manually) --- `);
-    for (const fragment of report.obsoleteFragments) {
-      console.info(`  ${fragment.filename}`);
+    if (0 < report.obsoleteFragments.size) {
+      console.info(` --- Obsolete fragments (delete manually) --- `);
+      for (const fragment of report.obsoleteFragments) {
+        console.info(`  ${fragment.filename}`);
+      }
+      console.info("");
     }
-    console.info("");
-  }
 
-  if (0 < report.changedFragments.size) {
-    console.info(` --- Detected changes --- `);
-    for (const scriptMeta of report.changedFragments) {
-      console.info(
-        `  ${FragmentStore.scriptToFragmentFilename(scriptMeta.scriptName)} (${
-          scriptMeta.scriptName
-        })`
-      );
+    if (0 < report.changedFragments.size) {
+      console.info(` --- Detected changes --- `);
+      for (const scriptMeta of report.changedFragments) {
+        console.info(
+          `  ${FragmentStore.scriptToFragmentFilename(scriptMeta.scriptName)} (${
+            scriptMeta.scriptName
+          })`
+        );
+      }
+      console.info("");
     }
-    console.info("");
-  }
 
-  if (0 < report.pendingDocumentation.size) {
-    console.info(` --- Pending documentation --- `);
-    for (const scriptMeta of report.pendingDocumentation) {
-      console.info(
-        `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
-      );
+    if (0 < report.pendingDocumentation.size) {
+      console.info(` --- Pending documentation --- `);
+      for (const scriptMeta of report.pendingDocumentation) {
+        console.info(
+          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
+        );
+      }
+      console.info("");
     }
-    console.info("");
-  }
 
-  if (0 < report.newScripts.size) {
-    console.info(` --- New scripts --- `);
-    for (const scriptMeta of report.newScripts) {
-      console.info(
-        `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
-      );
+    if (0 < report.newScripts.size) {
+      console.info(` --- New scripts --- `);
+      for (const scriptMeta of report.newScripts) {
+        console.info(
+          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
+        );
+      }
+      console.info("");
     }
-    console.info("");
+  } else {
+    console.info("Skipping change-detection due to --skip-scan.");
   }
 
   const checkOnly = Boolean(argv["check-only"]) ?? false;
@@ -171,7 +177,7 @@ const argv = minimist(process.argv.slice(2));
     console.info("Flushing metadata...");
     await metadata.save();
   } else {
-    console.warn("No files were updates, due to --check-only.");
+    console.warn("No files were updated, due to --check-only.");
   }
 
   console.log(`Process completed in ${entry.getValue()}.`);

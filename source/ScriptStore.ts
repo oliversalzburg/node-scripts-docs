@@ -33,6 +33,10 @@ export class ScriptStore {
   #filename: string;
   #rootDirectory: string;
 
+  get globalScripts() {
+    return this.scripts.filter(scriptMeta => scriptMeta.isGlobal);
+  }
+
   constructor(rootDirectory: string, filename = SCRIPTS_METADATA_DEFAULT_FILENAME) {
     this.#rootDirectory = rootDirectory;
     this.#filename = filename;
