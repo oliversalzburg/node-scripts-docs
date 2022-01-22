@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import { marked } from "marked";
 import path from "path";
 
-export const DOCS_FRAGMENTS_DEFAULT_LOCATION = "docs/reference/yarn Scripts/";
+export const DOCS_FRAGMENTS_DEFAULT_LOCATION = "docs/reference/Repostitory Scripts/";
 
 export class DocumentationFragment {
   descriptionMarkdown: string;
