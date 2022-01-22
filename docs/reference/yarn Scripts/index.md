@@ -11,7 +11,7 @@
 
 -   Description:
 
-    _documentation pending_
+    Build the TypeScript sources.
 
 ## docs:build
 
@@ -37,7 +37,7 @@
 
 -   Description:
 
-    _documentation pending_
+    Rebuilds the `node-scripts-docs` documentation for this project itself.
 
 ## docs:serve
 
