@@ -133,7 +133,8 @@ const argv = minimist(process.argv.slice(2));
       console.info("");
     }
 
-    if (0 < report.pendingDocumentation.size) {
+    const skipPending = Boolean(argv["skip-pending"]) ?? false;
+    if (0 < report.pendingDocumentation.size && !skipPending) {
       console.info(` --- Pending documentation --- `);
       for (const scriptMeta of report.pendingDocumentation) {
         console.info(
