@@ -11,6 +11,13 @@
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
+      "scriptName": "docs:build",
+      "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
+      "isGlobal": true
+    },
+    {
+      "manifestPath": "package.json",
+      "projectName": "node-scripts-docs",
       "scriptName": "docs:serve",
       "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material",
       "isGlobal": true,
