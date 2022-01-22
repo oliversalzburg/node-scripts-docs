@@ -25,3 +25,16 @@
 -   Description:
 
     Runs the mkdocs-material development server.
+
+## npm:publish
+
+-   Project: `node-scripts-docs`
+-   Source:
+
+    ```shell
+    yarn build && npm publish
+    ```
+
+-   Description:
+
+    _documentation pending_

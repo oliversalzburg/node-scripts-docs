@@ -45,3 +45,30 @@ To run `nsd` on another project, you can simply pass the directory as an unlabel
 Drop the `--check-only` to write the initial documentation scaffold. Then begin editing the descriptions in the generated documentation fragments right away.
 
 Whenever you've added scripts, removed scripts, updated documentation fragments, just run `yarn nsd` again to update the documentation.
+
+## Sample output
+
+```shell
+node-scripts-docs (2022-01-22T20:56:40.834Z)
+Working directory: /home/oliver/projects/node-scripts-docs
+Manifest: package.json (exists) [node-scripts-docs@0.0.2]
+Metadata store: package.json-scripts.json (exists)
+Docs location: docs/reference/yarn Scripts/ (exists)
+Finding all scripts in all workspaces...
+Found 1 manifest(s).
+Manifests contain 5 script(s), 3 as global.
+Loading existing metadata...
+Store contains 4 script(s).
+Loading existing fragments...
+Docs contain 2 fragment(s).
+ --- Pending documentation ---
+  docs:build→node-scripts-docs
+
+ --- New scripts ---
+  npm:publish→node-scripts-docs
+
+Augmenting metadata with existing documentation fragment data...
+Augmentation complete.
+Flushing metadata...
+Process completed in 56.703ms.
+```

@@ -26,6 +26,13 @@
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
+      "scriptName": "npm:publish",
+      "scriptCode": "yarn build && npm publish",
+      "isGlobal": true
+    },
+    {
+      "manifestPath": "package.json",
+      "projectName": "node-scripts-docs",
       "scriptName": "nsd-debug",
       "scriptCode": "yarn build && node output/node-scripts-docs.js",
       "isGlobal": false
