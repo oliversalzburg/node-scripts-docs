@@ -25,6 +25,7 @@ export class DocumentationRenderer {
   }
 
   async renderFragments(rootDirectory: string, includeLocalScripts = false) {
+    await fs.mkdir(rootDirectory, { recursive: true });
     for (const scriptMeta of this.metadata.scripts) {
       if (!scriptMeta.isGlobal && !includeLocalScripts) {
         continue;
