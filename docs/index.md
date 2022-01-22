@@ -46,6 +46,12 @@ Drop the `--check-only` to write the initial documentation scaffold. Then begin 
 
 Whenever you've added scripts, removed scripts, updated documentation fragments, just run `yarn nsd` again to update the documentation.
 
+!!! note
+
+    By default, this tool will only operate on scripts that have a `:` in their name. By `yarn` definition, these are _globally available_ script throughout the monorepo. This tool is primarily designed for that scenario.
+
+    However, you can pass `--include-locals` to also include other scripts in the build. If you are working in a monorepo, where multiple workspaces define the same script, this will result in problems.
+
 ## Sample output
 
 ```shell
