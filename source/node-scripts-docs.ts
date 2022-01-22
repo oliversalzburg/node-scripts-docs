@@ -170,6 +170,8 @@ const argv = minimist(process.argv.slice(2));
 
     console.info("Flushing metadata...");
     await metadata.save();
+  } else {
+    console.warn("No files were updates, due to --check-only.");
   }
 
   console.log(`Process completed in ${entry.getValue()}.`);
