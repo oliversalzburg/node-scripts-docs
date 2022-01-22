@@ -8,6 +8,7 @@
     "build": "tsc",
     "docs:build": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
     "docs:serve": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material",
+    "npm:publish": "yarn build && npm publish",
     "nsd-debug": "yarn build && node output/node-scripts-docs.js"
   },
   "dependencies": {
