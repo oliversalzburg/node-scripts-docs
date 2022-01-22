@@ -9,5 +9,6 @@
 !/.yarn/cache
 #/.pnp.*
 
+/.vscode/launch.json
 /output/
 tsconfig.tsbuildinfo
