@@ -13,16 +13,16 @@
   },
   "dependencies": {
     "elapsed-time": "0.0.1",
-    "globby": "11",
+    "globby": "11.1.0",
     "marked": "4.0.10",
     "minimist": "1.2.5",
     "tslib": "2.3.1"
   },
   "devDependencies": {
-    "@types/marked": "^4",
+    "@types/marked": "4.0.1",
     "@types/minimist": "1.2.2",
     "@types/node": "17.0.10",
-    "@types/prettier": "^2",
+    "@types/prettier": "2.4.3",
     "@types/prettier-package-json": "2.1.1",
     "@yarnpkg/sdks": "2.5.0",
     "eslint": "8.7.0",

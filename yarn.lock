@@ -168,7 +168,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/marked@npm:^4":
+"@types/marked@npm:4.0.1":
   version: 4.0.1
   resolution: "@types/marked@npm:4.0.1"
   checksum: c2dabaae5ed5e2806ee3ef7f717ef7fe91ac5ee2718162219dd34de9d684d36efd561987fb3316b659d1add6d432696ca507da04b94380a77aac30870cb276d7
@@ -210,7 +210,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2":
+"@types/prettier@npm:2.4.3":
   version: 2.4.3
   resolution: "@types/prettier@npm:2.4.3"
   checksum: b240434daabac54700c862b0bb52a83fec396e0e9c847447119ba41fd8404d79aadfa174e6306fb094b29efadac586344b7606c3a71c286b71755ab2579d54df
@@ -1304,7 +1304,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:11, globby@npm:^11.0.1":
+"globby@npm:11.1.0, globby@npm:^11.0.1":
   version: 11.1.0
   resolution: "globby@npm:11.1.0"
   dependencies:
@@ -1876,15 +1876,15 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "node-scripts-docs@workspace:."
   dependencies:
-    "@types/marked": ^4
+    "@types/marked": 4.0.1
     "@types/minimist": 1.2.2
     "@types/node": 17.0.10
-    "@types/prettier": ^2
+    "@types/prettier": 2.4.3
     "@types/prettier-package-json": 2.1.1
     "@yarnpkg/sdks": 2.5.0
     elapsed-time: 0.0.1
     eslint: 8.7.0
-    globby: 11
+    globby: 11.1.0
     lint-staged: 12.2.2
     marked: 4.0.10
     minimist: 1.2.5
