@@ -13,12 +13,13 @@
       "projectName": "node-scripts-docs",
       "scriptName": "docs:serve",
       "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material",
-      "isGlobal": true
+      "isGlobal": true,
+      "description": "Runs the mkdocs-material development server."
     },
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
-      "scriptName": "nsd",
+      "scriptName": "nsd-debug",
       "scriptCode": "yarn build && node output/node-scripts-docs.js",
       "isGlobal": false
     }

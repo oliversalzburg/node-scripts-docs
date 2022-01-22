@@ -11,4 +11,4 @@
 
 -   Description:
 
-    _documentation pending_
+    Runs the mkdocs-material development server.
