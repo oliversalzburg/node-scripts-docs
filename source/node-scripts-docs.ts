@@ -21,6 +21,8 @@ const argv = minimist(process.argv.slice(2));
   const rootDirectory = argv.cwd ?? argv._[0] ?? process.cwd();
   console.info(`Working directory: ${rootDirectory}`);
 
+  const withLocalScripts = Boolean(argv["include-locals"]) ?? false;
+
   const manifestPath = path.resolve(rootDirectory, "package.json");
   const manifestExists = await ScriptScanner.canLoad(manifestPath);
   if (!manifestExists) {
@@ -89,7 +91,7 @@ const argv = minimist(process.argv.slice(2));
       fragmentStore ?? new FragmentStore(fragmentStorePath)
     );
 
-    const report = validator.generateReport();
+    const report = validator.generateReport(withLocalScripts);
 
     if (0 < report.missingFragments.size) {
       console.info(` --- Missing fragments (will be generated) --- `);
@@ -166,9 +168,8 @@ const argv = minimist(process.argv.slice(2));
       console.info("Augmentation complete.");
     }
 
-    const withLocalScripts = Boolean(argv["include-locals"]) ?? false;
     const renderer = new DocumentationRenderer(metadata);
-    await renderer.renderFragments(fragmentStorePath);
+    await renderer.renderFragments(fragmentStorePath, withLocalScripts);
 
     const documentation = renderer.render(withLocalScripts);
     const indexFile = path.resolve(fragmentStorePath, "index.md");

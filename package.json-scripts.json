@@ -13,6 +13,14 @@
       "projectName": "node-scripts-docs",
       "scriptName": "docs:build",
       "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
+      "isGlobal": true,
+      "description": "Build the documentation website locally."
+    },
+    {
+      "manifestPath": "package.json",
+      "projectName": "node-scripts-docs",
+      "scriptName": "docs:scripts",
+      "scriptCode": "yarn nsd-debug --include-locals",
       "isGlobal": true
     },
     {
