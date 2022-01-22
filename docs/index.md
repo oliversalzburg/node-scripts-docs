@@ -1,50 +1,52 @@
 # Quick Start
 
-Install the published package:
+1.  Install `node-scripts-docs`:
 
-=== "yarn"
+    === "yarn"
 
-    ```shell
-    yarn install -D node-scripts-docs
-    ```
+        ```shell
+        yarn install -D node-scripts-docs
+        ```
 
-=== "npm"
+    === "npm"
 
-    ```shell
-    npm install -D node-scripts-docs
-    ```
+        ```shell
+        npm install -D node-scripts-docs
+        ```
 
-You can now run `node-scripts-docs` from the shell through `yarn`:
+1.  Run an initial check on your project:
 
-=== "yarn"
+    === "yarn"
 
-    ```shell
-    yarn nsd --check-only
-    ```
+        ```shell
+        yarn nsd --check-only
+        ```
 
-=== "npm"
+    === "npm"
 
-    ```shell
-    npx nsd --check-only
-    ```
+        ```shell
+        npx nsd --check-only
+        ```
 
-To run `nsd` on another project, you can simply pass the directory as an unlabeled argument:
+    !!! hint
 
-=== "yarn"
+        To run `nsd` on another project, you can simply pass the directory as an unlabeled argument:
 
-    ```shell
-    yarn nsd ~/projects/myrepo --check-only
-    ```
+        === "yarn"
 
-=== "npm"
+            ```shell
+            yarn nsd ~/projects/myrepo --check-only
+            ```
 
-    ```shell
-    npx nsd ~/projects/myrepo --check-only
-    ```
+        === "npm"
 
-Drop the `--check-only` to write the initial documentation scaffold. Then begin editing the descriptions in the generated documentation fragments right away.
+            ```shell
+            npx nsd ~/projects/myrepo --check-only
+            ```
 
-Whenever you've added scripts, removed scripts, updated documentation fragments, just run `yarn nsd` again to update the documentation.
+1.  Drop the `--check-only` to write the initial documentation scaffold. Then begin editing the descriptions in the generated documentation fragments right away.
+
+    Whenever you've added scripts, removed scripts, updated documentation fragments, just run `yarn nsd` again to update the documentation.
 
 !!! note
 
