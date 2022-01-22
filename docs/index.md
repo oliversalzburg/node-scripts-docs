@@ -1,22 +1,46 @@
 # Quick Start
 
-This is a yarn [Zero-Install](https://yarnpkg.com/features/zero-installs) repository. After cloning it, you should be ready to use the code. Just in case some dependencies need to be rebuilt, run an install:
+Install the published package:
 
-```shell
-yarn install
-```
+=== "yarn"
+
+    ```shell
+    yarn install -D node-scripts-docs
+    ```
+
+=== "npm"
+
+    ```shell
+    npm install -D node-scripts-docs
+    ```
 
 You can now run `node-scripts-docs` from the shell through `yarn`:
 
-```shell
-yarn nsd --check-only
-```
+=== "yarn"
+
+    ```shell
+    yarn nsd --check-only
+    ```
+
+=== "npm"
+
+    ```shell
+    npx nsd --check-only
+    ```
 
 To run `nsd` on another project, you can simply pass the directory as an unlabeled argument:
 
-```shell
-yarn nsd ~/projects/myrepo --check-only
-```
+=== "yarn"
+
+    ```shell
+    yarn nsd ~/projects/myrepo --check-only
+    ```
+
+=== "npm"
+
+    ```shell
+    npx nsd ~/projects/myrepo --check-only
+    ```
 
 Drop the `--check-only` to write the initial documentation scaffold. Then begin editing the descriptions in the generated documentation fragments right away.
 
