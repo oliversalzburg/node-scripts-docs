@@ -1,6 +1,6 @@
 {
   "name": "node-scripts-docs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "bin": {
     "nsd": "output/node-scripts-docs.js"
   },
