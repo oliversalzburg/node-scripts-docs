@@ -15,7 +15,6 @@ import { Validator } from "./Validator";
 const argv = minimist(process.argv.slice(2));
 
 (async () => {
-  debugger;
   console.info(`node-scripts-docs (${new Date().toISOString()})`);
   const entry = ElapsedTime.new().start();
 
