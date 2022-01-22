@@ -46,7 +46,7 @@
 
 1.  Drop the `--check-only` to write the initial documentation scaffold. Then begin editing the descriptions in the generated documentation fragments right away.
 
-    Whenever you've added scripts, removed scripts, updated documentation fragments, just run `yarn nsd` again to update the documentation.
+    Whenever you've added scripts, removed scripts, updated documentation fragments, just run `yarn nsd` again to synchronize the documentation and the scripts.
 
 !!! note
 
