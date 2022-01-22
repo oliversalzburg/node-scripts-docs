@@ -1,3 +1,9 @@
+plugins:
+  - search
+repo_name: oliversalzburg/node-scripts-docs
+repo_url: https://github.com/oliversalzburg/node-scripts-docs
 site_name: Node Scripts Docs
 theme:
+  icon:
+    repo: fontawesome/brands/github
   name: material
