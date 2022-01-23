@@ -43,7 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/sdks", "npm:2.5.0"],
             ["elapsed-time", "npm:0.0.1"],
             ["eslint", "npm:8.7.0"],
-            ["globby", "npm:11.1.0"],
+            ["globby", "npm:12.2.0"],
             ["lint-staged", "npm:12.3.1"],
             ["marked", "npm:4.0.10"],
             ["minimist", "npm:1.2.5"],
@@ -606,6 +606,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/array-union-npm-2.1.0-4e4852b221-5bee12395c.zip/node_modules/array-union/",
           "packageDependencies": [
             ["array-union", "npm:2.1.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:3.0.1", {
+          "packageLocation": "./.yarn/cache/array-union-npm-3.0.1-3ee2eb5947-47b29f8825.zip/node_modules/array-union/",
+          "packageDependencies": [
+            ["array-union", "npm:3.0.1"]
           ],
           "linkType": "HARD",
         }]
@@ -1584,6 +1591,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["slash", "npm:3.0.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:12.2.0", {
+          "packageLocation": "./.yarn/cache/globby-npm-12.2.0-c8a4e97e5f-2539379a7f.zip/node_modules/globby/",
+          "packageDependencies": [
+            ["globby", "npm:12.2.0"],
+            ["array-union", "npm:3.0.1"],
+            ["dir-glob", "npm:3.0.1"],
+            ["fast-glob", "npm:3.2.11"],
+            ["ignore", "npm:5.2.0"],
+            ["merge2", "npm:1.4.1"],
+            ["slash", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["got", [
@@ -2241,7 +2261,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/sdks", "npm:2.5.0"],
             ["elapsed-time", "npm:0.0.1"],
             ["eslint", "npm:8.7.0"],
-            ["globby", "npm:11.1.0"],
+            ["globby", "npm:12.2.0"],
             ["lint-staged", "npm:12.3.1"],
             ["marked", "npm:4.0.10"],
             ["minimist", "npm:1.2.5"],
@@ -2851,6 +2871,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/slash-npm-3.0.0-b87de2279a-94a93fff61.zip/node_modules/slash/",
           "packageDependencies": [
             ["slash", "npm:3.0.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:4.0.0", {
+          "packageLocation": "./.yarn/cache/slash-npm-4.0.0-ce4bbc4a80-da8e4af737.zip/node_modules/slash/",
+          "packageDependencies": [
+            ["slash", "npm:4.0.0"]
           ],
           "linkType": "HARD",
         }]
