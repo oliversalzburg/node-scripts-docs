@@ -93,6 +93,17 @@ const argv = minimist(process.argv.slice(2));
 
     const report = validator.generateReport(withLocalScripts);
 
+    const skipPending = Boolean(argv["skip-pending"]) ?? false;
+    if (0 < report.pendingDocumentation.size && !skipPending) {
+      console.info(` --- Pending documentation --- `);
+      for (const scriptMeta of report.pendingDocumentation) {
+        console.info(
+          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
+        );
+      }
+      console.info("");
+    }
+
     if (0 < report.missingFragments.size) {
       console.info(` --- Missing fragments (will be generated) --- `);
       for (const scriptMeta of report.missingFragments) {
@@ -130,17 +141,6 @@ const argv = minimist(process.argv.slice(2));
           `  ${FragmentStore.scriptToFragmentFilename(scriptMeta.scriptName)} (${
             scriptMeta.scriptName
           })`
-        );
-      }
-      console.info("");
-    }
-
-    const skipPending = Boolean(argv["skip-pending"]) ?? false;
-    if (0 < report.pendingDocumentation.size && !skipPending) {
-      console.info(` --- Pending documentation --- `);
-      for (const scriptMeta of report.pendingDocumentation) {
-        console.info(
-          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
         );
       }
       console.info("");
