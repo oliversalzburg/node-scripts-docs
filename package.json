@@ -28,7 +28,7 @@
     "@types/prettier-package-json": "2.1.1",
     "@yarnpkg/sdks": "2.5.0",
     "eslint": "8.7.0",
-    "lint-staged": "12.3.1",
+    "lint-staged": "12.3.3",
     "prettier": "2.5.1",
     "prettier-package-json": "2.6.0",
     "prettier-plugin-organize-imports": "2.3.4",
