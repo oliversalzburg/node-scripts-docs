@@ -35,7 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["@types/marked", "npm:4.0.1"],
+            ["@types/marked", "npm:4.0.2"],
             ["@types/minimist", "npm:1.2.2"],
             ["@types/node", "npm:17.0.10"],
             ["@types/prettier", "npm:2.4.3"],
@@ -45,7 +45,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.7.0"],
             ["globby", "npm:11.1.0"],
             ["lint-staged", "npm:12.3.3"],
-            ["marked", "npm:4.0.10"],
+            ["marked", "npm:4.0.12"],
             ["minimist", "npm:1.2.5"],
             ["prettier", "npm:2.5.1"],
             ["prettier-package-json", "npm:2.6.0"],
@@ -247,10 +247,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@types/marked", [
-        ["npm:4.0.1", {
-          "packageLocation": "./.yarn/cache/@types-marked-npm-4.0.1-47b2459b6f-c2dabaae5e.zip/node_modules/@types/marked/",
+        ["npm:4.0.2", {
+          "packageLocation": "./.yarn/cache/@types-marked-npm-4.0.2-2f29ece852-61d7f47b2b.zip/node_modules/@types/marked/",
           "packageDependencies": [
-            ["@types/marked", "npm:4.0.1"]
+            ["@types/marked", "npm:4.0.2"]
           ],
           "linkType": "HARD",
         }]
@@ -2082,10 +2082,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["marked", [
-        ["npm:4.0.10", {
-          "packageLocation": "./.yarn/cache/marked-npm-4.0.10-7e4da27560-46cd8ef1a7.zip/node_modules/marked/",
+        ["npm:4.0.12", {
+          "packageLocation": "./.yarn/cache/marked-npm-4.0.12-1fc6e0ed31-7575117f85.zip/node_modules/marked/",
           "packageDependencies": [
-            ["marked", "npm:4.0.10"]
+            ["marked", "npm:4.0.12"]
           ],
           "linkType": "HARD",
         }]
@@ -2233,7 +2233,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["node-scripts-docs", "workspace:."],
-            ["@types/marked", "npm:4.0.1"],
+            ["@types/marked", "npm:4.0.2"],
             ["@types/minimist", "npm:1.2.2"],
             ["@types/node", "npm:17.0.10"],
             ["@types/prettier", "npm:2.4.3"],
@@ -2243,7 +2243,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.7.0"],
             ["globby", "npm:11.1.0"],
             ["lint-staged", "npm:12.3.3"],
-            ["marked", "npm:4.0.10"],
+            ["marked", "npm:4.0.12"],
             ["minimist", "npm:1.2.5"],
             ["prettier", "npm:2.5.1"],
             ["prettier-package-json", "npm:2.6.0"],
