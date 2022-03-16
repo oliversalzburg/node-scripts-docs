@@ -3825,9 +3825,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:12.3.3":
-  version: 12.3.3
-  resolution: "lint-staged@npm:12.3.3"
+"lint-staged@npm:12.3.6":
+  version: 12.3.6
+  resolution: "lint-staged@npm:12.3.6"
   dependencies:
     cli-truncate: ^3.1.0
     colorette: ^2.0.16
@@ -3839,12 +3839,13 @@ __metadata:
     micromatch: ^4.0.4
     normalize-path: ^3.0.0
     object-inspect: ^1.12.0
+    pidtree: ^0.5.0
     string-argv: ^0.3.1
     supports-color: ^9.2.1
     yaml: ^1.10.2
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: a9147eb5def6345622d1b772d5920b1282808738abf53e6034d8da2d21d6baf80135ea22f799bf4092867a3dba13cd875493b8e32e47f3b4574e4e8871a0aa8e
+  checksum: b5075addb79cefd3a01eb3e4b511cdbe255c86e80ac4f27c4ce90bbd5a6ef3765ec0c70ddc33e37d13aef54218b6026f52fcd0ed0ac9bf3a205a533b994ed387
   languageName: node
   linkType: hard
 
@@ -4243,7 +4244,7 @@ __metadata:
     eslint: 8.8.0
     globby: 11.1.0
     jest: 27.5.1
-    lint-staged: 12.3.3
+    lint-staged: 12.3.6
     marked: 4.0.12
     minimist: 1.2.5
     prettier: 2.5.1
@@ -4552,6 +4553,15 @@ __metadata:
   version: 2.3.1
   resolution: "picomatch@npm:2.3.1"
   checksum: 050c865ce81119c4822c45d3c84f1ced46f93a0126febae20737bd05ca20589c564d6e9226977df859ed5e03dc73f02584a2b0faad36e896936238238b0446cf
+  languageName: node
+  linkType: hard
+
+"pidtree@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "pidtree@npm:0.5.0"
+  bin:
+    pidtree: bin/pidtree.js
+  checksum: 371cd14bbc9bdee2a6a44596dd521dd3565e223481e0b1afffdca3f1c29831850bfa7784114dc30d245d37e7d186cec035e036256b39f75d878d19498fe0df6a
   languageName: node
   linkType: hard
 
