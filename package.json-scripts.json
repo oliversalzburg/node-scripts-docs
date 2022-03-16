@@ -46,7 +46,8 @@
       "projectName": "node-scripts-docs",
       "scriptName": "npm:publish:patch",
       "scriptCode": "yarn build && npm version patch && npm publish",
-      "isGlobal": true
+      "isGlobal": true,
+      "description": "Publish a patch release to the npm registry."
     },
     {
       "manifestPath": "package.json",
@@ -61,14 +62,16 @@
       "projectName": "node-scripts-docs",
       "scriptName": "test",
       "scriptCode": "jest",
-      "isGlobal": false
+      "isGlobal": false,
+      "description": "Execute all Jest test suites."
     },
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "test:coverage",
       "scriptCode": "jest --coverage",
-      "isGlobal": true
+      "isGlobal": true,
+      "description": "Execute Jest test suites and calculate code coverage."
     }
   ],
   "version": 1

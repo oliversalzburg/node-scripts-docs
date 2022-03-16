@@ -76,7 +76,7 @@
 
 -   Description:
 
-    _documentation pending_
+    Publish a patch release to the npm registry.
 
 ## nsd-debug
 
@@ -102,7 +102,7 @@
 
 -   Description:
 
-    _documentation pending_
+    Execute all Jest test suites.
 
 ## test:coverage
 
@@ -115,4 +115,4 @@
 
 -   Description:
 
-    _documentation pending_
+    Execute Jest test suites and calculate code coverage.
