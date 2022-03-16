@@ -6,48 +6,63 @@
       "projectName": "node-scripts-docs",
       "scriptName": "build",
       "scriptCode": "tsc",
-      "isGlobal": false,
-      "description": "Build the TypeScript sources."
+      "isGlobal": false
     },
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "docs:build",
       "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
-      "isGlobal": true,
-      "description": "Build the documentation website locally."
+      "isGlobal": true
     },
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "docs:scripts",
       "scriptCode": "yarn nsd-debug --include-locals",
-      "isGlobal": true,
-      "description": "Rebuilds the `node-scripts-docs` documentation for this project itself."
+      "isGlobal": true
     },
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "docs:serve",
       "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material",
-      "isGlobal": true,
-      "description": "Runs the mkdocs-material development server."
+      "isGlobal": true
     },
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "npm:publish",
       "scriptCode": "yarn build && npm publish",
-      "isGlobal": true,
-      "description": "Build the latest sources and then `npm publish` the current state."
+      "isGlobal": true
+    },
+    {
+      "manifestPath": "package.json",
+      "projectName": "node-scripts-docs",
+      "scriptName": "npm:publish:patch",
+      "scriptCode": "yarn build && npm version patch && npm publish",
+      "isGlobal": true
     },
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "nsd-debug",
       "scriptCode": "yarn build && node output/node-scripts-docs.js",
-      "isGlobal": false,
-      "description": "Build the latest sources and then use the build output to execute your command. Parameters are passed through by `yarn`."
+      "isGlobal": false
+    },
+    {
+      "manifestPath": "package.json",
+      "projectName": "node-scripts-docs",
+      "scriptName": "test",
+      "scriptCode": "jest",
+      "isGlobal": false
+    },
+    {
+      "manifestPath": "package.json",
+      "projectName": "node-scripts-docs",
+      "scriptName": "test:coverage",
+      "scriptCode": "jest --coverage",
+      "isGlobal": true
     }
   ],
   "version": 1
