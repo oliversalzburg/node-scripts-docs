@@ -110,7 +110,7 @@ const argv = minimist(process.argv.slice(2));
     }
 
     const renderer = new DocumentationRenderer(metadata);
-    await renderer.renderFragments(fragmentStorePath, withLocalScripts);
+    await renderer.flushFragments(fragmentStorePath, withLocalScripts);
 
     const documentation = renderer.render(withLocalScripts);
     const indexFile = path.resolve(fragmentStorePath, "index.md");

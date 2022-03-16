@@ -1,121 +1,146 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should load an existing store 1`] = `
+exports[`loads existing manifests (monorepo) 1`] = `
 Array [
-  Object {
-    "description": "Build the documentation website locally.",
-    "isGlobal": true,
+  ScriptStoreEntry {
+    "isGlobal": false,
     "manifestPath": "package.json",
-    "projectName": "default",
+    "projectName": "monorepo",
+    "scriptCode": "tsc",
+    "scriptName": "build",
+  },
+  ScriptStoreEntry {
+    "isGlobal": false,
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
+    "scriptCode": "tsc",
+    "scriptName": "build",
+  },
+  ScriptStoreEntry {
+    "isGlobal": true,
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
     "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
     "scriptName": "docs:build",
   },
-  Object {
-    "description": "Rebuilds the \`node-scripts-docs\` documentation for this project itself.",
+  ScriptStoreEntry {
     "isGlobal": true,
-    "manifestPath": "package.json",
-    "projectName": "default",
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
     "scriptCode": "yarn nsd-debug --include-locals",
     "scriptName": "docs:scripts",
   },
-  Object {
-    "description": "Runs the mkdocs-material development server.",
+  ScriptStoreEntry {
     "isGlobal": true,
-    "manifestPath": "package.json",
-    "projectName": "default",
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
     "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material",
     "scriptName": "docs:serve",
   },
-  Object {
-    "description": "Build the latest sources and then \`npm publish\` the current state.",
+  ScriptStoreEntry {
     "isGlobal": true,
-    "manifestPath": "package.json",
-    "projectName": "default",
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
     "scriptCode": "yarn build && npm publish",
     "scriptName": "npm:publish",
   },
-  Object {
+  ScriptStoreEntry {
     "isGlobal": true,
-    "manifestPath": "package.json",
-    "projectName": "default",
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
     "scriptCode": "yarn build && npm version patch && npm publish",
     "scriptName": "npm:publish:patch",
   },
-  Object {
-    "isGlobal": true,
+  ScriptStoreEntry {
+    "isGlobal": false,
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
+    "scriptCode": "yarn build && node output/node-scripts-docs.js",
+    "scriptName": "nsd-debug",
+  },
+  ScriptStoreEntry {
+    "isGlobal": false,
     "manifestPath": "package.json",
-    "projectName": "default",
+    "projectName": "monorepo",
+    "scriptCode": "jest",
+    "scriptName": "test",
+  },
+  ScriptStoreEntry {
+    "isGlobal": false,
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
+    "scriptCode": "jest",
+    "scriptName": "test",
+  },
+  ScriptStoreEntry {
+    "isGlobal": true,
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
     "scriptCode": "jest --coverage",
     "scriptName": "test:coverage",
   },
 ]
 `;
 
-exports[`should load an existing store 2`] = `
+exports[`loads existing manifests (simple project) 1`] = `
 Array [
-  Object {
-    "description": "Build the TypeScript sources.",
+  ScriptStoreEntry {
     "isGlobal": false,
     "manifestPath": "package.json",
     "projectName": "default",
     "scriptCode": "tsc",
     "scriptName": "build",
   },
-  Object {
-    "description": "Build the documentation website locally.",
+  ScriptStoreEntry {
     "isGlobal": true,
     "manifestPath": "package.json",
     "projectName": "default",
     "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
     "scriptName": "docs:build",
   },
-  Object {
-    "description": "Rebuilds the \`node-scripts-docs\` documentation for this project itself.",
+  ScriptStoreEntry {
     "isGlobal": true,
     "manifestPath": "package.json",
     "projectName": "default",
     "scriptCode": "yarn nsd-debug --include-locals",
     "scriptName": "docs:scripts",
   },
-  Object {
-    "description": "Runs the mkdocs-material development server.",
+  ScriptStoreEntry {
     "isGlobal": true,
     "manifestPath": "package.json",
     "projectName": "default",
     "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material",
     "scriptName": "docs:serve",
   },
-  Object {
-    "description": "Build the latest sources and then \`npm publish\` the current state.",
+  ScriptStoreEntry {
     "isGlobal": true,
     "manifestPath": "package.json",
     "projectName": "default",
     "scriptCode": "yarn build && npm publish",
     "scriptName": "npm:publish",
   },
-  Object {
+  ScriptStoreEntry {
     "isGlobal": true,
     "manifestPath": "package.json",
     "projectName": "default",
     "scriptCode": "yarn build && npm version patch && npm publish",
     "scriptName": "npm:publish:patch",
   },
-  Object {
-    "description": "Build the latest sources and then use the build output to execute your command. Parameters are passed through by \`yarn\`.",
+  ScriptStoreEntry {
     "isGlobal": false,
     "manifestPath": "package.json",
     "projectName": "default",
     "scriptCode": "yarn build && node output/node-scripts-docs.js",
     "scriptName": "nsd-debug",
   },
-  Object {
+  ScriptStoreEntry {
     "isGlobal": false,
     "manifestPath": "package.json",
     "projectName": "default",
     "scriptCode": "jest",
     "scriptName": "test",
   },
-  Object {
+  ScriptStoreEntry {
     "isGlobal": true,
     "manifestPath": "package.json",
     "projectName": "default",

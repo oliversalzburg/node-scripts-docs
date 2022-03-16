@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders empty report as expected 1`] = `""`;
+
+exports[`renders empty report as expected 2`] = `""`;
+
+exports[`renders report as expected 1`] = `
+" --- Pending documentation --- 
+  pending→default
+
+ --- Missing fragments (will be generated) --- 
+  .missing.md (missing)
+
+ --- Outdated metadata (will be updated) --- 
+  corrupted→default
+
+ --- Obsolete fragments (delete manually) --- 
+  .obsolete.md
+
+ --- Detected changes --- 
+  .changed.md (changed)
+
+ --- New scripts --- 
+  new→default
+"
+`;
+
+exports[`renders report as expected 2`] = `
+" --- Missing fragments (will be generated) --- 
+  .missing.md (missing)
+
+ --- Outdated metadata (will be updated) --- 
+  corrupted→default
+
+ --- Obsolete fragments (delete manually) --- 
+  .obsolete.md
+
+ --- Detected changes --- 
+  .changed.md (changed)
+
+ --- New scripts --- 
+  new→default
+"
+`;

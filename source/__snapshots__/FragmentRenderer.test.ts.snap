@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders fragment with existing description 1`] = `
+"## docs:scripts
+
+-   Project: \`node-scripts-docs\`
+-   Source:
+
+    \`\`\`shell
+    yarn nsd-debug --include-locals
+    \`\`\`
+
+-   Description:
+
+    Build the latest sources and then use the build output to execute your command. Parameters are passed through by \`yarn\`.
+"
+`;
+
+exports[`renders fragment without description 1`] = `
+"## docs:scripts
+
+-   Project: \`node-scripts-docs\`
+-   Source:
+
+    \`\`\`shell
+    yarn nsd-debug --include-locals
+    \`\`\`
+
+-   Description:
+
+    _documentation pending_
+"
+`;

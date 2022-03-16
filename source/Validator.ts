@@ -83,7 +83,7 @@ export class Validator {
       // If the metadata contains no description, the documentation is still pending.
       if (
         FragmentRenderer.isDefaultDescription(fragment.descriptionMarkdown) &&
-        !cachedMeta.description
+        (!cachedMeta.description || FragmentRenderer.isDefaultDescription(cachedMeta.description))
       ) {
         report.unchangedFragments.add(scriptMeta);
         report.pendingDocumentation.add(scriptMeta);

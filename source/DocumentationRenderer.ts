@@ -24,7 +24,7 @@ export class DocumentationRenderer {
     return fullDocument;
   }
 
-  async renderFragments(rootDirectory: string, includeLocalScripts = false) {
+  async flushFragments(rootDirectory: string, includeLocalScripts = false) {
     await fs.mkdir(rootDirectory, { recursive: true });
     for (const scriptMeta of this.metadata.scripts) {
       if (!scriptMeta.isGlobal && !includeLocalScripts) {
@@ -38,17 +38,5 @@ export class DocumentationRenderer {
       const fragmentPath = path.resolve(rootDirectory, fragmentFilename);
       await fs.writeFile(fragmentPath, scriptDocs);
     }
-  }
-
-  asFragmentStore(rootDirectory: string, includeLocalScripts = false) {
-    const fragmentStore = new FragmentStore(rootDirectory);
-    for (const scriptMeta of this.metadata.scripts) {
-      if (!scriptMeta.isGlobal && !includeLocalScripts) {
-        continue;
-      }
-
-      fragmentStore.addScript(scriptMeta.scriptName, scriptMeta.description);
-    }
-    return fragmentStore;
   }
 }

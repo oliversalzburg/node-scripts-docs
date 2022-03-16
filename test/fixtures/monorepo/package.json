@@ -1,0 +1,8 @@
+{
+  "name": "monorepo",
+  "version": "0.0.7",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  }
+}

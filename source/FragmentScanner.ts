@@ -1,4 +1,3 @@
-import fs from "fs/promises";
 import globby from "globby";
 import { FragmentStore } from "./FragmentStore";
 
@@ -21,15 +20,5 @@ export class FragmentScanner {
     }
 
     return fragmentStore;
-  }
-
-  static async canLoad(manifestPath: string) {
-    try {
-      await fs.stat(manifestPath);
-    } catch {
-      return false;
-    }
-
-    return true;
   }
 }

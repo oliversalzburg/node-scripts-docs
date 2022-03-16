@@ -1,0 +1,208 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a script store as expected 1`] = `
+"# Full reference
+
+## docs:build
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public
+    \`\`\`
+
+-   Description:
+
+    Build the documentation website locally.
+
+## docs:scripts
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    yarn nsd-debug --include-locals
+    \`\`\`
+
+-   Description:
+
+    Rebuilds the \`node-scripts-docs\` documentation for this project itself.
+
+## docs:serve
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material
+    \`\`\`
+
+-   Description:
+
+    Runs the mkdocs-material development server.
+
+## npm:publish
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    yarn build && npm publish
+    \`\`\`
+
+-   Description:
+
+    Build the latest sources and then \`npm publish\` the current state.
+
+## npm:publish:patch
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    yarn build && npm version patch && npm publish
+    \`\`\`
+
+-   Description:
+
+    _documentation pending_
+
+## test:coverage
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    jest --coverage
+    \`\`\`
+
+-   Description:
+
+    _documentation pending_
+
+"
+`;
+
+exports[`renders a script store as expected 2`] = `
+"# Full reference
+
+## build
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    tsc
+    \`\`\`
+
+-   Description:
+
+    Build the TypeScript sources.
+
+## docs:build
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public
+    \`\`\`
+
+-   Description:
+
+    Build the documentation website locally.
+
+## docs:scripts
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    yarn nsd-debug --include-locals
+    \`\`\`
+
+-   Description:
+
+    Rebuilds the \`node-scripts-docs\` documentation for this project itself.
+
+## docs:serve
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material
+    \`\`\`
+
+-   Description:
+
+    Runs the mkdocs-material development server.
+
+## npm:publish
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    yarn build && npm publish
+    \`\`\`
+
+-   Description:
+
+    Build the latest sources and then \`npm publish\` the current state.
+
+## npm:publish:patch
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    yarn build && npm version patch && npm publish
+    \`\`\`
+
+-   Description:
+
+    _documentation pending_
+
+## nsd-debug
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    yarn build && node output/node-scripts-docs.js
+    \`\`\`
+
+-   Description:
+
+    Build the latest sources and then use the build output to execute your command. Parameters are passed through by \`yarn\`.
+
+## test
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    jest
+    \`\`\`
+
+-   Description:
+
+    _documentation pending_
+
+## test:coverage
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    jest --coverage
+    \`\`\`
+
+-   Description:
+
+    _documentation pending_
+
+"
+`;

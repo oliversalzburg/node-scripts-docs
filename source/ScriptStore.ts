@@ -9,7 +9,7 @@ export class ScriptStoreEntry {
   scriptName: string;
   scriptCode: string;
   isGlobal: boolean;
-  description: string | undefined;
+  description?: string | undefined;
 
   constructor(
     manifestPath: string,

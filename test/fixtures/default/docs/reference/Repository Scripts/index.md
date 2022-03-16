@@ -65,19 +65,6 @@
 
     Build the latest sources and then `npm publish` the current state.
 
-## npm:publish:patch
-
--   Project: `node-scripts-docs`
--   Source:
-
-    ```shell
-    yarn build && npm version patch && npm publish
-    ```
-
--   Description:
-
-    _documentation pending_
-
 ## nsd-debug
 
 -   Project: `node-scripts-docs`
@@ -90,29 +77,3 @@
 -   Description:
 
     Build the latest sources and then use the build output to execute your command. Parameters are passed through by `yarn`.
-
-## test
-
--   Project: `node-scripts-docs`
--   Source:
-
-    ```shell
-    jest
-    ```
-
--   Description:
-
-    _documentation pending_
-
-## test:coverage
-
--   Project: `node-scripts-docs`
--   Source:
-
-    ```shell
-    jest --coverage
-    ```
-
--   Description:
-
-    _documentation pending_

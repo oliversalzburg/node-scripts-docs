@@ -3,63 +3,69 @@
   "scripts": [
     {
       "manifestPath": "package.json",
-      "projectName": "node-scripts-docs",
+      "projectName": "default",
       "scriptName": "build",
       "scriptCode": "tsc",
-      "isGlobal": false
+      "isGlobal": false,
+      "description": "Build the TypeScript sources."
     },
     {
       "manifestPath": "package.json",
-      "projectName": "node-scripts-docs",
+      "projectName": "default",
       "scriptName": "docs:build",
       "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
-      "isGlobal": true
+      "isGlobal": true,
+      "description": "Build the documentation website locally."
     },
     {
       "manifestPath": "package.json",
-      "projectName": "node-scripts-docs",
+      "projectName": "default",
       "scriptName": "docs:scripts",
       "scriptCode": "yarn nsd-debug --include-locals",
-      "isGlobal": true
+      "isGlobal": true,
+      "description": "Rebuilds the `node-scripts-docs` documentation for this project itself."
     },
     {
       "manifestPath": "package.json",
-      "projectName": "node-scripts-docs",
+      "projectName": "default",
       "scriptName": "docs:serve",
       "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material",
-      "isGlobal": true
+      "isGlobal": true,
+      "description": "Runs the mkdocs-material development server."
     },
     {
       "manifestPath": "package.json",
-      "projectName": "node-scripts-docs",
+      "projectName": "default",
       "scriptName": "npm:publish",
       "scriptCode": "yarn build && npm publish",
-      "isGlobal": true
+      "isGlobal": true,
+      "description": "Build the latest sources and then `npm publish` the current state."
     },
     {
       "manifestPath": "package.json",
-      "projectName": "node-scripts-docs",
+      "projectName": "default",
       "scriptName": "npm:publish:patch",
       "scriptCode": "yarn build && npm version patch && npm publish",
       "isGlobal": true
     },
     {
       "manifestPath": "package.json",
-      "projectName": "node-scripts-docs",
+      "projectName": "default",
       "scriptName": "nsd-debug",
       "scriptCode": "yarn build && node output/node-scripts-docs.js",
-      "isGlobal": false
+      "isGlobal": false,
+      "description": "Build the latest sources and then use the build output to execute your command. Parameters are passed through by `yarn`."
     },
     {
       "manifestPath": "package.json",
-      "projectName": "node-scripts-docs",
+      "projectName": "default",
       "scriptName": "test",
       "scriptCode": "jest",
       "isGlobal": false
     },
     {
       "manifestPath": "package.json",
-      "projectName": "node-scripts-docs",
+      "projectName": "default",
       "scriptName": "test:coverage",
       "scriptCode": "jest --coverage",
       "isGlobal": true
