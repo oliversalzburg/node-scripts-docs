@@ -11,12 +11,13 @@ on:
       - main
 
 jobs:
-  build:
+  test:
+    name: Run Tests
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [lts/*, 12, 14, 15, 16]
+        node-version: [lts/*, 14, 15, 16]
 
     steps:
       - uses: actions/checkout@v2
