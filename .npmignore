@@ -2,9 +2,11 @@
 /.vscode/
 /.yarn/
 /@types/
+/coverage/
 /docs/
 /public/
 /source/
+/test/
 /.editorconfig
 /.eslintrc.json
 /.gitattributes
@@ -13,6 +15,7 @@
 /.pnp.loader.mjs
 /.prettierrc.js
 /.yarnrc.yml
+/jest.config.js
 /mkdocs.yml
 /package.json-scripts.json
 /renovate.json
