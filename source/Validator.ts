@@ -2,6 +2,24 @@ import { FragmentRenderer } from "./FragmentRenderer";
 import { DocumentationFragment, FragmentStore } from "./FragmentStore";
 import { ScriptStore, ScriptStoreEntry } from "./ScriptStore";
 
+export type ValidationReport = {
+  // Scripts for which the description in the fragment doesn't match the metadata.
+  changedFragments: Set<ScriptStoreEntry>;
+  // Scripts where the metadata was confusingly inconsistent with the fragment.
+  corruptedMetadataRecords: Set<ScriptStoreEntry>;
+  // Scripts that exist in the metadata, but for which no fragment exists at all.
+  // These could just be new scripts.
+  missingFragments: Set<ScriptStoreEntry>;
+  // Scripts that aren't in the metadata.
+  newScripts: Set<ScriptStoreEntry>;
+  // Fragments for which there is no longer a matching script.
+  obsoleteFragments: Set<DocumentationFragment>;
+  // Scripts that have a fragment which is not filled out yet.
+  pendingDocumentation: Set<ScriptStoreEntry>;
+  // Scripts for which the description in the fragment is identical with the metadata.
+  unchangedFragments: Set<ScriptStoreEntry>;
+};
+
 export class Validator {
   fragmentStore: FragmentStore;
   metadata: ScriptStore;
@@ -13,22 +31,14 @@ export class Validator {
     this.fragmentStore = fragmentStore;
   }
 
-  generateReport(withLocals = false) {
-    const report = {
-      // Scripts for which the description in the fragment doesn't match the metadata.
+  generateReport(withLocals = false): ValidationReport {
+    const report: ValidationReport = {
       changedFragments: new Set<ScriptStoreEntry>(),
-      // Scripts where the metadata was confusingly inconsistent with the fragment.
       corruptedMetadataRecords: new Set<ScriptStoreEntry>(),
-      // Scripts that exist in the metadata, but for which no fragment exists at all.
-      // These could just be new scripts.
       missingFragments: new Set<ScriptStoreEntry>(),
-      // Scripts that aren't in the metadata.
       newScripts: new Set<ScriptStoreEntry>(),
-      // Fragments for which there is no longer a matching script.
       obsoleteFragments: new Set<DocumentationFragment>(),
-      // Scripts that have a fragment which is not filled out yet.
       pendingDocumentation: new Set<ScriptStoreEntry>(),
-      // Scripts for which the description in the fragment is identical with the metadata.
       unchangedFragments: new Set<ScriptStoreEntry>(),
     };
 

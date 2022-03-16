@@ -7,6 +7,7 @@ import path from "path";
 import { DocumentationRenderer } from "./DocumentationRenderer";
 import { FragmentScanner } from "./FragmentScanner";
 import { DOCS_FRAGMENTS_DEFAULT_LOCATION, FragmentStore } from "./FragmentStore";
+import { ReportRenderer } from "./ReportRenderer";
 import { ScriptScanner } from "./ScriptScanner";
 import { ScriptStore, SCRIPTS_METADATA_DEFAULT_FILENAME } from "./ScriptStore";
 import { StoreAugmenter } from "./StoreAugmenter";
@@ -94,67 +95,7 @@ const argv = minimist(process.argv.slice(2));
     const report = validator.generateReport(withLocalScripts);
 
     const skipPending = Boolean(argv["skip-pending"]) ?? false;
-    if (0 < report.pendingDocumentation.size && !skipPending) {
-      console.info(` --- Pending documentation --- `);
-      for (const scriptMeta of report.pendingDocumentation) {
-        console.info(
-          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
-        );
-      }
-      console.info("");
-    }
-
-    if (0 < report.missingFragments.size) {
-      console.info(` --- Missing fragments (will be generated) --- `);
-      for (const scriptMeta of report.missingFragments) {
-        console.info(
-          `  ${FragmentStore.scriptToFragmentFilename(scriptMeta.scriptName)} (${
-            scriptMeta.scriptName
-          })`
-        );
-      }
-      console.info("");
-    }
-
-    if (0 < report.corruptedMetadataRecords.size) {
-      console.info(` --- Outdated metadata (will be updated) --- `);
-      for (const scriptMeta of report.corruptedMetadataRecords) {
-        console.info(
-          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
-        );
-      }
-      console.info("");
-    }
-
-    if (0 < report.obsoleteFragments.size) {
-      console.info(` --- Obsolete fragments (delete manually) --- `);
-      for (const fragment of report.obsoleteFragments) {
-        console.info(`  ${fragment.filename}`);
-      }
-      console.info("");
-    }
-
-    if (0 < report.changedFragments.size) {
-      console.info(` --- Detected changes --- `);
-      for (const scriptMeta of report.changedFragments) {
-        console.info(
-          `  ${FragmentStore.scriptToFragmentFilename(scriptMeta.scriptName)} (${
-            scriptMeta.scriptName
-          })`
-        );
-      }
-      console.info("");
-    }
-
-    if (0 < report.newScripts.size) {
-      console.info(` --- New scripts --- `);
-      for (const scriptMeta of report.newScripts) {
-        console.info(
-          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
-        );
-      }
-      console.info("");
-    }
+    console.info(ReportRenderer.render(report, skipPending));
   } else {
     console.info("Skipping change-detection due to --skip-scan.");
   }
