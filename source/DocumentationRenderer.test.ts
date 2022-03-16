@@ -6,10 +6,9 @@ import { ScriptScanner } from "./ScriptScanner";
 import { StoreAugmenter } from "./StoreAugmenter";
 
 it("renders a script store as expected", async () => {
-  const scannerFragments = new FragmentScanner(
+  const storeFragments = await FragmentScanner.loadFragments(
     path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION)
   );
-  const storeFragments = await scannerFragments.loadFragments();
 
   const scannerScripts = new ScriptScanner("test/fixtures/default");
   await scannerScripts.loadManifests();

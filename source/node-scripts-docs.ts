@@ -74,8 +74,7 @@ const argv = minimist(process.argv.slice(2));
   let fragmentStore;
   if (fragmentStoreExists) {
     console.info("Loading existing fragments...");
-    const fragmentScanner = new FragmentScanner(fragmentStorePath);
-    fragmentStore = await fragmentScanner.loadFragments();
+    fragmentStore = await FragmentScanner.loadFragments(fragmentStorePath);
     console.info(`Docs contain ${fragmentStore.fragments.size} fragment(s).`);
   }
 

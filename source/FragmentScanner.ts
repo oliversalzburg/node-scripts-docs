@@ -2,18 +2,10 @@ import globby from "globby";
 import { FragmentStore } from "./FragmentStore";
 
 export class FragmentScanner {
-  private fragmentDirectory: string;
-
-  public fragments = new Array<string>();
-
-  constructor(fragmentDirectory: string) {
-    this.fragmentDirectory = fragmentDirectory;
-  }
-
-  async loadFragments() {
-    const fragmentStore = new FragmentStore(this.fragmentDirectory);
+  static async loadFragments(fragmentDirectory: string) {
+    const fragmentStore = new FragmentStore(fragmentDirectory);
     const fragments = await globby(FragmentStore.scriptToFragmentFilename("*"), {
-      cwd: this.fragmentDirectory,
+      cwd: fragmentDirectory,
     });
     for (const fragment of fragments) {
       await fragmentStore.loadFragment(fragment);
