@@ -1,11 +1,17 @@
-name: Documentation
+name: Documentation (build only)
+
 on:
   push:
     branches:
       - master
       - main
+  pull_request:
+    branches:
+      - master
+      - main
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -13,4 +19,4 @@ jobs:
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
-      - run: mkdocs gh-deploy --force
+      - run: mkdocs build
