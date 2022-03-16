@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should load an existing store 1`] = `
+Array [
+  Object {
+    "isGlobal": true,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
+    "scriptName": "docs:build",
+  },
+  Object {
+    "isGlobal": true,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "yarn nsd-debug --include-locals",
+    "scriptName": "docs:scripts",
+  },
+  Object {
+    "isGlobal": true,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material",
+    "scriptName": "docs:serve",
+  },
+  Object {
+    "isGlobal": true,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "yarn build && npm publish",
+    "scriptName": "npm:publish",
+  },
+  Object {
+    "isGlobal": true,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "yarn build && npm version patch && npm publish",
+    "scriptName": "npm:publish:patch",
+  },
+  Object {
+    "isGlobal": true,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "jest --coverage",
+    "scriptName": "test:coverage",
+  },
+]
+`;
+
+exports[`should load an existing store 2`] = `
+Array [
+  Object {
+    "isGlobal": false,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "tsc",
+    "scriptName": "build",
+  },
+  Object {
+    "isGlobal": true,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
+    "scriptName": "docs:build",
+  },
+  Object {
+    "isGlobal": true,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "yarn nsd-debug --include-locals",
+    "scriptName": "docs:scripts",
+  },
+  Object {
+    "isGlobal": true,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material",
+    "scriptName": "docs:serve",
+  },
+  Object {
+    "isGlobal": true,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "yarn build && npm publish",
+    "scriptName": "npm:publish",
+  },
+  Object {
+    "isGlobal": true,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "yarn build && npm version patch && npm publish",
+    "scriptName": "npm:publish:patch",
+  },
+  Object {
+    "isGlobal": false,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "yarn build && node output/node-scripts-docs.js",
+    "scriptName": "nsd-debug",
+  },
+  Object {
+    "isGlobal": false,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "jest",
+    "scriptName": "test",
+  },
+  Object {
+    "isGlobal": true,
+    "manifestPath": "package.json",
+    "projectName": "node-scripts-docs",
+    "scriptCode": "jest --coverage",
+    "scriptName": "test:coverage",
+  },
+]
+`;

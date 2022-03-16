@@ -86,8 +86,8 @@ export class ScriptStore {
   static parseScriptLocator(locator: string) {
     const parts = /([^→]+)→(.+)/.exec(locator)!;
     return {
-      projectName: parts[1],
-      scriptName: parts[2],
+      projectName: parts[2],
+      scriptName: parts[1],
     };
   }
 
