@@ -46,7 +46,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:27.5.1"],\
             ["lint-staged", "npm:12.3.7"],\
             ["marked", "npm:4.0.12"],\
-            ["minimist", "npm:1.2.5"],\
+            ["minimist", "npm:1.2.6"],\
             ["prettier", "npm:2.6.0"],\
             ["prettier-package-json", "npm:2.6.3"],\
             ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:2.3.4"],\
@@ -5074,6 +5074,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["minimist", "npm:1.2.5"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:1.2.6", {\
+          "packageLocation": "./.yarn/cache/minimist-npm-1.2.6-f4cee4b4af-d15428cd1e.zip/node_modules/minimist/",\
+          "packageDependencies": [\
+            ["minimist", "npm:1.2.6"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["minipass", [\
@@ -5265,7 +5272,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:27.5.1"],\
             ["lint-staged", "npm:12.3.7"],\
             ["marked", "npm:4.0.12"],\
-            ["minimist", "npm:1.2.5"],\
+            ["minimist", "npm:1.2.6"],\
             ["prettier", "npm:2.6.0"],\
             ["prettier-package-json", "npm:2.6.3"],\
             ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:2.3.4"],\
