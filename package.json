@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@types/jest": "27.4.1",
-    "@types/marked": "4.0.2",
+    "@types/marked": "4.0.3",
     "@types/minimist": "1.2.2",
     "@types/node": "17.0.10",
     "@types/prettier": "2.4.4",
