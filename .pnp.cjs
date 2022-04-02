@@ -50,7 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.6.1"],\
             ["prettier-package-json", "npm:2.6.3"],\
             ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:2.3.4"],\
-            ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.8.2"],\
+            ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.9.0"],\
             ["ts-jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:27.1.4"],\
             ["tslib", "npm:2.3.1"],\
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
@@ -5190,15 +5190,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["mvdan-sh", [\
-        ["npm:0.5.0", {\
-          "packageLocation": "./.yarn/cache/mvdan-sh-npm-0.5.0-e7cb78827c-b662308861.zip/node_modules/mvdan-sh/",\
-          "packageDependencies": [\
-            ["mvdan-sh", "npm:0.5.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["natural-compare", [\
         ["npm:1.4.0", {\
           "packageLocation": "./.yarn/cache/natural-compare-npm-1.4.0-97b75b362d-23ad088b08.zip/node_modules/natural-compare/",\
@@ -5276,7 +5267,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.6.1"],\
             ["prettier-package-json", "npm:2.6.3"],\
             ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:2.3.4"],\
-            ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.8.2"],\
+            ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.9.0"],\
             ["ts-jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:27.1.4"],\
             ["tslib", "npm:2.3.1"],\
             ["typescript", "patch:typescript@npm%3A4.6.2#~builtin<compat/typescript>::version=4.6.2&hash=bda367"]\
@@ -5702,20 +5693,21 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier-plugin-sh", [\
-        ["npm:0.8.2", {\
-          "packageLocation": "./.yarn/cache/prettier-plugin-sh-npm-0.8.2-4a90d2a8a5-66297d52b4.zip/node_modules/prettier-plugin-sh/",\
+        ["npm:0.9.0", {\
+          "packageLocation": "./.yarn/cache/prettier-plugin-sh-npm-0.9.0-fcef5bc07c-30d2f8110d.zip/node_modules/prettier-plugin-sh/",\
           "packageDependencies": [\
-            ["prettier-plugin-sh", "npm:0.8.2"]\
+            ["prettier-plugin-sh", "npm:0.9.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.8.2", {\
-          "packageLocation": "./.yarn/__virtual__/prettier-plugin-sh-virtual-86e6adafb3/0/cache/prettier-plugin-sh-npm-0.8.2-4a90d2a8a5-66297d52b4.zip/node_modules/prettier-plugin-sh/",\
+        ["virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.9.0", {\
+          "packageLocation": "./.yarn/__virtual__/prettier-plugin-sh-virtual-8a6a03c53e/0/cache/prettier-plugin-sh-npm-0.9.0-fcef5bc07c-30d2f8110d.zip/node_modules/prettier-plugin-sh/",\
           "packageDependencies": [\
-            ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.8.2"],\
+            ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.9.0"],\
             ["@types/prettier", "npm:2.4.4"],\
-            ["mvdan-sh", "npm:0.5.0"],\
-            ["prettier", "npm:2.6.1"]\
+            ["prettier", "npm:2.6.1"],\
+            ["sh-syntax", "npm:0.0.2"],\
+            ["synckit", "npm:0.6.1"]\
           ],\
           "packagePeers": [\
             "@types/prettier",\
@@ -6119,6 +6111,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["sh-syntax", [\
+        ["npm:0.0.2", {\
+          "packageLocation": "./.yarn/cache/sh-syntax-npm-0.0.2-eb9018cad3-302e1f7a48.zip/node_modules/sh-syntax/",\
+          "packageDependencies": [\
+            ["sh-syntax", "npm:0.0.2"],\
+            ["tslib", "npm:2.3.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["shebang-command", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/shebang-command-npm-2.0.0-eb2b01921d-6b52fe8727.zip/node_modules/shebang-command/",\
@@ -6502,6 +6504,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/symbol-tree-npm-3.2.4-fe70cdb75b-6e8fc7e148.zip/node_modules/symbol-tree/",\
           "packageDependencies": [\
             ["symbol-tree", "npm:3.2.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["synckit", [\
+        ["npm:0.6.1", {\
+          "packageLocation": "./.yarn/cache/synckit-npm-0.6.1-54df95dab5-015039b01b.zip/node_modules/synckit/",\
+          "packageDependencies": [\
+            ["synckit", "npm:0.6.1"],\
+            ["tslib", "npm:2.3.1"]\
           ],\
           "linkType": "HARD"\
         }]\
