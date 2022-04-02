@@ -4191,13 +4191,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mvdan-sh@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "mvdan-sh@npm:0.5.0"
-  checksum: b662308861c8d77076513d7f154ec2e340b28f34bedcf413450381255408dd6749b92b51b56946945cf016887789decfe7e89f3b201a71e3d908f59bd9e77474
-  languageName: node
-  linkType: hard
-
 "natural-compare@npm:^1.4.0":
   version: 1.4.0
   resolution: "natural-compare@npm:1.4.0"
@@ -4267,7 +4260,7 @@ __metadata:
     prettier: 2.6.1
     prettier-package-json: 2.6.3
     prettier-plugin-organize-imports: 2.3.4
-    prettier-plugin-sh: 0.8.2
+    prettier-plugin-sh: 0.9.0
     ts-jest: 27.1.4
     tslib: 2.3.1
     typescript: 4.6.2
@@ -4622,14 +4615,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-sh@npm:0.8.2":
-  version: 0.8.2
-  resolution: "prettier-plugin-sh@npm:0.8.2"
+"prettier-plugin-sh@npm:0.9.0":
+  version: 0.9.0
+  resolution: "prettier-plugin-sh@npm:0.9.0"
   dependencies:
-    mvdan-sh: ^0.5.0
+    sh-syntax: ^0.0.2
+    synckit: ^0.6.1
   peerDependencies:
     prettier: ^2.0.0
-  checksum: 66297d52b4ed3b32fcf0a7256eaf627bcd3c7bbd8fcb919feb18e4ee3a6911022b53a6a2360bb9b1857286ce6b755327494b1874b764895c8bc3c386c207b17c
+  checksum: 30d2f8110d5854936f68afe88c4c6a6aa4eba18bbc32f5824b1a7b385ad2250a4dda409065608005fe0327c221720d9127bcef5bec935f0da15ca6bb4a4420d9
   languageName: node
   linkType: hard
 
@@ -4988,6 +4982,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sh-syntax@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "sh-syntax@npm:0.0.2"
+  dependencies:
+    tslib: ^2.3.1
+  checksum: 302e1f7a48883406e16582fe8ae7f417417edd858cb0a27d231e655942dc6e1c415ef0ebe374da4d37be429d58036df57cb7285ee0cad8dac27b9eb7a28568cf
+  languageName: node
+  linkType: hard
+
 "shebang-command@npm:^2.0.0":
   version: 2.0.0
   resolution: "shebang-command@npm:2.0.0"
@@ -5334,6 +5337,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"synckit@npm:^0.6.1":
+  version: 0.6.1
+  resolution: "synckit@npm:0.6.1"
+  dependencies:
+    tslib: ^2.3.1
+  checksum: 015039b01b3ade9b01a118afb91dd0fd1c01b56e5d4b4943e092908207133ca84393da2fba729dd8b92fc91734c931c4fd9186d82d867c6bfd7dcb946afa95b3
+  languageName: node
+  linkType: hard
+
 "tar@npm:^6.0.5, tar@npm:^6.1.11, tar@npm:^6.1.2":
   version: 6.1.11
   resolution: "tar@npm:6.1.11"
@@ -5482,7 +5494,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.3.1, tslib@npm:^2.1.0":
+"tslib@npm:2.3.1, tslib@npm:^2.1.0, tslib@npm:^2.3.1":
   version: 2.3.1
   resolution: "tslib@npm:2.3.1"
   checksum: de17a98d4614481f7fcb5cd53ffc1aaf8654313be0291e1bfaee4b4bb31a20494b7d218ff2e15017883e8ea9626599b3b0e0229c18383ba9dce89da2adf15cb9
