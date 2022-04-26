@@ -15,6 +15,7 @@ it("renders fragment with existing description", () => {
     scriptName: "docs:scripts",
     scriptCode: "yarn nsd-debug --include-locals",
     isGlobal: true,
+    isRootManifest: true,
   };
   const fragment = FragmentRenderer.makeDocumentation(meta, meta.description);
   expect(fragment).toMatchSnapshot();
@@ -27,6 +28,7 @@ it("renders fragment without description", () => {
     scriptName: "docs:scripts",
     scriptCode: "yarn nsd-debug --include-locals",
     isGlobal: true,
+    isRootManifest: true,
   };
   const fragment = FragmentRenderer.makeDocumentation(meta, meta.description);
   expect(fragment).toMatchSnapshot();

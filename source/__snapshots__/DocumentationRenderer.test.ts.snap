@@ -3,6 +3,19 @@
 exports[`renders a script store as expected 1`] = `
 "# Full reference
 
+## build
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    tsc
+    \`\`\`
+
+-   Description:
+
+    Build the TypeScript sources.
+
 ## docs:build
 
 -   Project: \`default\`
@@ -62,6 +75,32 @@ exports[`renders a script store as expected 1`] = `
 
     \`\`\`shell
     yarn build && npm version patch && npm publish
+    \`\`\`
+
+-   Description:
+
+    _documentation pending_
+
+## nsd-debug
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    yarn build && node output/node-scripts-docs.js
+    \`\`\`
+
+-   Description:
+
+    Build the latest sources and then use the build output to execute your command. Parameters are passed through by \`yarn\`.
+
+## test
+
+-   Project: \`default\`
+-   Source:
+
+    \`\`\`shell
+    jest
     \`\`\`
 
 -   Description:

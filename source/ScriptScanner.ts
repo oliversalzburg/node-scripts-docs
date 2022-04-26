@@ -43,6 +43,7 @@ export class ScriptScanner {
   async loadScripts() {
     const scriptStore = new ScriptStore(this.rootDirectory);
     for (const manifestPath of this.manifests) {
+      const isRootManifest = manifestPath === "package.json";
       const manifest = await ScriptScanner.loadManifest(
         path.resolve(this.rootDirectory, manifestPath)
       );
@@ -51,7 +52,7 @@ export class ScriptScanner {
 
       for (const [name, script] of Object.entries(projectScripts)) {
         const isGlobal = name.includes(":");
-        scriptStore.add(manifestPath, projectName, name, script, isGlobal);
+        scriptStore.add(manifestPath, projectName, name, script, isGlobal, isRootManifest);
       }
     }
 

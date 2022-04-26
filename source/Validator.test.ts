@@ -23,6 +23,7 @@ it("detects changed fragment", async () => {
   const storeScriptsCached = new ScriptStore("test/fixtures/default");
   storeScriptsCached.scripts.push({
     isGlobal: false,
+    isRootManifest: true,
     manifestPath: "package.json",
     projectName: "default",
     scriptCode: "tsc",
@@ -83,6 +84,7 @@ it("detects missing fragment", async () => {
   const storeScriptsCached = new ScriptStore("test/fixtures/default");
   storeScriptsCached.scripts.push({
     isGlobal: false,
+    isRootManifest: true,
     manifestPath: "package.json",
     projectName: "default",
     scriptCode: "tsc",
@@ -120,6 +122,7 @@ it("detects unchanged+pending fragment", async () => {
   const storeScriptsCached = new ScriptStore("test/fixtures/default");
   storeScriptsCached.scripts.push({
     isGlobal: false,
+    isRootManifest: true,
     manifestPath: "package.json",
     projectName: "default",
     scriptCode: "tsc",
@@ -159,6 +162,7 @@ it("detects corrupted metadata", async () => {
   const storeScriptsCached = new ScriptStore("test/fixtures/default");
   storeScriptsCached.scripts.push({
     isGlobal: false,
+    isRootManifest: true,
     manifestPath: "package.json",
     projectName: "default",
     scriptCode: "tsc",
@@ -196,6 +200,7 @@ it("detects obsolete fragment", async () => {
   const storeScriptsCached = new ScriptStore("test/fixtures/default");
   storeScriptsCached.scripts.push({
     isGlobal: false,
+    isRootManifest: true,
     manifestPath: "package.json",
     projectName: "default",
     scriptCode: "tsc",
@@ -234,6 +239,7 @@ it("detects obsolete fragment", async () => {
   const storeScriptsCached = new ScriptStore("test/fixtures/default");
   storeScriptsCached.scripts.push({
     isGlobal: false,
+    isRootManifest: true,
     manifestPath: "package.json",
     projectName: "default",
     scriptCode: "tsc",

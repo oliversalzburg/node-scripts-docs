@@ -9,6 +9,7 @@ export class ScriptStoreEntry {
   scriptName: string;
   scriptCode: string;
   isGlobal: boolean;
+  isRootManifest: boolean;
   description?: string | undefined;
 
   constructor(
@@ -16,13 +17,15 @@ export class ScriptStoreEntry {
     projectName: string,
     scriptName: string,
     scriptCode: string,
-    isGlobal: boolean
+    isGlobal: boolean,
+    isRootManifest = false
   ) {
     this.manifestPath = manifestPath;
     this.projectName = projectName;
     this.scriptName = scriptName;
     this.scriptCode = scriptCode;
     this.isGlobal = isGlobal;
+    this.isRootManifest = isRootManifest;
   }
 }
 
@@ -47,10 +50,18 @@ export class ScriptStore {
     projectName: string,
     scriptName: string,
     scriptCode: string,
-    isGlobal: boolean
+    isGlobal: boolean,
+    isRootManifest = false
   ) {
     this.scripts.push(
-      new ScriptStoreEntry(manifestPath, projectName, scriptName, scriptCode, isGlobal)
+      new ScriptStoreEntry(
+        manifestPath,
+        projectName,
+        scriptName,
+        scriptCode,
+        isGlobal,
+        isRootManifest
+      )
     );
 
     // Assume consistent order is best preserved on insert.

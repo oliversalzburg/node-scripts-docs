@@ -14,7 +14,7 @@ export class DocumentationRenderer {
   render(includeLocalScripts = false) {
     let fullDocument = "# Full reference\n\n";
     for (const scriptMeta of this.metadata.scripts) {
-      if (!scriptMeta.isGlobal && !includeLocalScripts) {
+      if (!scriptMeta.isGlobal && !scriptMeta.isRootManifest && !includeLocalScripts) {
         continue;
       }
 
@@ -27,7 +27,7 @@ export class DocumentationRenderer {
   async flushFragments(rootDirectory: string, includeLocalScripts = false) {
     await fs.mkdir(rootDirectory, { recursive: true });
     for (const scriptMeta of this.metadata.scripts) {
-      if (!scriptMeta.isGlobal && !includeLocalScripts) {
+      if (!scriptMeta.isGlobal && !scriptMeta.isRootManifest && !includeLocalScripts) {
         continue;
       }
 

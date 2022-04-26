@@ -56,7 +56,7 @@ export class Validator {
     report.obsoleteFragments = obsoleteFragments;
 
     for (const scriptMeta of this.metadataFromScan.scripts) {
-      if (!scriptMeta.isGlobal && !withLocals) {
+      if (!scriptMeta.isGlobal && !scriptMeta.isRootManifest && !withLocals) {
         continue;
       }
 
