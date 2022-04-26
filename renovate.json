@@ -1,5 +1,5 @@
 {
-  "extends": ["config:js-app"],
+  "extends": ["config:base", ":disableDependencyDashboard"],
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
