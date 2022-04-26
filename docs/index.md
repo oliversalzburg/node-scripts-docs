@@ -5,7 +5,7 @@
     === "yarn"
 
         ```shell
-        yarn install -D node-scripts-docs
+        yarn add -D node-scripts-docs
         ```
 
     === "npm"
