@@ -4,9 +4,13 @@
   "description": "Generate documentation for your `package.json` scripts.",
   "license": "UNLICENSED",
   "author": "Oliver Salzburg <oliver.salzburg@gmail.com>",
+  "homepage": "https://oliversalzburg.github.io/node-scripts-docs/",
   "repository": {
     "type": "git",
     "url": "https://github.com/oliversalzburg/node-scripts-docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/oliversalzburg/node-scripts-docs/issues"
   },
   "bin": {
     "nsd": "output/node-scripts-docs.js"
