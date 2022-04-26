@@ -48,7 +48,7 @@
 
     Whenever you've added scripts, removed scripts, updated documentation fragments, just run `yarn nsd` again to synchronize the documentation and the scripts.
 
-!!! warn
+!!! warning
 
     By default, this tool will only operate on scripts that have a `:` in their name. By `yarn` definition, these are _globally available_ scripts throughout the monorepo. This tool is primarily designed for that scenario.
 
