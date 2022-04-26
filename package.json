@@ -1,6 +1,12 @@
 {
   "name": "node-scripts-docs",
   "version": "0.0.9",
+  "license": "UNLICENSED",
+  "author": "Oliver Salzburg <oliver.salzburg@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oliversalzburg/node-scripts-docs.git"
+  },
   "bin": {
     "nsd": "output/node-scripts-docs.js"
   },
