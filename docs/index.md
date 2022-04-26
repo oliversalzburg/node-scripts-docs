@@ -48,11 +48,11 @@
 
     Whenever you've added scripts, removed scripts, updated documentation fragments, just run `yarn nsd` again to synchronize the documentation and the scripts.
 
-!!! warning
+!!! info
 
-    By default, this tool will only operate on scripts that have a `:` in their name. By `yarn` definition, these are _globally available_ scripts throughout the monorepo. This tool is primarily designed for that scenario.
+    By default, this tool will only operate on scripts that either are defined in the root manifest, or have a `:` in their name. By `yarn` definition, the latter are _globally available_ scripts throughout the monorepo. This tool is primarily designed for that scenario.
 
-    However, you can pass `--include-locals` to also include other scripts in the build. If you are working in a monorepo, where multiple workspaces define the same script, this will result in problems. This option is mostly intended for single-workspace projects.
+    However, you can pass `--include-locals` to also include all other scripts in the build. If you are working in a monorepo, where multiple workspaces define the same script (like `test`), this will result in collisions that are currently unhandled.
 
 ## Sample output
 
