@@ -7,30 +7,34 @@
       "scriptName": "build",
       "scriptCode": "tsc",
       "isGlobal": false,
+      "isRootManifest": true,
       "description": "Build the TypeScript sources."
     },
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "docs:build",
-      "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
+      "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs ghcr.io/oliversalzburg/mkdocs-material-ex:main build --site-dir=public",
       "isGlobal": true,
+      "isRootManifest": true,
       "description": "Build the documentation website locally."
     },
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "docs:scripts",
-      "scriptCode": "yarn nsd-debug --include-locals",
+      "scriptCode": "yarn nsd-debug",
       "isGlobal": true,
+      "isRootManifest": true,
       "description": "Rebuilds the `node-scripts-docs` documentation for this project itself."
     },
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "docs:serve",
-      "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material",
+      "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs ghcr.io/oliversalzburg/mkdocs-material-ex:main",
       "isGlobal": true,
+      "isRootManifest": true,
       "description": "Runs the mkdocs-material development server."
     },
     {
@@ -39,6 +43,7 @@
       "scriptName": "npm:publish",
       "scriptCode": "yarn build && npm publish",
       "isGlobal": true,
+      "isRootManifest": true,
       "description": "Build the latest sources and then `npm publish` the current state."
     },
     {
@@ -47,6 +52,7 @@
       "scriptName": "npm:publish:patch",
       "scriptCode": "yarn build && npm version patch && npm publish",
       "isGlobal": true,
+      "isRootManifest": true,
       "description": "Publish a patch release to the npm registry."
     },
     {
@@ -55,6 +61,7 @@
       "scriptName": "nsd-debug",
       "scriptCode": "yarn build && node output/node-scripts-docs.js",
       "isGlobal": false,
+      "isRootManifest": true,
       "description": "Build the latest sources and then use the build output to execute your command. Parameters are passed through by `yarn`."
     },
     {
@@ -63,6 +70,7 @@
       "scriptName": "test",
       "scriptCode": "jest",
       "isGlobal": false,
+      "isRootManifest": true,
       "description": "Execute all Jest test suites."
     },
     {
@@ -71,6 +79,7 @@
       "scriptName": "test:coverage",
       "scriptCode": "jest --coverage",
       "isGlobal": true,
+      "isRootManifest": true,
       "description": "Execute Jest test suites and calculate code coverage."
     }
   ],

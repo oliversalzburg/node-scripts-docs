@@ -19,7 +19,7 @@
 -   Source:
 
     ```shell
-    docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public
+    docker run --rm -it -p 8000:8000 -v ${PWD}:/docs ghcr.io/oliversalzburg/mkdocs-material-ex:main build --site-dir=public
     ```
 
 -   Description:
@@ -32,7 +32,7 @@
 -   Source:
 
     ```shell
-    yarn nsd-debug --include-locals
+    yarn nsd-debug
     ```
 
 -   Description:
@@ -45,7 +45,7 @@
 -   Source:
 
     ```shell
-    docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material
+    docker run --rm -it -p 8000:8000 -v ${PWD}:/docs ghcr.io/oliversalzburg/mkdocs-material-ex:main
     ```
 
 -   Description:
