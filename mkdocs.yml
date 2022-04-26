@@ -1,3 +1,8 @@
+copyright: Oliver Salzburg
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/oliversalzburg/
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -12,6 +17,7 @@ markdown_extensions:
   - toc:
       permalink: true
 plugins:
+  - git-revision-date-localized
   - search
 repo_name: oliversalzburg/node-scripts-docs
 repo_url: https://github.com/oliversalzburg/node-scripts-docs
@@ -25,3 +31,18 @@ theme:
   icon:
     repo: fontawesome/brands/github
   name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      accent: amber
+      primary: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      accent: indigo
+      primary: amber
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
