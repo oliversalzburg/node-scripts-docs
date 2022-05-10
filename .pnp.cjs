@@ -50,7 +50,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.6.2"],\
             ["prettier-package-json", "npm:2.6.3"],\
             ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:2.3.4"],\
-            ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.10.2"],\
+            ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.11.0"],\
             ["ts-jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:28.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
@@ -1263,21 +1263,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@npmcli/move-file", "npm:1.1.2"],\
             ["mkdirp", "npm:1.0.4"],\
             ["rimraf", "npm:3.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["@pkgr/utils", [\
-        ["npm:2.0.3", {\
-          "packageLocation": "./.yarn/cache/@pkgr-utils-npm-2.0.3-ad1537eaaa-168e04653c.zip/node_modules/@pkgr/utils/",\
-          "packageDependencies": [\
-            ["@pkgr/utils", "npm:2.0.3"],\
-            ["chalk", "npm:4.1.2"],\
-            ["cross-spawn", "npm:7.0.3"],\
-            ["is-glob", "npm:4.0.3"],\
-            ["open", "npm:8.4.0"],\
-            ["tiny-glob", "npm:0.2.9"],\
-            ["tslib", "npm:2.4.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2709,15 +2694,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["define-lazy-prop", [\
-        ["npm:2.0.0", {\
-          "packageLocation": "./.yarn/cache/define-lazy-prop-npm-2.0.0-bba0cd91a7-0115fdb065.zip/node_modules/define-lazy-prop/",\
-          "packageDependencies": [\
-            ["define-lazy-prop", "npm:2.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["define-properties", [\
         ["npm:1.1.3", {\
           "packageLocation": "./.yarn/cache/define-properties-npm-1.1.3-0f3115e2b9-da80dba55d.zip/node_modules/define-properties/",\
@@ -3430,15 +3406,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["globalyzer", [\
-        ["npm:0.1.0", {\
-          "packageLocation": "./.yarn/cache/globalyzer-npm-0.1.0-3982d25961-419a0f95ba.zip/node_modules/globalyzer/",\
-          "packageDependencies": [\
-            ["globalyzer", "npm:0.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["globby", [\
         ["npm:11.1.0", {\
           "packageLocation": "./.yarn/cache/globby-npm-11.1.0-bdcdf20c71-b4be8885e0.zip/node_modules/globby/",\
@@ -3450,15 +3417,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ignore", "npm:5.2.0"],\
             ["merge2", "npm:1.4.1"],\
             ["slash", "npm:3.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["globrex", [\
-        ["npm:0.1.2", {\
-          "packageLocation": "./.yarn/cache/globrex-npm-0.1.2-ddda94f2d0-adca162494.zip/node_modules/globrex/",\
-          "packageDependencies": [\
-            ["globrex", "npm:0.1.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3759,15 +3717,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["is-docker", [\
-        ["npm:2.2.1", {\
-          "packageLocation": "./.yarn/cache/is-docker-npm-2.2.1-3f18a53aff-3fef7ddbf0.zip/node_modules/is-docker/",\
-          "packageDependencies": [\
-            ["is-docker", "npm:2.2.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["is-extglob", [\
         ["npm:2.1.1", {\
           "packageLocation": "./.yarn/cache/is-extglob-npm-2.1.1-0870ea68b5-df033653d0.zip/node_modules/is-extglob/",\
@@ -3835,16 +3784,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/is-stream-npm-2.0.1-c802db55e7-b8e05ccdf9.zip/node_modules/is-stream/",\
           "packageDependencies": [\
             ["is-stream", "npm:2.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["is-wsl", [\
-        ["npm:2.2.0", {\
-          "packageLocation": "./.yarn/cache/is-wsl-npm-2.2.0-2ba10d6393-20849846ae.zip/node_modules/is-wsl/",\
-          "packageDependencies": [\
-            ["is-wsl", "npm:2.2.0"],\
-            ["is-docker", "npm:2.2.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5009,11 +4948,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["nanoid", [\
-        ["npm:3.3.2", {\
-          "packageLocation": "./.yarn/cache/nanoid-npm-3.3.2-8c41a1931d-376717f068.zip/node_modules/nanoid/",\
+      ["mvdan-sh", [\
+        ["npm:0.10.1", {\
+          "packageLocation": "./.yarn/cache/mvdan-sh-npm-0.10.1-d68cb00b7b-32ac3ad9ad.zip/node_modules/mvdan-sh/",\
           "packageDependencies": [\
-            ["nanoid", "npm:3.3.2"]\
+            ["mvdan-sh", "npm:0.10.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5095,7 +5034,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.6.2"],\
             ["prettier-package-json", "npm:2.6.3"],\
             ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:2.3.4"],\
-            ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.10.2"],\
+            ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.11.0"],\
             ["ts-jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:28.0.2"],\
             ["tslib", "npm:2.4.0"],\
             ["typescript", "patch:typescript@npm%3A4.6.4#~builtin<compat/typescript>::version=4.6.4&hash=bda367"]\
@@ -5220,18 +5159,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["onetime", "npm:5.1.2"],\
             ["mimic-fn", "npm:2.1.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["open", [\
-        ["npm:8.4.0", {\
-          "packageLocation": "./.yarn/cache/open-npm-8.4.0-df63cfe537-e9545bec64.zip/node_modules/open/",\
-          "packageDependencies": [\
-            ["open", "npm:8.4.0"],\
-            ["define-lazy-prop", "npm:2.0.0"],\
-            ["is-docker", "npm:2.2.1"],\
-            ["is-wsl", "npm:2.2.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5495,21 +5422,20 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier-plugin-sh", [\
-        ["npm:0.10.2", {\
-          "packageLocation": "./.yarn/cache/prettier-plugin-sh-npm-0.10.2-75d922fb3d-045f723df3.zip/node_modules/prettier-plugin-sh/",\
+        ["npm:0.11.0", {\
+          "packageLocation": "./.yarn/cache/prettier-plugin-sh-npm-0.11.0-c1e5f3cac2-c782108250.zip/node_modules/prettier-plugin-sh/",\
           "packageDependencies": [\
-            ["prettier-plugin-sh", "npm:0.10.2"]\
+            ["prettier-plugin-sh", "npm:0.11.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.10.2", {\
-          "packageLocation": "./.yarn/__virtual__/prettier-plugin-sh-virtual-532afbb6a6/0/cache/prettier-plugin-sh-npm-0.10.2-75d922fb3d-045f723df3.zip/node_modules/prettier-plugin-sh/",\
+        ["virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.11.0", {\
+          "packageLocation": "./.yarn/__virtual__/prettier-plugin-sh-virtual-9fe943a97d/0/cache/prettier-plugin-sh-npm-0.11.0-c1e5f3cac2-c782108250.zip/node_modules/prettier-plugin-sh/",\
           "packageDependencies": [\
-            ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.10.2"],\
+            ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.11.0"],\
             ["@types/prettier", "npm:2.6.0"],\
-            ["prettier", "npm:2.6.2"],\
-            ["sh-syntax", "npm:0.1.4"],\
-            ["synckit", "npm:0.7.0"]\
+            ["mvdan-sh", "npm:0.10.1"],\
+            ["prettier", "npm:2.6.2"]\
           ],\
           "packagePeers": [\
             "@types/prettier",\
@@ -5912,17 +5838,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["sh-syntax", [\
-        ["npm:0.1.4", {\
-          "packageLocation": "./.yarn/cache/sh-syntax-npm-0.1.4-f34d59b491-a20cec48df.zip/node_modules/sh-syntax/",\
-          "packageDependencies": [\
-            ["sh-syntax", "npm:0.1.4"],\
-            ["nanoid", "npm:3.3.2"],\
-            ["tslib", "npm:2.4.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["shebang-command", [\
         ["npm:2.0.0", {\
           "packageLocation": "./.yarn/cache/shebang-command-npm-2.0.0-eb2b01921d-6b52fe8727.zip/node_modules/shebang-command/",\
@@ -6280,17 +6195,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
-      ["synckit", [\
-        ["npm:0.7.0", {\
-          "packageLocation": "./.yarn/cache/synckit-npm-0.7.0-88dd321b0e-a175fc4d27.zip/node_modules/synckit/",\
-          "packageDependencies": [\
-            ["synckit", "npm:0.7.0"],\
-            ["@pkgr/utils", "npm:2.0.3"],\
-            ["tslib", "npm:2.4.0"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
       ["tar", [\
         ["npm:6.1.11", {\
           "packageLocation": "./.yarn/cache/tar-npm-6.1.11-e6ac3cba9c-a04c07bb9e.zip/node_modules/tar/",\
@@ -6352,17 +6256,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/through-npm-2.3.8-df5f72a16e-a38c3e0598.zip/node_modules/through/",\
           "packageDependencies": [\
             ["through", "npm:2.3.8"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["tiny-glob", [\
-        ["npm:0.2.9", {\
-          "packageLocation": "./.yarn/cache/tiny-glob-npm-0.2.9-068f4ab3f8-aea5801eb6.zip/node_modules/tiny-glob/",\
-          "packageDependencies": [\
-            ["tiny-glob", "npm:0.2.9"],\
-            ["globalyzer", "npm:0.1.0"],\
-            ["globrex", "npm:0.1.2"]\
           ],\
           "linkType": "HARD"\
         }]\
