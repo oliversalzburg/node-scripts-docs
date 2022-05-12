@@ -38,7 +38,7 @@
     "@types/marked": "4.0.3",
     "@types/minimist": "1.2.2",
     "@types/node": "17.0.10",
-    "@types/prettier": "2.6.0",
+    "@types/prettier": "2.6.1",
     "@types/prettier-package-json": "2.1.1",
     "@yarnpkg/sdks": "2.6.0",
     "eslint": "8.15.0",
