@@ -2,12 +2,12 @@ import { FragmentStore } from "./FragmentStore";
 
 it("converts script name to filename as expected", () => {
   expect(FragmentStore.scriptToFragmentFilename("test:coverage")).toStrictEqual(
-    ".test:coverage.md"
+    ".test$$coverage.md"
   );
 });
 
 it("converts filename to script name as expected", () => {
-  expect(FragmentStore.fragmentFilenameToScript(".test:coverage.md")).toStrictEqual(
+  expect(FragmentStore.fragmentFilenameToScript(".test$$coverage.md")).toStrictEqual(
     "test:coverage"
   );
 });

@@ -71,7 +71,8 @@ export class FragmentStore {
   }
 
   static scriptToFragmentFilename(scriptName: string) {
-    return `.${scriptName}.md`;
+    // $ needs to be duplicated, as it's otherwise interpreted as part of $1,$2,$3,... references
+    return `.${scriptName.replace(/\:/g, "$$$$")}.md`;
   }
 
   static fragmentFilenameToScript(fragmentName: string) {
@@ -80,7 +81,7 @@ export class FragmentStore {
       return null;
     }
 
-    return matches[1];
+    return matches[1].replace(/\$\$/g, ":");
   }
 
   static async exists(storePath: string) {
