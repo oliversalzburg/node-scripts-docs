@@ -1,6 +1,6 @@
 {
   "name": "node-scripts-docs",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Generate documentation for your `package.json` scripts.",
   "license": "UNLICENSED",
   "author": "Oliver Salzburg <oliver.salzburg@gmail.com>",
