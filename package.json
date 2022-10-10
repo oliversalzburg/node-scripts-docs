@@ -29,13 +29,13 @@
   "dependencies": {
     "elapsed-time": "0.0.1",
     "globby": "11.1.0",
-    "marked": "4.0.19",
+    "marked": "4.1.1",
     "minimist": "1.2.6",
     "tslib": "2.4.0"
   },
   "devDependencies": {
     "@types/jest": "^28.1.8",
-    "@types/marked": "4.0.6",
+    "@types/marked": "4.0.7",
     "@types/minimist": "1.2.2",
     "@types/node": "18.7.14",
     "@types/prettier": "2.7.1",
