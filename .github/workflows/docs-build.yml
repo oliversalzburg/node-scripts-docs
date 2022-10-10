@@ -3,7 +3,6 @@ name: Documentation (PR, build only)
 on:
   pull_request:
     branches:
-      - master
       - main
 
 jobs:
