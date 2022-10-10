@@ -4167,7 +4167,7 @@ __metadata:
     marked: 4.0.19
     minimist: 1.2.6
     prettier: 2.7.1
-    prettier-package-json: 2.6.4
+    prettier-package-json: 2.7.0
     prettier-plugin-organize-imports: 3.1.0
     prettier-plugin-sh: 0.12.8
     ts-jest: 28.0.8
@@ -4514,9 +4514,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-package-json@npm:2.6.4":
-  version: 2.6.4
-  resolution: "prettier-package-json@npm:2.6.4"
+"prettier-package-json@npm:2.7.0":
+  version: 2.7.0
+  resolution: "prettier-package-json@npm:2.7.0"
   dependencies:
     "@types/parse-author": ^2.0.0
     commander: ^4.0.1
@@ -4529,7 +4529,7 @@ __metadata:
     sort-order: ^1.0.1
   bin:
     prettier-package-json: bin/prettier-package-json
-  checksum: 1da5d782a8892c5ee362c3b5dd19a1b6cd3e228bf6ec844348a1c5f6fc3970ce23f7e2ff7ab8adb29c12fb76a4e02900f5513758dbca98fe9ae311b431724d39
+  checksum: 1742c8b50766fa54d3b781dae608ddb159eaf38868fc1dcc670bae75e3854f457c16119f92756ead94b182a12ac6d9e5f9d02e9b40c46e338a6d05bec0b5316d
   languageName: node
   linkType: hard
 
