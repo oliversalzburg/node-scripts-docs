@@ -43,7 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["minimist", "npm:1.2.7"],\
             ["prettier", "npm:2.7.1"],\
             ["prettier-package-json", "npm:2.7.0"],\
-            ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.1.1"],\
+            ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.2.0"],\
             ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.12.8"],\
             ["ts-jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:28.0.8"],\
             ["tslib", "npm:2.4.1"],\
@@ -5216,7 +5216,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["minimist", "npm:1.2.7"],\
             ["prettier", "npm:2.7.1"],\
             ["prettier-package-json", "npm:2.7.0"],\
-            ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.1.1"],\
+            ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.2.0"],\
             ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.12.8"],\
             ["ts-jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:28.0.8"],\
             ["tslib", "npm:2.4.1"],\
@@ -5630,20 +5630,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier-plugin-organize-imports", [\
-        ["npm:3.1.1", {\
-          "packageLocation": "./.yarn/cache/prettier-plugin-organize-imports-npm-3.1.1-567d5f658a-a5776ddf70.zip/node_modules/prettier-plugin-organize-imports/",\
+        ["npm:3.2.0", {\
+          "packageLocation": "./.yarn/cache/prettier-plugin-organize-imports-npm-3.2.0-d3838dda23-ba9f0d1bf2.zip/node_modules/prettier-plugin-organize-imports/",\
           "packageDependencies": [\
-            ["prettier-plugin-organize-imports", "npm:3.1.1"]\
+            ["prettier-plugin-organize-imports", "npm:3.2.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.1.1", {\
-          "packageLocation": "./.yarn/__virtual__/prettier-plugin-organize-imports-virtual-ea438a6e7a/0/cache/prettier-plugin-organize-imports-npm-3.1.1-567d5f658a-a5776ddf70.zip/node_modules/prettier-plugin-organize-imports/",\
+        ["virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/prettier-plugin-organize-imports-virtual-449e01e51a/0/cache/prettier-plugin-organize-imports-npm-3.2.0-d3838dda23-ba9f0d1bf2.zip/node_modules/prettier-plugin-organize-imports/",\
           "packageDependencies": [\
-            ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.1.1"],\
+            ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.2.0"],\
             ["@types/prettier", "npm:2.7.1"],\
             ["@types/typescript", null],\
+            ["@types/volar__vue-language-plugin-pug", null],\
             ["@types/volar__vue-typescript", null],\
+            ["@volar/vue-language-plugin-pug", null],\
             ["@volar/vue-typescript", null],\
             ["prettier", "npm:2.7.1"],\
             ["typescript", "patch:typescript@npm%3A4.8.4#~builtin<compat/typescript>::version=4.8.4&hash=0102e9"]\
@@ -5651,7 +5653,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/prettier",\
             "@types/typescript",\
+            "@types/volar__vue-language-plugin-pug",\
             "@types/volar__vue-typescript",\
+            "@volar/vue-language-plugin-pug",\
             "@volar/vue-typescript",\
             "prettier",\
             "typescript"\
