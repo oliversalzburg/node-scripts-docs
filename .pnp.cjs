@@ -43,7 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["minimist", "npm:1.2.7"],\
             ["prettier", "npm:2.8.0"],\
             ["prettier-package-json", "npm:2.7.0"],\
-            ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.2.0"],\
+            ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.2.1"],\
             ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.12.8"],\
             ["ts-jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:28.0.8"],\
             ["tslib", "npm:2.4.1"],\
@@ -5216,7 +5216,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["minimist", "npm:1.2.7"],\
             ["prettier", "npm:2.8.0"],\
             ["prettier-package-json", "npm:2.7.0"],\
-            ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.2.0"],\
+            ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.2.1"],\
             ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.12.8"],\
             ["ts-jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:28.0.8"],\
             ["tslib", "npm:2.4.1"],\
@@ -5630,17 +5630,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["prettier-plugin-organize-imports", [\
-        ["npm:3.2.0", {\
-          "packageLocation": "./.yarn/cache/prettier-plugin-organize-imports-npm-3.2.0-d3838dda23-ba9f0d1bf2.zip/node_modules/prettier-plugin-organize-imports/",\
+        ["npm:3.2.1", {\
+          "packageLocation": "./.yarn/cache/prettier-plugin-organize-imports-npm-3.2.1-dac156fd04-57d0539e26.zip/node_modules/prettier-plugin-organize-imports/",\
           "packageDependencies": [\
-            ["prettier-plugin-organize-imports", "npm:3.2.0"]\
+            ["prettier-plugin-organize-imports", "npm:3.2.1"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.2.0", {\
-          "packageLocation": "./.yarn/__virtual__/prettier-plugin-organize-imports-virtual-449e01e51a/0/cache/prettier-plugin-organize-imports-npm-3.2.0-d3838dda23-ba9f0d1bf2.zip/node_modules/prettier-plugin-organize-imports/",\
+        ["virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.2.1", {\
+          "packageLocation": "./.yarn/__virtual__/prettier-plugin-organize-imports-virtual-2bdd273177/0/cache/prettier-plugin-organize-imports-npm-3.2.1-dac156fd04-57d0539e26.zip/node_modules/prettier-plugin-organize-imports/",\
           "packageDependencies": [\
-            ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.2.0"],\
+            ["prettier-plugin-organize-imports", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:3.2.1"],\
             ["@types/prettier", "npm:2.7.1"],\
             ["@types/typescript", null],\
             ["@types/volar__vue-language-plugin-pug", null],\
