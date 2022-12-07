@@ -39,7 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["globby", "npm:13.1.2"],\
             ["jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:28.1.3"],\
             ["lint-staged", "npm:13.1.0"],\
-            ["marked", "npm:4.2.3"],\
+            ["marked", "npm:4.2.4"],\
             ["minimist", "npm:1.2.7"],\
             ["prettier", "npm:2.8.0"],\
             ["prettier-package-json", "npm:2.7.0"],\
@@ -4923,10 +4923,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["marked", [\
-        ["npm:4.2.3", {\
-          "packageLocation": "./.yarn/cache/marked-npm-4.2.3-8e14562a38-21b9f6cc4e.zip/node_modules/marked/",\
+        ["npm:4.2.4", {\
+          "packageLocation": "./.yarn/cache/marked-npm-4.2.4-27c37fa825-5eb5bfa6ee.zip/node_modules/marked/",\
           "packageDependencies": [\
-            ["marked", "npm:4.2.3"]\
+            ["marked", "npm:4.2.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5205,7 +5205,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["globby", "npm:13.1.2"],\
             ["jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:28.1.3"],\
             ["lint-staged", "npm:13.1.0"],\
-            ["marked", "npm:4.2.3"],\
+            ["marked", "npm:4.2.4"],\
             ["minimist", "npm:1.2.7"],\
             ["prettier", "npm:2.8.0"],\
             ["prettier-package-json", "npm:2.7.0"],\
