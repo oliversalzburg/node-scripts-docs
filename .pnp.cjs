@@ -29,7 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@types/jest", "npm:28.1.8"],\
-            ["@types/marked", "npm:4.0.7"],\
+            ["@types/marked", "npm:4.0.8"],\
             ["@types/minimist", "npm:1.2.2"],\
             ["@types/node", "npm:18.11.11"],\
             ["@types/prettier", "npm:2.7.1"],\
@@ -1517,10 +1517,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@types/marked", [\
-        ["npm:4.0.7", {\
-          "packageLocation": "./.yarn/cache/@types-marked-npm-4.0.7-9766a6e6d5-4907b6a606.zip/node_modules/@types/marked/",\
+        ["npm:4.0.8", {\
+          "packageLocation": "./.yarn/cache/@types-marked-npm-4.0.8-ecccac0208-68278fa7ac.zip/node_modules/@types/marked/",\
           "packageDependencies": [\
-            ["@types/marked", "npm:4.0.7"]\
+            ["@types/marked", "npm:4.0.8"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5195,7 +5195,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["node-scripts-docs", "workspace:."],\
             ["@types/jest", "npm:28.1.8"],\
-            ["@types/marked", "npm:4.0.7"],\
+            ["@types/marked", "npm:4.0.8"],\
             ["@types/minimist", "npm:1.2.2"],\
             ["@types/node", "npm:18.11.11"],\
             ["@types/prettier", "npm:2.7.1"],\
