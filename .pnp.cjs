@@ -31,7 +31,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:28.1.8"],\
             ["@types/marked", "npm:4.0.8"],\
             ["@types/minimist", "npm:1.2.2"],\
-            ["@types/node", "npm:18.11.12"],\
+            ["@types/node", "npm:18.11.13"],\
             ["@types/prettier", "npm:2.7.1"],\
             ["@yarnpkg/sdks", "npm:2.6.3"],\
             ["elapsed-time", "npm:0.0.1"],\
@@ -1549,10 +1549,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:18.11.12", {\
-          "packageLocation": "./.yarn/cache/@types-node-npm-18.11.12-3e4f66dc1e-6c67f0998a.zip/node_modules/@types/node/",\
+        ["npm:18.11.13", {\
+          "packageLocation": "./.yarn/cache/@types-node-npm-18.11.13-8738c466da-b0c1aa3bd2.zip/node_modules/@types/node/",\
           "packageDependencies": [\
-            ["@types/node", "npm:18.11.12"]\
+            ["@types/node", "npm:18.11.13"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5197,7 +5197,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/jest", "npm:28.1.8"],\
             ["@types/marked", "npm:4.0.8"],\
             ["@types/minimist", "npm:1.2.2"],\
-            ["@types/node", "npm:18.11.12"],\
+            ["@types/node", "npm:18.11.13"],\
             ["@types/prettier", "npm:2.7.1"],\
             ["@yarnpkg/sdks", "npm:2.6.3"],\
             ["elapsed-time", "npm:0.0.1"],\
