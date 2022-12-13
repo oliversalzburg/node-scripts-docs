@@ -36,7 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/sdks", "npm:2.6.3"],\
             ["elapsed-time", "npm:0.0.1"],\
             ["eslint", "npm:8.29.0"],\
-            ["globby", "npm:13.1.2"],\
+            ["globby", "npm:13.1.3"],\
             ["jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:28.1.3"],\
             ["lint-staged", "npm:13.1.0"],\
             ["marked", "npm:4.2.4"],\
@@ -3519,10 +3519,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "HARD"\
         }],\
-        ["npm:13.1.2", {\
-          "packageLocation": "./.yarn/cache/globby-npm-13.1.2-3d26efd428-c148fcda0c.zip/node_modules/globby/",\
+        ["npm:13.1.3", {\
+          "packageLocation": "./.yarn/cache/globby-npm-13.1.3-3b0bb18d0b-93f06e0200.zip/node_modules/globby/",\
           "packageDependencies": [\
-            ["globby", "npm:13.1.2"],\
+            ["globby", "npm:13.1.3"],\
             ["dir-glob", "npm:3.0.1"],\
             ["fast-glob", "npm:3.2.12"],\
             ["ignore", "npm:5.2.0"],\
@@ -5202,7 +5202,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@yarnpkg/sdks", "npm:2.6.3"],\
             ["elapsed-time", "npm:0.0.1"],\
             ["eslint", "npm:8.29.0"],\
-            ["globby", "npm:13.1.2"],\
+            ["globby", "npm:13.1.3"],\
             ["jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:28.1.3"],\
             ["lint-staged", "npm:13.1.0"],\
             ["marked", "npm:4.2.4"],\
