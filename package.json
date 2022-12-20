@@ -38,7 +38,7 @@
     "@types/marked": "4.0.8",
     "@types/minimist": "1.2.2",
     "@types/node": "18.11.17",
-    "@types/prettier": "2.7.1",
+    "@types/prettier": "2.7.2",
     "@yarnpkg/sdks": "2.6.3",
     "eslint": "8.30.0",
     "jest": "28.1.3",
