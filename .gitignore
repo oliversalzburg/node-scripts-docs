@@ -6,8 +6,11 @@
 !.yarn/sdks
 !.yarn/versions
 
+/node_modules/
+
 /.vscode/launch.json
 /coverage/
 /output/
 /public/
 tsconfig.tsbuildinfo
+
