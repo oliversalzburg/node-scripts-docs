@@ -47,7 +47,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.12.8"],\
             ["ts-jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:28.0.8"],\
             ["tslib", "npm:2.5.0"],\
-            ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
+            ["typescript", "patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=d73830"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -5189,7 +5189,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier-plugin-sh", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:0.12.8"],\
             ["ts-jest", "virtual:1558dec80d5c2c02fff3baf1ab43c79f9e948952e451c3abd3d9c7dfaed773dec5b3ce3426f0a760914f8d6bbe5a5ba9f091a11175a29654a2fead427d4dfe67#npm:28.0.8"],\
             ["tslib", "npm:2.5.0"],\
-            ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
+            ["typescript", "patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=d73830"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -5617,7 +5617,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@volar/vue-language-plugin-pug", null],\
             ["@volar/vue-typescript", null],\
             ["prettier", "npm:2.8.3"],\
-            ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
+            ["typescript", "patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=d73830"]\
           ],\
           "packagePeers": [\
             "@types/prettier",\
@@ -6556,7 +6556,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lodash.memoize", "npm:4.1.2"],\
             ["make-error", "npm:1.3.6"],\
             ["semver", "npm:7.3.5"],\
-            ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"],\
+            ["typescript", "patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=d73830"],\
             ["yargs-parser", "npm:21.1.1"]\
           ],\
           "packagePeers": [\
@@ -6653,10 +6653,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["typescript", [\
-        ["patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830", {\
-          "packageLocation": "./.yarn/cache/typescript-patch-b9b216bc0d-67ca21a387.zip/node_modules/typescript/",\
+        ["patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=d73830", {\
+          "packageLocation": "./.yarn/cache/typescript-patch-b74a6ef84c-37f6e2c3c5.zip/node_modules/typescript/",\
           "packageDependencies": [\
-            ["typescript", "patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=d73830"]\
+            ["typescript", "patch:typescript@npm%3A4.9.4#~builtin<compat/typescript>::version=4.9.4&hash=d73830"]\
           ],\
           "linkType": "HARD"\
         }]\
