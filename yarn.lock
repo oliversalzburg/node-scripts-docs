@@ -3221,9 +3221,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:13.1.0":
-  version: 13.1.0
-  resolution: "lint-staged@npm:13.1.0"
+"lint-staged@npm:13.1.1":
+  version: 13.1.1
+  resolution: "lint-staged@npm:13.1.1"
   dependencies:
     cli-truncate: ^3.1.0
     colorette: ^2.0.19
@@ -3240,7 +3240,7 @@ __metadata:
     yaml: ^2.1.3
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: e6eeb75b433fd9aaa195c016618017dcf5a0fe87911d0303bb34eda6bfab09b6b5a902f11b26baf3e4a0e911cc683cea8a7f7655f2234739478001b35e58f406
+  checksum: 94397e98f783e7b6af982c0d60020aef4c13177d54a47e822079a41ea46ebdd6f6688281eef59cafa140d95816597efa9a560d7f89fea742cc37478788f8a908
   languageName: node
   linkType: hard
 
@@ -3623,7 +3623,7 @@ __metadata:
     eslint: 8.33.0
     globby: ^11
     jest: 28.1.3
-    lint-staged: 13.1.0
+    lint-staged: 13.1.1
     marked: 4.2.12
     minimist: 1.2.7
     prettier: 2.8.3
