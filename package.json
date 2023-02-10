@@ -31,7 +31,7 @@
     "elapsed-time": "0.0.1",
     "globby": "^11",
     "marked": "4.2.12",
-    "minimist": "1.2.7",
+    "minimist": "1.2.8",
     "tslib": "2.5.0"
   },
   "devDependencies": {
