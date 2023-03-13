@@ -974,10 +974,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:18.15.0":
-  version: 18.15.0
-  resolution: "@types/node@npm:18.15.0"
-  checksum: 64f385e8c48cc23ff2c25860a096bd4357c47dd35eae1a3bb0542f5320544dc280111d2a8542136422c643750ef75f4c41437a2d314a2bb7504772f540fe4141
+"@types/node@npm:18.15.2":
+  version: 18.15.2
+  resolution: "@types/node@npm:18.15.2"
+  checksum: 9b1d73b3d6f11b16fc8d978a7e71945d9e6a0c0e8593dc2221e17d03dbbad0d2f582e83d00db6a799c6180f6553960cf59da528af3e84759bbc986873dc73a17
   languageName: node
   linkType: hard
 
@@ -3632,7 +3632,7 @@ __metadata:
     "@types/jest": ^28.1.8
     "@types/marked": 4.0.8
     "@types/minimist": 1.2.2
-    "@types/node": 18.15.0
+    "@types/node": 18.15.2
     "@types/prettier": 2.7.2
     elapsed-time: 0.0.1
     eslint: 8.36.0
