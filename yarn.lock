@@ -3398,12 +3398,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:4.2.12":
-  version: 4.2.12
-  resolution: "marked@npm:4.2.12"
+"marked@npm:4.3.0":
+  version: 4.3.0
+  resolution: "marked@npm:4.3.0"
   bin:
     marked: bin/marked.js
-  checksum: ce8a2d0def715480f23ade1ee72ad74c9cdfe614442da88dac22049500566cf3e6a1fa41e70c4061bb378beba9896bb4bd542f58aa4a30c1f431e553a461ffe6
+  checksum: 0013463855e31b9c88d8bb2891a611d10ef1dc79f2e3cbff1bf71ba389e04c5971298c886af0be799d7fa9aa4593b086a136062d59f1210b0480b026a8c5dc47
   languageName: node
   linkType: hard
 
@@ -3639,7 +3639,7 @@ __metadata:
     globby: ^11
     jest: 28.1.3
     lint-staged: 13.2.0
-    marked: 4.2.12
+    marked: 4.3.0
     minimist: 1.2.8
     prettier: 2.8.6
     prettier-package-json: 2.8.0
