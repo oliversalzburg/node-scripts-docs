@@ -3641,7 +3641,7 @@ __metadata:
     lint-staged: 13.2.0
     marked: 4.3.0
     minimist: 1.2.8
-    prettier: 2.8.6
+    prettier: 2.8.7
     prettier-package-json: 2.8.0
     prettier-plugin-organize-imports: 3.2.2
     prettier-plugin-sh: 0.12.8
@@ -3979,12 +3979,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.8.6":
-  version: 2.8.6
-  resolution: "prettier@npm:2.8.6"
+"prettier@npm:2.8.7":
+  version: 2.8.7
+  resolution: "prettier@npm:2.8.7"
   bin:
     prettier: bin-prettier.js
-  checksum: 64d27fcf1923b6119ee279bb01bfcf4e232bce87ed49d431366f9aff1f601ced8ef83ada45d90e19a2cb61b6d2af1de2e748d15f56a9ac8fd40995cad82695a8
+  checksum: 84c5b62f7d4909ae5b18b1a4cee67f6a30a548244c8919e67158dee1453f4fa4ff4d291c6f2e41e21d443a0c405f03ec27690502d4ad90c3a7c59bcaf38b51ba
   languageName: node
   linkType: hard
 
