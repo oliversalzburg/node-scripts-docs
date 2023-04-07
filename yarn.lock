@@ -3243,9 +3243,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:13.2.0":
-  version: 13.2.0
-  resolution: "lint-staged@npm:13.2.0"
+"lint-staged@npm:13.2.1":
+  version: 13.2.1
+  resolution: "lint-staged@npm:13.2.1"
   dependencies:
     chalk: 5.2.0
     cli-truncate: ^3.1.0
@@ -3262,7 +3262,7 @@ __metadata:
     yaml: ^2.2.1
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 39c2ab8f40c5a55f3877326d23a8434d1fcbb1772c40aec783dc4cf258fb7f758a6366cc11ec97c1dae446d90b3836d84686e8188dd62e73a68147bc64648093
+  checksum: 324f3b9511e581a7032c36b70386dcd54892cb3558bdfda8713fe3d42ffd6087233592016354e24af0186f1ecce1096ca93207e803312891c4788c6dd3670d6e
   languageName: node
   linkType: hard
 
@@ -3645,7 +3645,7 @@ __metadata:
     eslint: 8.37.0
     globby: ^11
     jest: 28.1.3
-    lint-staged: 13.2.0
+    lint-staged: 13.2.1
     marked: 4.3.0
     minimist: 1.2.8
     prettier: 2.8.7
