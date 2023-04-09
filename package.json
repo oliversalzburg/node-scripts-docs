@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "elapsed-time": "0.0.1",
-    "globby": "^11",
+    "globby": "^13",
     "marked": "4.3.0",
     "minimist": "1.2.8",
     "tslib": "2.5.0"
