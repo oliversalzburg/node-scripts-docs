@@ -3243,9 +3243,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:13.2.1":
-  version: 13.2.1
-  resolution: "lint-staged@npm:13.2.1"
+"lint-staged@npm:13.2.2":
+  version: 13.2.2
+  resolution: "lint-staged@npm:13.2.2"
   dependencies:
     chalk: 5.2.0
     cli-truncate: ^3.1.0
@@ -3259,10 +3259,10 @@ __metadata:
     object-inspect: ^1.12.3
     pidtree: ^0.6.0
     string-argv: ^0.3.1
-    yaml: ^2.2.1
+    yaml: ^2.2.2
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 324f3b9511e581a7032c36b70386dcd54892cb3558bdfda8713fe3d42ffd6087233592016354e24af0186f1ecce1096ca93207e803312891c4788c6dd3670d6e
+  checksum: a3f43ad7a88b57cbdd5e15a6b484955092ecf8bfbb38b009ec47d52ef8d16961785ce85fd6fb49a2d57ec7feb54d6724f1b0b2732f425d0e39b17206a88f7f96
   languageName: node
   linkType: hard
 
@@ -3645,7 +3645,7 @@ __metadata:
     eslint: 8.39.0
     globby: ^11
     jest: 28.1.3
-    lint-staged: 13.2.1
+    lint-staged: 13.2.2
     marked: 5.0.0
     minimist: 1.2.8
     prettier: 2.8.7
@@ -4881,10 +4881,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "yaml@npm:2.2.1"
-  checksum: 12f3a73f2d28970d146184b1425d32a63f65e9f4840eeab09155a4d23a15be8401ac7a3a09b6626895ccf853c1b9069450957c0ad82cfe591369aaa58d1593d6
+"yaml@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "yaml@npm:2.2.2"
+  checksum: a95bed9205a1f1cac11b315cb3f7ddf6b9979b85a478a18c86abf3066fd8d32c88f8de128c1ea97c2ac5f05de3268ff64e8286c241fd956851f1308044a50a9d
   languageName: node
   linkType: hard
 
