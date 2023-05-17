@@ -3653,7 +3653,7 @@ __metadata:
     prettier-plugin-organize-imports: 3.2.2
     prettier-plugin-sh: 0.12.8
     ts-jest: 28.0.8
-    tslib: 2.5.0
+    tslib: 2.5.1
     typescript: 4.9.5
   bin:
     nsd: output/node-scripts-docs.js
@@ -4655,7 +4655,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.5.0, tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.5.0":
+"tslib@npm:2.5.1":
+  version: 2.5.1
+  resolution: "tslib@npm:2.5.1"
+  checksum: f22552f49090ebd75b3585904ac8a1784ef81609f5294969b30b03cf3729be28ffac03e1a0e9e416cabe60a7ebe0caa5f911ee40dfe53ffc1204c96d6b7fa4d2
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.1.0, tslib@npm:^2.4.0, tslib@npm:^2.5.0":
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: e32fc99cc730dd514e53c44e668d76016e738f0bcc726aad5dbd2d335cf19b87a95a9b1e4f0a9993e370f1d702b5e471cdd4acabcac428a3099d496b9af2021e
