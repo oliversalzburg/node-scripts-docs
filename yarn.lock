@@ -953,10 +953,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/marked@npm:4.3.0":
-  version: 4.3.0
-  resolution: "@types/marked@npm:4.3.0"
-  checksum: 048c4f2bfe2036006d53a52a6cf5a12536524ba43b92970c1825cda9b496aa70965eee517ccfa040f6057b5e85f85ea865f5d479eebb5e212ebad069fd868d25
+"@types/marked@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@types/marked@npm:5.0.0"
+  checksum: 327951882a820c20e71601394a34099237359c5e010d09cf61c9a29668b8f54d241174f940cb7f985ea2790fc0e045b0bfe4ca6a35a7a4c26240f51f5c20fcc4
   languageName: node
   linkType: hard
 
@@ -3637,7 +3637,7 @@ __metadata:
   resolution: "node-scripts-docs@workspace:."
   dependencies:
     "@types/jest": ^28.1.8
-    "@types/marked": 4.3.0
+    "@types/marked": 5.0.0
     "@types/minimist": 1.2.2
     "@types/node": 20.2.1
     "@types/prettier": 2.7.2
