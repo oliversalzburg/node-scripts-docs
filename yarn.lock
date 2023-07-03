@@ -1197,13 +1197,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"array-union@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "array-union@npm:2.1.0"
-  checksum: 429897e68110374f39b771ec47a7161fc6a8fc33e196857c0a396dc75df0b5f65e4d046674db764330b6bb66b39ef48dd7c53b6a2ee75cfb0681e0c1a7033962
-  languageName: node
-  linkType: hard
-
 "astral-regex@npm:^2.0.0":
   version: 2.0.0
   resolution: "astral-regex@npm:2.0.0"
@@ -2047,16 +2040,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.9":
-  version: 3.2.12
-  resolution: "fast-glob@npm:3.2.12"
+"fast-glob@npm:^3.2.11":
+  version: 3.3.0
+  resolution: "fast-glob@npm:3.3.0"
   dependencies:
     "@nodelib/fs.stat": ^2.0.2
     "@nodelib/fs.walk": ^1.2.3
     glob-parent: ^5.1.2
     merge2: ^1.3.0
     micromatch: ^4.0.4
-  checksum: 08604fb8ef6442ce74068bef3c3104382bb1f5ab28cf75e4ee904662778b60ad620e1405e692b7edea598ef445f5d387827a965ba034e1892bf54b1dfde97f26
+  checksum: 4700063a2d7c9aae178f575648580bee1fc3f02ab3f358236d77811f52332bc10a398e75c6d5ecde61216996f3308247b37d70e2ee605a0748abe147f01b8f64
   languageName: node
   linkType: hard
 
@@ -2312,17 +2305,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^11":
-  version: 11.1.0
-  resolution: "globby@npm:11.1.0"
+"globby@npm:^13":
+  version: 13.2.1
+  resolution: "globby@npm:13.2.1"
   dependencies:
-    array-union: ^2.1.0
     dir-glob: ^3.0.1
-    fast-glob: ^3.2.9
+    fast-glob: ^3.2.11
     ignore: ^5.2.0
     merge2: ^1.4.1
-    slash: ^3.0.0
-  checksum: b39511b4afe4bd8a7aead3a27c4ade2b9968649abab0a6c28b1a90141b96ca68ca5db1302f7c7bd29eab66bf51e13916b8e0a3d0ac08f75e1e84a39b35691189
+    slash: ^4.0.0
+  checksum: 263cd0a2fa8cfa90b9922f3a3f5309b1ac1be0aa5439f3c11e71087c7d6ae797f236c231fa2c02c5fe576a1d2d247810932525f57f77c1ba2994a41b81a41c27
   languageName: node
   linkType: hard
 
@@ -3642,7 +3634,7 @@ __metadata:
     "@types/prettier": 2.7.3
     elapsed-time: 0.0.1
     eslint: 8.43.0
-    globby: ^11
+    globby: ^13
     jest: 28.1.3
     lint-staged: 13.2.3
     marked: 5.1.0
@@ -4272,6 +4264,13 @@ __metadata:
   version: 3.0.0
   resolution: "slash@npm:3.0.0"
   checksum: e18488c6a42bdfd4ac5be85b2ced3ccd0224773baae6ad42cfbb9ec74fc07f9fa8396bd35ee638084ead7a2a0818eb5e7151111544d4731ce843019dab4be47b
+  languageName: node
+  linkType: hard
+
+"slash@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "slash@npm:4.0.0"
+  checksum: b522ca75d80d107fd30d29df0549a7b2537c83c4c4ecd12cd7d4ea6c8aaca2ab17ada002e7a1d78a9d736a0261509f26ea5b489082ee443a3a810586ef8eff18
   languageName: node
   linkType: hard
 
