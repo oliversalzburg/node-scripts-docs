@@ -967,10 +967,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.4.5":
-  version: 20.4.5
-  resolution: "@types/node@npm:20.4.5"
-  checksum: ed414b8fea1b462cb7444464e18cf0786a11def8b863bcca52b0466992d04f701422f9fc3c33e0601444bfdbf9e18d8f4b163d35902758495b51e635b09fee64
+"@types/node@npm:20.4.10":
+  version: 20.4.10
+  resolution: "@types/node@npm:20.4.10"
+  checksum: 203a930077cb02d91b8ca98a254667112b1f4c5828f94908078c126d22b71508069c3ef70c569b313d56752edcc692e62ee47c267dd0ad44a5c22ab7d128ab8c
   languageName: node
   linkType: hard
 
@@ -3590,7 +3590,7 @@ __metadata:
     "@types/jest": ^28.1.8
     "@types/marked": 5.0.1
     "@types/minimist": 1.2.2
-    "@types/node": 20.4.5
+    "@types/node": 20.4.10
     "@types/prettier": 2.7.3
     elapsed-time: 0.0.1
     eslint: 8.45.0
