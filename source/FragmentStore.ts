@@ -1,5 +1,5 @@
 import fs from "fs/promises";
-import { marked } from "marked";
+import { Tokens, marked } from "marked";
 import path from "path";
 import { DOCUMENTATION_PENDING_DEFAULT } from "./FragmentRenderer";
 
@@ -32,22 +32,21 @@ export class FragmentStore {
 
     const existingDocumentation = await fs.readFile(
       path.resolve(this.fragmentDirectory, fragmentFilename),
-      "utf-8"
+      "utf-8",
     );
     const parsed = marked.lexer(existingDocumentation);
 
     // Expect parsed to be an array of [heading, list]
-    const items = (parsed?.[1] as marked.Tokens.List)?.items;
+    const items = (parsed?.[1] as Tokens.List)?.items;
     // Expect items to be [list_item, list_item, list_item]
     const descriptionItem =
       items &&
       items.find(
-        item =>
-          1 <= item.tokens.length && (item.tokens[0] as marked.Tokens.Text).text === "Description:"
+        item => 1 <= item.tokens.length && (item.tokens[0] as Tokens.Text).text === "Description:",
       );
     if (!descriptionItem) {
       throw new Error(
-        `Unable to find description item in documentation fragment at '${fragmentFilename}'!`
+        `Unable to find description item in documentation fragment at '${fragmentFilename}'!`,
       );
     }
 
@@ -58,7 +57,7 @@ export class FragmentStore {
 
     this.fragments.set(
       assumedScriptName,
-      new DocumentationFragment(fragmentFilename, descriptionRaw)
+      new DocumentationFragment(fragmentFilename, descriptionRaw),
     );
   }
 
