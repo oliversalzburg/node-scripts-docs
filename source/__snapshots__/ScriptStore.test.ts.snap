@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should load an existing store 1`] = `
-Array [
-  Object {
+[
+  {
     "description": "Build the documentation website locally.",
     "isGlobal": true,
     "manifestPath": "package.json",
@@ -10,7 +10,7 @@ Array [
     "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
     "scriptName": "docs:build",
   },
-  Object {
+  {
     "description": "Rebuilds the \`node-scripts-docs\` documentation for this project itself.",
     "isGlobal": true,
     "manifestPath": "package.json",
@@ -18,7 +18,7 @@ Array [
     "scriptCode": "yarn nsd-debug --include-locals",
     "scriptName": "docs:scripts",
   },
-  Object {
+  {
     "description": "Runs the mkdocs-material development server.",
     "isGlobal": true,
     "manifestPath": "package.json",
@@ -26,7 +26,7 @@ Array [
     "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material",
     "scriptName": "docs:serve",
   },
-  Object {
+  {
     "description": "Build the latest sources and then \`npm publish\` the current state.",
     "isGlobal": true,
     "manifestPath": "package.json",
@@ -34,14 +34,14 @@ Array [
     "scriptCode": "yarn build && npm publish",
     "scriptName": "npm:publish",
   },
-  Object {
+  {
     "isGlobal": true,
     "manifestPath": "package.json",
     "projectName": "default",
     "scriptCode": "yarn build && npm version patch && npm publish",
     "scriptName": "npm:publish:patch",
   },
-  Object {
+  {
     "isGlobal": true,
     "manifestPath": "package.json",
     "projectName": "default",
@@ -52,8 +52,8 @@ Array [
 `;
 
 exports[`should load an existing store 2`] = `
-Array [
-  Object {
+[
+  {
     "description": "Build the TypeScript sources.",
     "isGlobal": false,
     "manifestPath": "package.json",
@@ -61,7 +61,7 @@ Array [
     "scriptCode": "tsc",
     "scriptName": "build",
   },
-  Object {
+  {
     "description": "Build the documentation website locally.",
     "isGlobal": true,
     "manifestPath": "package.json",
@@ -69,7 +69,7 @@ Array [
     "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
     "scriptName": "docs:build",
   },
-  Object {
+  {
     "description": "Rebuilds the \`node-scripts-docs\` documentation for this project itself.",
     "isGlobal": true,
     "manifestPath": "package.json",
@@ -77,7 +77,7 @@ Array [
     "scriptCode": "yarn nsd-debug --include-locals",
     "scriptName": "docs:scripts",
   },
-  Object {
+  {
     "description": "Runs the mkdocs-material development server.",
     "isGlobal": true,
     "manifestPath": "package.json",
@@ -85,7 +85,7 @@ Array [
     "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material",
     "scriptName": "docs:serve",
   },
-  Object {
+  {
     "description": "Build the latest sources and then \`npm publish\` the current state.",
     "isGlobal": true,
     "manifestPath": "package.json",
@@ -93,14 +93,14 @@ Array [
     "scriptCode": "yarn build && npm publish",
     "scriptName": "npm:publish",
   },
-  Object {
+  {
     "isGlobal": true,
     "manifestPath": "package.json",
     "projectName": "default",
     "scriptCode": "yarn build && npm version patch && npm publish",
     "scriptName": "npm:publish:patch",
   },
-  Object {
+  {
     "description": "Build the latest sources and then use the build output to execute your command. Parameters are passed through by \`yarn\`.",
     "isGlobal": false,
     "manifestPath": "package.json",
@@ -108,14 +108,14 @@ Array [
     "scriptCode": "yarn build && node output/node-scripts-docs.js",
     "scriptName": "nsd-debug",
   },
-  Object {
+  {
     "isGlobal": false,
     "manifestPath": "package.json",
     "projectName": "default",
     "scriptCode": "jest",
     "scriptName": "test",
   },
-  Object {
+  {
     "isGlobal": true,
     "manifestPath": "package.json",
     "projectName": "default",
