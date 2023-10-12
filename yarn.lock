@@ -996,10 +996,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/marked@npm:5.0.2":
-  version: 5.0.2
-  resolution: "@types/marked@npm:5.0.2"
-  checksum: 357cc530fc94cf876fb6626ab1763c336850d9c884981766a3dc62516abb6f821205a120e5b8209e3333bfa4aba35da6c4acedd2c9a4ddb47951fba70e479fe3
+"@types/marked@npm:6.0.0":
+  version: 6.0.0
+  resolution: "@types/marked@npm:6.0.0"
+  dependencies:
+    marked: "*"
+  checksum: 1a831af52413b1a208c91539d3bdda9be83d5451dc094c3cbc07e3e07186970673b9ec3ad5edd6c136b1249875c41e22c39eacb3c00ea7c59d0873c35c273035
   languageName: node
   linkType: hard
 
@@ -3504,7 +3506,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:9.1.1":
+"marked@npm:*, marked@npm:9.1.1":
   version: 9.1.1
   resolution: "marked@npm:9.1.1"
   bin:
@@ -3736,7 +3738,7 @@ __metadata:
   resolution: "node-scripts-docs@workspace:."
   dependencies:
     "@types/jest": ^29.5.4
-    "@types/marked": 5.0.2
+    "@types/marked": 6.0.0
     "@types/minimist": 1.2.2
     "@types/node": 20.8.0
     elapsed-time: 0.0.1
