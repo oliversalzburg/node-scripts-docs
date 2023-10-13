@@ -1017,10 +1017,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.8.0":
-  version: 20.8.0
-  resolution: "@types/node@npm:20.8.0"
-  checksum: 9ee3b9116bdb85bf519fe373f0faafdec048b6e3e34b1d97c20a3331f3d3ae0a87b08696805758447694869620d6359c81c18fdee30751a8fb4231bffa8f5482
+"@types/node@npm:20.8.6":
+  version: 20.8.6
+  resolution: "@types/node@npm:20.8.6"
+  dependencies:
+    undici-types: ~5.25.1
+  checksum: d0a2bef7e041553540291091d171b6aa7e5e647e4c2d5092e71d5d69bfb272625cd023d5208b91955a78780dac6fdea591962576cfd7a7a94fabbc707fadf7a1
   languageName: node
   linkType: hard
 
@@ -3738,7 +3740,7 @@ __metadata:
     "@types/jest": ^29.5.4
     "@types/marked": 5.0.2
     "@types/minimist": 1.2.2
-    "@types/node": 20.8.0
+    "@types/node": 20.8.6
     elapsed-time: 0.0.1
     eslint: 8.50.0
     globby: ^11
@@ -4752,6 +4754,13 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 062c1cee1990e6b9419ce8a55162b8dc917eb87f807e4de0327dbc1c2fa4e5f61bc0dd4e034d38ff541d1ed0479b53bcee8e4de3a4075c51a1724eb6216cb6f5
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~5.25.1":
+  version: 5.25.3
+  resolution: "undici-types@npm:5.25.3"
+  checksum: 60a47c6db451c00d27186d86a41fbd9677fa1f6d1a5350bff342c3985bd79fc3f5a638ebf56bbce21df46c701a687db43b3fbd588e1726e58047cea14d182fef
   languageName: node
   linkType: hard
 
