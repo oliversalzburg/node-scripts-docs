@@ -1003,10 +1003,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/minimist@npm:1.2.2":
-  version: 1.2.2
-  resolution: "@types/minimist@npm:1.2.2"
-  checksum: f220f57f682bbc3793dab4518f8e2180faa79d8e2589c79614fd777d7182be203ba399020c3a056a115064f5d57a065004a32b522b2737246407621681b24137
+"@types/minimist@npm:1.2.4":
+  version: 1.2.4
+  resolution: "@types/minimist@npm:1.2.4"
+  checksum: 01403652c09de17b8c6d7d9959cb7a244deccf31e9e7a1a7011fba73fa2724c14fe935718e0fdc48dcd30403fd76a916cb991d4c0ddf229748ccc6c4920c3371
   languageName: node
   linkType: hard
 
@@ -3737,7 +3737,7 @@ __metadata:
   dependencies:
     "@types/jest": ^29.5.4
     "@types/marked": 5.0.2
-    "@types/minimist": 1.2.2
+    "@types/minimist": 1.2.4
     "@types/node": 20.8.0
     elapsed-time: 0.0.1
     eslint: 8.50.0
