@@ -30,13 +30,13 @@
   },
   "dependencies": {
     "elapsed-time": "0.0.1",
-    "globby": "^13.2.2",
+    "globby": "13.2.2",
     "marked": "9.1.2",
     "minimist": "1.2.8",
     "tslib": "2.6.2"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.4",
+    "@types/jest": "29.5.6",
     "@types/minimist": "1.2.4",
     "@types/node": "20.8.7",
     "eslint": "8.52.0",

@@ -946,7 +946,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^29.5.4":
+"@types/jest@npm:29.5.6":
   version: 29.5.6
   resolution: "@types/jest@npm:29.5.6"
   dependencies:
@@ -2302,7 +2302,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globby@npm:^13.2.2":
+"globby@npm:13.2.2":
   version: 13.2.2
   resolution: "globby@npm:13.2.2"
   dependencies:
@@ -3603,12 +3603,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "node-scripts-docs@workspace:."
   dependencies:
-    "@types/jest": ^29.5.4
+    "@types/jest": 29.5.6
     "@types/minimist": 1.2.4
     "@types/node": 20.8.7
     elapsed-time: 0.0.1
     eslint: 8.52.0
-    globby: ^13.2.2
+    globby: 13.2.2
     jest: 29.7.0
     lint-staged: 15.0.2
     marked: 9.1.2
