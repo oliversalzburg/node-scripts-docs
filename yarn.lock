@@ -956,13 +956,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/marked@npm:5.0.2":
-  version: 5.0.2
-  resolution: "@types/marked@npm:5.0.2"
-  checksum: 357cc530fc94cf876fb6626ab1763c336850d9c884981766a3dc62516abb6f821205a120e5b8209e3333bfa4aba35da6c4acedd2c9a4ddb47951fba70e479fe3
-  languageName: node
-  linkType: hard
-
 "@types/minimist@npm:1.2.4":
   version: 1.2.4
   resolution: "@types/minimist@npm:1.2.4"
@@ -970,10 +963,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:20.8.0":
-  version: 20.8.0
-  resolution: "@types/node@npm:20.8.0"
-  checksum: 9ee3b9116bdb85bf519fe373f0faafdec048b6e3e34b1d97c20a3331f3d3ae0a87b08696805758447694869620d6359c81c18fdee30751a8fb4231bffa8f5482
+"@types/node@npm:*, @types/node@npm:20.8.7":
+  version: 20.8.7
+  resolution: "@types/node@npm:20.8.7"
+  dependencies:
+    undici-types: ~5.25.1
+  checksum: e82b87e7f3f4c12acc5803db21f9144d5e87c20841db9ae98746958e038064700ab04294d08a3714a3df8bd710a974998e2e423443a5d031840cbba17fa126a7
   languageName: node
   linkType: hard
 
@@ -3609,9 +3604,8 @@ __metadata:
   resolution: "node-scripts-docs@workspace:."
   dependencies:
     "@types/jest": ^29.5.4
-    "@types/marked": 5.0.2
     "@types/minimist": 1.2.4
-    "@types/node": 20.8.0
+    "@types/node": 20.8.7
     elapsed-time: 0.0.1
     eslint: 8.52.0
     globby: ^13.2.2
@@ -4610,6 +4604,13 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 062c1cee1990e6b9419ce8a55162b8dc917eb87f807e4de0327dbc1c2fa4e5f61bc0dd4e034d38ff541d1ed0479b53bcee8e4de3a4075c51a1724eb6216cb6f5
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~5.25.1":
+  version: 5.25.3
+  resolution: "undici-types@npm:5.25.3"
+  checksum: 60a47c6db451c00d27186d86a41fbd9677fa1f6d1a5350bff342c3985bd79fc3f5a638ebf56bbce21df46c701a687db43b3fbd588e1726e58047cea14d182fef
   languageName: node
   linkType: hard
 
