@@ -1,8 +1,8 @@
-import fs from "fs/promises";
-import path from "path";
-import { FragmentRenderer } from "./FragmentRenderer";
-import { FragmentStore } from "./FragmentStore";
-import { ScriptStore } from "./ScriptStore";
+import fs from "node:fs/promises";
+import path from "node:path";
+import { FragmentRenderer } from "./FragmentRenderer.js";
+import { FragmentStore } from "./FragmentStore.js";
+import { ScriptStore } from "./ScriptStore.js";
 
 export class DocumentationRenderer {
   private metadata: ScriptStore;

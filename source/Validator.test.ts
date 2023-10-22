@@ -1,13 +1,13 @@
 import path from "path";
-import { DOCUMENTATION_PENDING_DEFAULT } from "./FragmentRenderer";
-import { DOCS_FRAGMENTS_DEFAULT_LOCATION, FragmentStore } from "./FragmentStore";
-import { ScriptStore } from "./ScriptStore";
-import { StoreAugmenter } from "./StoreAugmenter";
-import { Validator } from "./Validator";
+import { DOCUMENTATION_PENDING_DEFAULT } from "./FragmentRenderer.js";
+import { DOCS_FRAGMENTS_DEFAULT_LOCATION, FragmentStore } from "./FragmentStore.js";
+import { ScriptStore } from "./ScriptStore.js";
+import { StoreAugmenter } from "./StoreAugmenter.js";
+import { Validator } from "./Validator.js";
 
 it("detects changed fragment", async () => {
   const storeFragments = new FragmentStore(
-    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION)
+    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
   storeFragments.fragments.set("build", {
     descriptionMarkdown: "Build the TypeScript sources.",
@@ -46,7 +46,7 @@ it("detects changed fragment", async () => {
 
 it("detects new script", async () => {
   const storeFragments = new FragmentStore(
-    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION)
+    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
 
   const storeScripts = new ScriptStore("test/fixtures/default");
@@ -72,7 +72,7 @@ it("detects new script", async () => {
 
 it("detects missing fragment", async () => {
   const storeFragments = new FragmentStore(
-    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION)
+    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
 
   const storeScripts = new ScriptStore("test/fixtures/default");
@@ -106,7 +106,7 @@ it("detects missing fragment", async () => {
 
 it("detects unchanged+pending fragment", async () => {
   const storeFragments = new FragmentStore(
-    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION)
+    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
   storeFragments.fragments.set("build", {
     descriptionMarkdown: DOCUMENTATION_PENDING_DEFAULT,
@@ -146,7 +146,7 @@ it("detects unchanged+pending fragment", async () => {
 
 it("detects corrupted metadata", async () => {
   const storeFragments = new FragmentStore(
-    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION)
+    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
   storeFragments.fragments.set("build", {
     descriptionMarkdown: "Excellent documentation",
@@ -184,7 +184,7 @@ it("detects corrupted metadata", async () => {
 
 it("detects obsolete fragment", async () => {
   const storeFragments = new FragmentStore(
-    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION)
+    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
   const fragment = {
     descriptionMarkdown: "Excellent documentation",
@@ -222,7 +222,7 @@ it("detects obsolete fragment", async () => {
 
 it("detects obsolete fragment", async () => {
   const storeFragments = new FragmentStore(
-    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION)
+    path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
   const fragment = {
     descriptionMarkdown: "Excellent documentation",

@@ -1,17 +1,17 @@
 #!/usr/bin/env node
 
 import ElapsedTime from "elapsed-time";
-import fs from "fs/promises";
 import minimist from "minimist";
-import path from "path";
-import { DocumentationRenderer } from "./DocumentationRenderer";
-import { FragmentScanner } from "./FragmentScanner";
-import { DOCS_FRAGMENTS_DEFAULT_LOCATION, FragmentStore } from "./FragmentStore";
-import { ReportRenderer } from "./ReportRenderer";
-import { ScriptScanner } from "./ScriptScanner";
-import { ScriptStore, SCRIPTS_METADATA_DEFAULT_FILENAME } from "./ScriptStore";
-import { StoreAugmenter } from "./StoreAugmenter";
-import { Validator } from "./Validator";
+import fs from "node:fs/promises";
+import path from "node:path";
+import { DocumentationRenderer } from "./DocumentationRenderer.js";
+import { FragmentScanner } from "./FragmentScanner.js";
+import { DOCS_FRAGMENTS_DEFAULT_LOCATION, FragmentStore } from "./FragmentStore.js";
+import { ReportRenderer } from "./ReportRenderer.js";
+import { ScriptScanner } from "./ScriptScanner.js";
+import { SCRIPTS_METADATA_DEFAULT_FILENAME, ScriptStore } from "./ScriptStore.js";
+import { StoreAugmenter } from "./StoreAugmenter.js";
+import { Validator } from "./Validator.js";
 
 const argv = minimist(process.argv.slice(2));
 
@@ -33,21 +33,21 @@ const argv = minimist(process.argv.slice(2));
   }
   const manifest = await ScriptScanner.loadManifest(manifestPath);
   console.info(
-    `Manifest: package.json (exists) [${manifest.name}@${manifest.version ?? "<no version>"}]`
+    `Manifest: package.json (exists) [${manifest.name}@${manifest.version ?? "<no version>"}]`,
   );
 
   const scriptStoreName = argv.store ?? SCRIPTS_METADATA_DEFAULT_FILENAME;
   const scriptStorePath = path.resolve(rootDirectory, scriptStoreName);
   const scriptStoreExists = await ScriptStore.exists(scriptStorePath);
   console.info(
-    `Metadata store: ${scriptStoreName} (${scriptStoreExists ? "exists" : "doesn't exist"})`
+    `Metadata store: ${scriptStoreName} (${scriptStoreExists ? "exists" : "doesn't exist"})`,
   );
 
   const docsLocation = argv["docs-location"] ?? DOCS_FRAGMENTS_DEFAULT_LOCATION;
   const fragmentStorePath = path.resolve(rootDirectory, docsLocation);
   const fragmentStoreExists = await FragmentStore.exists(fragmentStorePath);
   console.info(
-    `Docs location: ${docsLocation} (${fragmentStoreExists ? "exists" : "doesn't exist"})`
+    `Docs location: ${docsLocation} (${fragmentStoreExists ? "exists" : "doesn't exist"})`,
   );
 
   const skipScan = Boolean(argv["skip-scan"]) ?? false;
@@ -59,7 +59,7 @@ const argv = minimist(process.argv.slice(2));
     console.info(`Found ${scriptScanner.manifests.length} manifest(s).`);
     scriptStoreFromScan = await scriptScanner.loadScripts();
     console.info(
-      `Manifests contain ${scriptStoreFromScan.scripts.length} script(s), ${scriptStoreFromScan.globalScripts.length} as global.`
+      `Manifests contain ${scriptStoreFromScan.scripts.length} script(s), ${scriptStoreFromScan.globalScripts.length} as global.`,
     );
   }
 
@@ -88,7 +88,7 @@ const argv = minimist(process.argv.slice(2));
     const validator = new Validator(
       scriptStore ?? new ScriptStore(rootDirectory),
       scriptStoreFromScan,
-      fragmentStore ?? new FragmentStore(fragmentStorePath)
+      fragmentStore ?? new FragmentStore(fragmentStorePath),
     );
 
     const report = validator.generateReport(withLocalScripts);

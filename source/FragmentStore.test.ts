@@ -1,14 +1,14 @@
-import { FragmentStore } from "./FragmentStore";
+import { FragmentStore } from "./FragmentStore.js";
 
 it("converts script name to filename as expected", () => {
   expect(FragmentStore.scriptToFragmentFilename("test:coverage")).toStrictEqual(
-    ".test$$coverage.md"
+    ".test$$coverage.md",
   );
 });
 
 it("converts filename to script name as expected", () => {
   expect(FragmentStore.fragmentFilenameToScript(".test$$coverage.md")).toStrictEqual(
-    "test:coverage"
+    "test:coverage",
   );
 });
 
@@ -19,14 +19,14 @@ it("returns null for invalid fragment file name conversion", () => {
 it("refuses to load invalid fragment name", async () => {
   const store = new FragmentStore("test/fixtures/default/docs");
   await expect(() => store.loadFragment("invalid-fragment.md")).rejects.toThrow(
-    "Unable to interpret fragment file name 'invalid-fragment.md'!"
+    "Unable to interpret fragment file name 'invalid-fragment.md'!",
   );
 });
 
 it("refuses to load invalid fragment", async () => {
   const store = new FragmentStore("test/fixtures/default/docs");
   await expect(() => store.loadFragment(".invalid-description.md")).rejects.toThrow(
-    "Unable to find description item in documentation fragment at '.invalid-description.md'!"
+    "Unable to find description item in documentation fragment at '.invalid-description.md'!",
   );
 });
 

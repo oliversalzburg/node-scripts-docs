@@ -1,4 +1,4 @@
-import { ReportRenderer } from "./ReportRenderer";
+import { ReportRenderer } from "./ReportRenderer.js";
 
 it("renders empty report as expected", () => {
   const report = {

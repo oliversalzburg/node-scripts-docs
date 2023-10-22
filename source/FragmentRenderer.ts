@@ -1,4 +1,4 @@
-import { ScriptStoreEntry } from "./ScriptStore";
+import { ScriptStoreEntry } from "./ScriptStore.js";
 
 export const DOCUMENTATION_PENDING_DEFAULT = "_documentation pending_";
 

@@ -1,5 +1,5 @@
-import globby from "globby";
-import { FragmentStore } from "./FragmentStore";
+import { globby } from "globby";
+import { FragmentStore } from "./FragmentStore.js";
 
 export class FragmentScanner {
   static async loadFragments(fragmentDirectory: string) {

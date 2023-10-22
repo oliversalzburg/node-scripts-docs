@@ -1,6 +1,6 @@
-import { FragmentRenderer } from "./FragmentRenderer";
-import { FragmentStore } from "./FragmentStore";
-import { ScriptStore } from "./ScriptStore";
+import { FragmentRenderer } from "./FragmentRenderer.js";
+import { FragmentStore } from "./FragmentStore.js";
+import { ScriptStore } from "./ScriptStore.js";
 
 export class StoreAugmenter {
   scriptStore: ScriptStore;

@@ -12,6 +12,7 @@
   "bugs": {
     "url": "https://github.com/oliversalzburg/node-scripts-docs/issues"
   },
+  "type": "module",
   "bin": {
     "nsd": "output/node-scripts-docs.js"
   },
@@ -24,12 +25,12 @@
     "npm:publish:minor": "yarn build && npm version minor && npm publish",
     "npm:publish:patch": "yarn build && npm version patch && npm publish",
     "nsd-debug": "yarn build && node output/node-scripts-docs.js",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test": "node --experimental-vm-modules $(yarn bin jest)",
+    "test:coverage": "node --experimental-vm-modules $(yarn bin jest) --coverage"
   },
   "dependencies": {
     "elapsed-time": "0.0.1",
-    "globby": "^11",
+    "globby": "^13.2.2",
     "marked": "9.1.2",
     "minimist": "1.2.8",
     "tslib": "2.6.2"

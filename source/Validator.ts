@@ -1,6 +1,6 @@
-import { FragmentRenderer } from "./FragmentRenderer";
-import { DocumentationFragment, FragmentStore } from "./FragmentStore";
-import { ScriptStore, ScriptStoreEntry } from "./ScriptStore";
+import { FragmentRenderer } from "./FragmentRenderer.js";
+import { DocumentationFragment, FragmentStore } from "./FragmentStore.js";
+import { ScriptStore, ScriptStoreEntry } from "./ScriptStore.js";
 
 export type ValidationReport = {
   // Scripts for which the description in the fragment doesn't match the metadata.
@@ -63,7 +63,7 @@ export class Validator {
       const cachedMeta = this.metadata.scripts.find(
         candidate =>
           candidate.projectName === scriptMeta.projectName &&
-          candidate.scriptName === scriptMeta.scriptName
+          candidate.scriptName === scriptMeta.scriptName,
       );
 
       if (!cachedMeta) {

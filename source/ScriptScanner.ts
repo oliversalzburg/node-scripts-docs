@@ -1,7 +1,7 @@
-import fs from "fs/promises";
-import globby from "globby";
-import path from "path";
-import { ScriptStore } from "./ScriptStore";
+import { globby } from "globby";
+import fs from "node:fs/promises";
+import path from "node:path";
+import { ScriptStore } from "./ScriptStore.js";
 
 export type Manifest = {
   name: string;
@@ -45,7 +45,7 @@ export class ScriptScanner {
     for (const manifestPath of this.manifests) {
       const isRootManifest = manifestPath === "package.json";
       const manifest = await ScriptScanner.loadManifest(
-        path.resolve(this.rootDirectory, manifestPath)
+        path.resolve(this.rootDirectory, manifestPath),
       );
       const projectName = manifest.name;
       const projectScripts: Record<string, string> = manifest.scripts || {};

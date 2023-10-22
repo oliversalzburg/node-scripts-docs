@@ -1,5 +1,5 @@
-import { FragmentRenderer } from "./FragmentRenderer";
-import { ScriptStoreEntry } from "./ScriptStore";
+import { FragmentRenderer } from "./FragmentRenderer.js";
+import { ScriptStoreEntry } from "./ScriptStore.js";
 
 it("identifies pending description", () => {
   expect(FragmentRenderer.isDefaultDescription("_documentation pending_")).toBe(true);

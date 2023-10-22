@@ -1,4 +1,4 @@
-import { ScriptStore } from "./ScriptStore";
+import { ScriptStore } from "./ScriptStore.js";
 
 it("reliably detects existence", async () => {
   expect(await ScriptStore.exists("test/fixtures/default")).toBe(true);

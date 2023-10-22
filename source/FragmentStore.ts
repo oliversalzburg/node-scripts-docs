@@ -1,7 +1,7 @@
-import fs from "fs/promises";
 import { Tokens, marked } from "marked";
-import path from "path";
-import { DOCUMENTATION_PENDING_DEFAULT } from "./FragmentRenderer";
+import fs from "node:fs/promises";
+import path from "node:path";
+import { DOCUMENTATION_PENDING_DEFAULT } from "./FragmentRenderer.js";
 
 export const DOCS_FRAGMENTS_DEFAULT_LOCATION = "docs/reference/Repository Scripts/";
 

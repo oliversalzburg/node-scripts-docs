@@ -3,6 +3,7 @@
 exports[`loads existing manifests (monorepo) 1`] = `
 [
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": false,
     "isRootManifest": true,
     "manifestPath": "package.json",
@@ -11,6 +12,7 @@ exports[`loads existing manifests (monorepo) 1`] = `
     "scriptName": "build",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": false,
     "isRootManifest": false,
     "manifestPath": "packages/some-project/package.json",
@@ -19,6 +21,7 @@ exports[`loads existing manifests (monorepo) 1`] = `
     "scriptName": "build",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": true,
     "isRootManifest": false,
     "manifestPath": "packages/some-project/package.json",
@@ -27,6 +30,7 @@ exports[`loads existing manifests (monorepo) 1`] = `
     "scriptName": "docs:build",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": true,
     "isRootManifest": false,
     "manifestPath": "packages/some-project/package.json",
@@ -35,6 +39,7 @@ exports[`loads existing manifests (monorepo) 1`] = `
     "scriptName": "docs:scripts",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": true,
     "isRootManifest": false,
     "manifestPath": "packages/some-project/package.json",
@@ -43,6 +48,7 @@ exports[`loads existing manifests (monorepo) 1`] = `
     "scriptName": "docs:serve",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": true,
     "isRootManifest": false,
     "manifestPath": "packages/some-project/package.json",
@@ -51,6 +57,7 @@ exports[`loads existing manifests (monorepo) 1`] = `
     "scriptName": "npm:publish",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": true,
     "isRootManifest": false,
     "manifestPath": "packages/some-project/package.json",
@@ -59,6 +66,7 @@ exports[`loads existing manifests (monorepo) 1`] = `
     "scriptName": "npm:publish:patch",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": false,
     "isRootManifest": false,
     "manifestPath": "packages/some-project/package.json",
@@ -67,6 +75,7 @@ exports[`loads existing manifests (monorepo) 1`] = `
     "scriptName": "nsd-debug",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": false,
     "isRootManifest": true,
     "manifestPath": "package.json",
@@ -75,6 +84,7 @@ exports[`loads existing manifests (monorepo) 1`] = `
     "scriptName": "test",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": false,
     "isRootManifest": false,
     "manifestPath": "packages/some-project/package.json",
@@ -83,6 +93,7 @@ exports[`loads existing manifests (monorepo) 1`] = `
     "scriptName": "test",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": true,
     "isRootManifest": false,
     "manifestPath": "packages/some-project/package.json",
@@ -96,6 +107,7 @@ exports[`loads existing manifests (monorepo) 1`] = `
 exports[`loads existing manifests (simple project) 1`] = `
 [
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": false,
     "isRootManifest": true,
     "manifestPath": "package.json",
@@ -104,6 +116,7 @@ exports[`loads existing manifests (simple project) 1`] = `
     "scriptName": "build",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": true,
     "isRootManifest": true,
     "manifestPath": "package.json",
@@ -112,6 +125,7 @@ exports[`loads existing manifests (simple project) 1`] = `
     "scriptName": "docs:build",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": true,
     "isRootManifest": true,
     "manifestPath": "package.json",
@@ -120,6 +134,7 @@ exports[`loads existing manifests (simple project) 1`] = `
     "scriptName": "docs:scripts",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": true,
     "isRootManifest": true,
     "manifestPath": "package.json",
@@ -128,6 +143,7 @@ exports[`loads existing manifests (simple project) 1`] = `
     "scriptName": "docs:serve",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": true,
     "isRootManifest": true,
     "manifestPath": "package.json",
@@ -136,6 +152,7 @@ exports[`loads existing manifests (simple project) 1`] = `
     "scriptName": "npm:publish",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": true,
     "isRootManifest": true,
     "manifestPath": "package.json",
@@ -144,6 +161,7 @@ exports[`loads existing manifests (simple project) 1`] = `
     "scriptName": "npm:publish:patch",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": false,
     "isRootManifest": true,
     "manifestPath": "package.json",
@@ -152,6 +170,7 @@ exports[`loads existing manifests (simple project) 1`] = `
     "scriptName": "nsd-debug",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": false,
     "isRootManifest": true,
     "manifestPath": "package.json",
@@ -160,6 +179,7 @@ exports[`loads existing manifests (simple project) 1`] = `
     "scriptName": "test",
   },
   ScriptStoreEntry {
+    "description": undefined,
     "isGlobal": true,
     "isRootManifest": true,
     "manifestPath": "package.json",

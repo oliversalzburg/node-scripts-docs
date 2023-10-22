@@ -1,5 +1,5 @@
-import fs from "fs/promises";
-import path from "path";
+import fs from "node:fs/promises";
+import path from "node:path";
 
 export const SCRIPTS_METADATA_DEFAULT_FILENAME = "package.json-scripts.json";
 
@@ -18,7 +18,7 @@ export class ScriptStoreEntry {
     scriptName: string,
     scriptCode: string,
     isGlobal: boolean,
-    isRootManifest = false
+    isRootManifest = false,
   ) {
     this.manifestPath = manifestPath;
     this.projectName = projectName;
@@ -51,7 +51,7 @@ export class ScriptStore {
     scriptName: string,
     scriptCode: string,
     isGlobal: boolean,
-    isRootManifest = false
+    isRootManifest = false,
   ) {
     this.scripts.push(
       new ScriptStoreEntry(
@@ -60,28 +60,28 @@ export class ScriptStore {
         scriptName,
         scriptCode,
         isGlobal,
-        isRootManifest
-      )
+        isRootManifest,
+      ),
     );
 
     // Assume consistent order is best preserved on insert.
     this.scripts.sort(
       (a, b) =>
-        a.scriptName.localeCompare(b.scriptName) || a.projectName.localeCompare(b.projectName)
+        a.scriptName.localeCompare(b.scriptName) || a.projectName.localeCompare(b.projectName),
     );
   }
 
   async save(filename?: string) {
     return fs.writeFile(
       path.resolve(this.#rootDirectory, filename ?? this.#filename),
-      JSON.stringify(this, undefined, 2)
+      JSON.stringify(this, undefined, 2),
     );
   }
 
   async load(filename?: string) {
     const storeContent = await fs.readFile(
       path.resolve(this.#rootDirectory, filename ?? this.#filename),
-      "utf-8"
+      "utf-8",
     );
     const store = JSON.parse(storeContent) as ScriptStore;
     if (store.version && store.version !== this.version) {

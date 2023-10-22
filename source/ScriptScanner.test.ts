@@ -1,4 +1,4 @@
-import { ScriptScanner } from "./ScriptScanner";
+import { ScriptScanner } from "./ScriptScanner.js";
 
 it("finds existing manifests (simple project)", async () => {
   const scanner = new ScriptScanner("test/fixtures/default");
@@ -10,7 +10,7 @@ it("finds existing manifests (monorepo)", async () => {
   const scanner = new ScriptScanner("test/fixtures/monorepo");
   const manifests = await scanner.findManifests();
   expect(manifests).toEqual(
-    expect.arrayContaining(["package.json", "packages/some-project/package.json"])
+    expect.arrayContaining(["package.json", "packages/some-project/package.json"]),
   );
 });
 

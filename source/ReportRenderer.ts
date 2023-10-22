@@ -1,6 +1,6 @@
-import { FragmentStore } from "./FragmentStore";
-import { ScriptStore } from "./ScriptStore";
-import { ValidationReport } from "./Validator";
+import { FragmentStore } from "./FragmentStore.js";
+import { ScriptStore } from "./ScriptStore.js";
+import { ValidationReport } from "./Validator.js";
 
 export class ReportRenderer {
   static render(report: ValidationReport, skipPending = true) {
@@ -9,7 +9,7 @@ export class ReportRenderer {
       output.push(` --- Pending documentation --- `);
       for (const scriptMeta of report.pendingDocumentation) {
         output.push(
-          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
+          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`,
         );
       }
       output.push("");
@@ -21,7 +21,7 @@ export class ReportRenderer {
         output.push(
           `  ${FragmentStore.scriptToFragmentFilename(scriptMeta.scriptName)} (${
             scriptMeta.scriptName
-          })`
+          })`,
         );
       }
       output.push("");
@@ -31,7 +31,7 @@ export class ReportRenderer {
       output.push(` --- Outdated metadata (will be updated) --- `);
       for (const scriptMeta of report.corruptedMetadataRecords) {
         output.push(
-          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
+          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`,
         );
       }
       output.push("");
@@ -51,7 +51,7 @@ export class ReportRenderer {
         output.push(
           `  ${FragmentStore.scriptToFragmentFilename(scriptMeta.scriptName)} (${
             scriptMeta.scriptName
-          })`
+          })`,
         );
       }
       output.push("");
@@ -61,7 +61,7 @@ export class ReportRenderer {
       output.push(` --- New scripts --- `);
       for (const scriptMeta of report.newScripts) {
         output.push(
-          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`
+          `  ${ScriptStore.makeScriptLocator(scriptMeta.projectName, scriptMeta.scriptName)}`,
         );
       }
       output.push("");
