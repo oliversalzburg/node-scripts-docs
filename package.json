@@ -22,6 +22,7 @@
     "docs:scripts": "yarn nsd-debug",
     "docs:serve": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs ghcr.io/oliversalzburg/mkdocs-material-ex:main",
     "npm:publish": "yarn build && npm publish",
+    "npm:publish:major": "yarn build && npm version major && npm publish",
     "npm:publish:minor": "yarn build && npm version minor && npm publish",
     "npm:publish:patch": "yarn build && npm version patch && npm publish",
     "nsd-debug": "yarn build && node output/node-scripts-docs.js",
