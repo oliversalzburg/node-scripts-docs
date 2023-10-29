@@ -14,7 +14,7 @@
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "docs:build",
-      "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs ghcr.io/oliversalzburg/mkdocs-material-ex:main build --site-dir=public",
+      "scriptCode": "podman run --rm -it -p 8000:8000 -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material build --site-dir=public",
       "isGlobal": true,
       "isRootManifest": true,
       "description": "Build the documentation website locally."
@@ -32,7 +32,7 @@
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "docs:serve",
-      "scriptCode": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs ghcr.io/oliversalzburg/mkdocs-material-ex:main",
+      "scriptCode": "podman run --rm -it -p 8000:8000 -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material",
       "isGlobal": true,
       "isRootManifest": true,
       "description": "Runs the mkdocs-material development server."
@@ -41,7 +41,7 @@
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "npm:publish",
-      "scriptCode": "yarn build && npm publish",
+      "scriptCode": "npm publish",
       "isGlobal": true,
       "isRootManifest": true,
       "description": "Build the latest sources and then `npm publish` the current state."
@@ -49,8 +49,24 @@
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
+      "scriptName": "npm:publish:major",
+      "scriptCode": "npm version major && npm publish",
+      "isGlobal": true,
+      "isRootManifest": true
+    },
+    {
+      "manifestPath": "package.json",
+      "projectName": "node-scripts-docs",
+      "scriptName": "npm:publish:minor",
+      "scriptCode": "npm version minor && npm publish",
+      "isGlobal": true,
+      "isRootManifest": true
+    },
+    {
+      "manifestPath": "package.json",
+      "projectName": "node-scripts-docs",
       "scriptName": "npm:publish:patch",
-      "scriptCode": "yarn build && npm version patch && npm publish",
+      "scriptCode": "npm version patch && npm publish",
       "isGlobal": true,
       "isRootManifest": true,
       "description": "Publish a patch release to the npm registry."
@@ -67,8 +83,16 @@
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
+      "scriptName": "prepack",
+      "scriptCode": "yarn build",
+      "isGlobal": false,
+      "isRootManifest": true
+    },
+    {
+      "manifestPath": "package.json",
+      "projectName": "node-scripts-docs",
       "scriptName": "test",
-      "scriptCode": "jest",
+      "scriptCode": "node --experimental-vm-modules $(yarn bin jest)",
       "isGlobal": false,
       "isRootManifest": true,
       "description": "Execute all Jest test suites."
@@ -77,7 +101,7 @@
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
       "scriptName": "test:coverage",
-      "scriptCode": "jest --coverage",
+      "scriptCode": "node --experimental-vm-modules $(yarn bin jest) --coverage",
       "isGlobal": true,
       "isRootManifest": true,
       "description": "Execute Jest test suites and calculate code coverage."

@@ -19,7 +19,7 @@
 -   Source:
 
     ```shell
-    docker run --rm -it -p 8000:8000 -v ${PWD}:/docs ghcr.io/oliversalzburg/mkdocs-material-ex:main build --site-dir=public
+    podman run --rm -it -p 8000:8000 -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material build --site-dir=public
     ```
 
 -   Description:
@@ -45,7 +45,7 @@
 -   Source:
 
     ```shell
-    docker run --rm -it -p 8000:8000 -v ${PWD}:/docs ghcr.io/oliversalzburg/mkdocs-material-ex:main
+    podman run --rm -it -p 8000:8000 -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material
     ```
 
 -   Description:
@@ -58,12 +58,38 @@
 -   Source:
 
     ```shell
-    yarn build && npm publish
+    npm publish
     ```
 
 -   Description:
 
     Build the latest sources and then `npm publish` the current state.
+
+## npm:publish:major
+
+-   Project: `node-scripts-docs`
+-   Source:
+
+    ```shell
+    npm version major && npm publish
+    ```
+
+-   Description:
+
+    _documentation pending_
+
+## npm:publish:minor
+
+-   Project: `node-scripts-docs`
+-   Source:
+
+    ```shell
+    npm version minor && npm publish
+    ```
+
+-   Description:
+
+    _documentation pending_
 
 ## npm:publish:patch
 
@@ -71,7 +97,7 @@
 -   Source:
 
     ```shell
-    yarn build && npm version patch && npm publish
+    npm version patch && npm publish
     ```
 
 -   Description:
@@ -91,13 +117,26 @@
 
     Build the latest sources and then use the build output to execute your command. Parameters are passed through by `yarn`.
 
+## prepack
+
+-   Project: `node-scripts-docs`
+-   Source:
+
+    ```shell
+    yarn build
+    ```
+
+-   Description:
+
+    _documentation pending_
+
 ## test
 
 -   Project: `node-scripts-docs`
 -   Source:
 
     ```shell
-    jest
+    node --experimental-vm-modules $(yarn bin jest)
     ```
 
 -   Description:
@@ -110,7 +149,7 @@
 -   Source:
 
     ```shell
-    jest --coverage
+    node --experimental-vm-modules $(yarn bin jest) --coverage
     ```
 
 -   Description:
