@@ -8,23 +8,23 @@ Map {
   },
   "docs:build" => DocumentationFragment {
     "descriptionMarkdown": "Build the documentation website locally.",
-    "filename": ".docs:build.md",
+    "filename": ".docs$$build.md",
   },
   "docs:scripts" => DocumentationFragment {
     "descriptionMarkdown": "Rebuilds the \`node-scripts-docs\` documentation for this project itself.",
-    "filename": ".docs:scripts.md",
+    "filename": ".docs$$scripts.md",
   },
   "docs:serve" => DocumentationFragment {
     "descriptionMarkdown": "Runs the mkdocs-material development server.",
-    "filename": ".docs:serve.md",
-  },
-  "npm:publish" => DocumentationFragment {
-    "descriptionMarkdown": "Build the latest sources and then \`npm publish\` the current state.",
-    "filename": ".npm:publish.md",
+    "filename": ".docs$$serve.md",
   },
   "npm:publish:patch" => DocumentationFragment {
     "descriptionMarkdown": "_documentation pending_",
-    "filename": ".npm:publish:patch.md",
+    "filename": ".npm$$publish$$patch.md",
+  },
+  "npm:publish" => DocumentationFragment {
+    "descriptionMarkdown": "Build the latest sources and then \`npm publish\` the current state.",
+    "filename": ".npm$$publish.md",
   },
   "nsd-debug" => DocumentationFragment {
     "descriptionMarkdown": "Build the latest sources and then use the build output to execute your command. Parameters are passed through by \`yarn\`.",
@@ -32,7 +32,7 @@ Map {
   },
   "test:coverage" => DocumentationFragment {
     "descriptionMarkdown": "_documentation pending_",
-    "filename": ".test:coverage.md",
+    "filename": ".test$$coverage.md",
   },
 }
 `;
