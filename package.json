@@ -19,9 +19,9 @@
   },
   "scripts": {
     "build": "tsc",
-    "docs:build": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs ghcr.io/oliversalzburg/mkdocs-material-ex:main build --site-dir=public",
+    "docs:build": "podman run --rm -it -p 8000:8000 -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material build --site-dir=public",
     "docs:scripts": "yarn nsd-debug",
-    "docs:serve": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs ghcr.io/oliversalzburg/mkdocs-material-ex:main",
+    "docs:serve": "podman run --rm -it -p 8000:8000 -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material",
     "npm:publish": "npm publish",
     "npm:publish:major": "npm version major && npm publish",
     "npm:publish:minor": "npm version minor && npm publish",

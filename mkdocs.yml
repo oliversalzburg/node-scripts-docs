@@ -17,8 +17,6 @@ markdown_extensions:
   - toc:
       permalink: true
 plugins:
-  - git-revision-date-localized:
-      fallback_to_build_date: true
   - search
 repo_name: oliversalzburg/node-scripts-docs
 repo_url: https://github.com/oliversalzburg/node-scripts-docs
