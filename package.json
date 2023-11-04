@@ -3,7 +3,7 @@
   "name": "node-scripts-docs",
   "version": "1.0.0",
   "description": "Generate documentation for your `package.json` scripts.",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "author": "Oliver Salzburg <oliver.salzburg@gmail.com>",
   "homepage": "https://oliversalzburg.github.io/node-scripts-docs/",
   "repository": {
