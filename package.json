@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "docs:build": "podman run --rm -it -p 8000:8000 -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material build --site-dir=public",
+    "docs:build": "podman run --rm -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material build --site-dir=public",
     "docs:scripts": "yarn nsd-debug",
     "docs:serve": "podman run --rm -it -p 8000:8000 -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material",
     "npm:publish": "npm publish",
