@@ -63,6 +63,7 @@
   "keywords": [
     "documentation",
     "mkdocs",
+    "monorepo",
     "npm",
     "package.json",
     "scripts",
