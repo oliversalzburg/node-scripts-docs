@@ -1,3 +1,4 @@
+import { InvalidOperationError, isNil } from "@oliversalzburg/js-utils";
 import fs from "node:fs/promises";
 import path from "node:path";
 
@@ -95,7 +96,11 @@ export class ScriptStore {
   }
 
   static parseScriptLocator(locator: string) {
-    const parts = /([^→]+)→(.+)/.exec(locator)!;
+    const parts = /([^→]+)→(.+)/.exec(locator);
+    if (isNil(parts)) {
+      throw new InvalidOperationError(`The locator '${locator}' is invalid.`);
+    }
+
     return {
       projectName: parts[2],
       scriptName: parts[1],

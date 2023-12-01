@@ -5,7 +5,7 @@ import { ScriptStore } from "./ScriptStore.js";
 import { StoreAugmenter } from "./StoreAugmenter.js";
 import { Validator } from "./Validator.js";
 
-it("detects changed fragment", async () => {
+it("detects changed fragment", () => {
   const storeFragments = new FragmentStore(
     path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
@@ -44,7 +44,7 @@ it("detects changed fragment", async () => {
   expect(report.changedFragments.has(storeScripts.scripts[0])).toBe(true);
 });
 
-it("detects new script", async () => {
+it("detects new script", () => {
   const storeFragments = new FragmentStore(
     path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
@@ -70,7 +70,7 @@ it("detects new script", async () => {
   expect(report.newScripts.has(storeScripts.scripts[0])).toBe(true);
 });
 
-it("detects missing fragment", async () => {
+it("detects missing fragment", () => {
   const storeFragments = new FragmentStore(
     path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
@@ -104,7 +104,7 @@ it("detects missing fragment", async () => {
   expect(report.missingFragments.has(storeScripts.scripts[0])).toBe(true);
 });
 
-it("detects unchanged+pending fragment", async () => {
+it("detects unchanged+pending fragment", () => {
   const storeFragments = new FragmentStore(
     path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
@@ -144,7 +144,7 @@ it("detects unchanged+pending fragment", async () => {
   expect(report.unchangedFragments.has(storeScripts.scripts[0])).toBe(true);
 });
 
-it("detects corrupted metadata", async () => {
+it("detects corrupted metadata", () => {
   const storeFragments = new FragmentStore(
     path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
@@ -182,7 +182,7 @@ it("detects corrupted metadata", async () => {
   expect(report.corruptedMetadataRecords.has(storeScripts.scripts[0])).toBe(true);
 });
 
-it("detects obsolete fragment", async () => {
+it("detects obsolete fragment", () => {
   const storeFragments = new FragmentStore(
     path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
@@ -220,7 +220,7 @@ it("detects obsolete fragment", async () => {
   expect(report.obsoleteFragments.has(fragment)).toBe(true);
 });
 
-it("detects obsolete fragment", async () => {
+it("detects obsolete fragment", () => {
   const storeFragments = new FragmentStore(
     path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );

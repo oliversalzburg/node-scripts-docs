@@ -1,4 +1,4 @@
-import { FragmentRenderer } from "./FragmentRenderer.js";
+import { isDefaultDescription } from "./FragmentRenderer.js";
 import { FragmentStore } from "./FragmentStore.js";
 import { ScriptStore } from "./ScriptStore.js";
 
@@ -9,10 +9,10 @@ export class StoreAugmenter {
     this.scriptStore = scriptStore;
   }
 
-  async augment(fragmentStore: FragmentStore) {
+  augment(fragmentStore: FragmentStore) {
     for (const scriptMeta of this.scriptStore.scripts) {
       const description = fragmentStore.getExistingDescription(scriptMeta.scriptName);
-      if (description && !FragmentRenderer.isDefaultDescription(description)) {
+      if (description && !isDefaultDescription(description)) {
         scriptMeta.description = description;
       }
     }

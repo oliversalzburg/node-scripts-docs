@@ -1,8 +1,9 @@
-import { FragmentRenderer } from "./FragmentRenderer.js";
+import { mustExist } from "@oliversalzburg/js-utils/nil.js";
+import { isDefaultDescription } from "./FragmentRenderer.js";
 import { DocumentationFragment, FragmentStore } from "./FragmentStore.js";
 import { ScriptStore, ScriptStoreEntry } from "./ScriptStore.js";
 
-export type ValidationReport = {
+export interface ValidationReport {
   // Scripts for which the description in the fragment doesn't match the metadata.
   changedFragments: Set<ScriptStoreEntry>;
   // Scripts where the metadata was confusingly inconsistent with the fragment.
@@ -18,7 +19,7 @@ export type ValidationReport = {
   pendingDocumentation: Set<ScriptStoreEntry>;
   // Scripts for which the description in the fragment is identical with the metadata.
   unchangedFragments: Set<ScriptStoreEntry>;
-};
+}
 
 export class Validator {
   fragmentStore: FragmentStore;
@@ -77,13 +78,13 @@ export class Validator {
         continue;
       }
 
-      const fragment = this.fragmentStore.fragments.get(scriptMeta.scriptName)!;
+      const fragment = mustExist(this.fragmentStore.fragments.get(scriptMeta.scriptName));
 
       // If the fragment has the default description, it was written by an earlier run.
       // If the metadata contains no description, the documentation is still pending.
       if (
-        FragmentRenderer.isDefaultDescription(fragment.descriptionMarkdown) &&
-        (!cachedMeta.description || FragmentRenderer.isDefaultDescription(cachedMeta.description))
+        isDefaultDescription(fragment.descriptionMarkdown) &&
+        (!cachedMeta.description || isDefaultDescription(cachedMeta.description))
       ) {
         report.unchangedFragments.add(scriptMeta);
         report.pendingDocumentation.add(scriptMeta);
@@ -91,19 +92,13 @@ export class Validator {
 
       // If the fragment has an authored description, it was well in production.
       // If the metadata contains no description, it seems to be corrupted.
-      if (
-        !FragmentRenderer.isDefaultDescription(fragment.descriptionMarkdown) &&
-        !cachedMeta.description
-      ) {
+      if (!isDefaultDescription(fragment.descriptionMarkdown) && !cachedMeta.description) {
         report.corruptedMetadataRecords.add(scriptMeta);
       }
 
       // If a non-default description is authored in the fragment and there's a description in the metdata,
       // this should be changed for changes.
-      if (
-        !FragmentRenderer.isDefaultDescription(fragment.descriptionMarkdown) &&
-        cachedMeta.description
-      ) {
+      if (!isDefaultDescription(fragment.descriptionMarkdown) && cachedMeta.description) {
         // If the description in the fragment is identical to the metadata, it's treated as unchanged.
         if (fragment.descriptionMarkdown === cachedMeta.description) {
           report.unchangedFragments.add(scriptMeta);

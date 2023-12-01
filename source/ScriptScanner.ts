@@ -3,11 +3,11 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { ScriptStore } from "./ScriptStore.js";
 
-export type Manifest = {
+export interface Manifest {
   name: string;
-  version: string;
-  scripts: Record<string, string>;
-};
+  version?: string | undefined;
+  scripts?: Record<string, string> | undefined;
+}
 
 export class ScriptScanner {
   private rootDirectory: string;
@@ -23,7 +23,7 @@ export class ScriptScanner {
   async findManifests(includeRootManifest = true) {
     const manifests = new Array<string>();
     for (const workspacePath of this.workspaces) {
-      let workspaceManifests = await globby(`${workspacePath}/package.json`, {
+      const workspaceManifests = await globby(`${workspacePath}/package.json`, {
         cwd: this.rootDirectory,
       });
       manifests.push(...workspaceManifests);
@@ -48,7 +48,7 @@ export class ScriptScanner {
         path.resolve(this.rootDirectory, manifestPath),
       );
       const projectName = manifest.name;
-      const projectScripts: Record<string, string> = manifest.scripts || {};
+      const projectScripts: Record<string, string> = manifest.scripts ?? {};
 
       for (const [name, script] of Object.entries(projectScripts)) {
         const isGlobal = name.includes(":");

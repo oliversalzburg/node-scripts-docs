@@ -1,4 +1,4 @@
-import { ReportRenderer } from "./ReportRenderer.js";
+import { render } from "./ReportRenderer.js";
 
 it("renders empty report as expected", () => {
   const report = {
@@ -11,8 +11,8 @@ it("renders empty report as expected", () => {
     unchangedFragments: new Set([]),
   };
 
-  expect(ReportRenderer.render(report, false)).toMatchSnapshot();
-  expect(ReportRenderer.render(report)).toMatchSnapshot();
+  expect(render(report, false)).toMatchSnapshot();
+  expect(render(report)).toMatchSnapshot();
 });
 
 it("renders report as expected", () => {
@@ -91,6 +91,6 @@ it("renders report as expected", () => {
     ]),
   };
 
-  expect(ReportRenderer.render(report, false)).toMatchSnapshot();
-  expect(ReportRenderer.render(report)).toMatchSnapshot();
+  expect(render(report, false)).toMatchSnapshot();
+  expect(render(report)).toMatchSnapshot();
 });

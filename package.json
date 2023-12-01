@@ -22,6 +22,11 @@
     "docs:build": "podman run --rm -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material build --site-dir=public",
     "docs:scripts": "yarn nsd-debug",
     "docs:serve": "podman run --rm -it -p 8000:8000 -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material",
+    "lint": "yarn run lint:all",
+    "lint:all": "yarn run lint:eslint && yarn run lint:prettier && yarn run lint:tsc",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
+    "lint:tsc": "tsc --noEmit",
     "npm:publish": "npm publish",
     "npm:publish:major": "npm version major && npm publish",
     "npm:publish:minor": "npm version minor && npm publish",
@@ -32,6 +37,7 @@
     "test:coverage": "node --experimental-vm-modules $(yarn bin jest) --coverage"
   },
   "dependencies": {
+    "@oliversalzburg/js-utils": "0.0.23",
     "elapsed-time": "0.0.1",
     "globby": "14.0.0",
     "marked": "11.0.0",
@@ -42,6 +48,8 @@
     "@types/jest": "29.5.10",
     "@types/minimist": "1.2.5",
     "@types/node": "20.10.1",
+    "@typescript-eslint/eslint-plugin": "6.13.1",
+    "@typescript-eslint/parser": "6.13.1",
     "eslint": "8.54.0",
     "jest": "29.7.0",
     "lint-staged": "15.1.0",

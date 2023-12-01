@@ -1,3 +1,4 @@
+import { InvalidOperationError, isNil } from "@oliversalzburg/js-utils";
 import { Tokens, marked } from "marked";
 import fs from "node:fs/promises";
 import path from "node:path";
@@ -37,13 +38,11 @@ export class FragmentStore {
     const parsed = marked.lexer(existingDocumentation);
 
     // Expect parsed to be an array of [heading, list]
-    const items = (parsed?.[1] as Tokens.List)?.items;
+    const items = (parsed[1] as Tokens.List | undefined)?.items;
     // Expect items to be [list_item, list_item, list_item]
-    const descriptionItem =
-      items &&
-      items.find(
-        item => 1 <= item.tokens.length && (item.tokens[0] as Tokens.Text).text === "Description:",
-      );
+    const descriptionItem = items?.find(
+      item => 1 <= item.tokens.length && (item.tokens[0] as Tokens.Text).text === "Description:",
+    );
     if (!descriptionItem) {
       throw new Error(
         `Unable to find description item in documentation fragment at '${fragmentFilename}'!`,
@@ -66,12 +65,17 @@ export class FragmentStore {
       return undefined;
     }
 
-    return this.fragments.get(scriptName)!.descriptionMarkdown;
+    const fragment = this.fragments.get(scriptName);
+    if (isNil(fragment)) {
+      throw new InvalidOperationError(`There is no fragment for '${scriptName}'.`);
+    }
+
+    return fragment.descriptionMarkdown;
   }
 
   static scriptToFragmentFilename(scriptName: string) {
     // $ needs to be duplicated, as it's otherwise interpreted as part of $1,$2,$3,... references
-    return `.${scriptName.replace(/\:/g, "$$$$")}.md`;
+    return `.${scriptName.replace(/:/g, "$$$$")}.md`;
   }
 
   static fragmentFilenameToScript(fragmentName: string) {

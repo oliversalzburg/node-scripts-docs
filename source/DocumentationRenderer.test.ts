@@ -1,12 +1,12 @@
 import path from "node:path";
 import { DocumentationRenderer } from "./DocumentationRenderer.js";
-import { FragmentScanner } from "./FragmentScanner.js";
+import { loadFragments } from "./FragmentScanner.js";
 import { DOCS_FRAGMENTS_DEFAULT_LOCATION } from "./FragmentStore.js";
 import { ScriptScanner } from "./ScriptScanner.js";
 import { StoreAugmenter } from "./StoreAugmenter.js";
 
 it("renders a script store as expected", async () => {
-  const storeFragments = await FragmentScanner.loadFragments(
+  const storeFragments = await loadFragments(
     path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
 

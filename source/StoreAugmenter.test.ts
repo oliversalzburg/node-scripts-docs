@@ -1,11 +1,11 @@
 import path from "path";
-import { FragmentScanner } from "./FragmentScanner.js";
+import { loadFragments } from "./FragmentScanner.js";
 import { DOCS_FRAGMENTS_DEFAULT_LOCATION } from "./FragmentStore.js";
 import { ScriptScanner } from "./ScriptScanner.js";
 import { StoreAugmenter } from "./StoreAugmenter.js";
 
 it("augments a store with descriptions from fragments", async () => {
-  const storeFragments = await FragmentScanner.loadFragments(
+  const storeFragments = await loadFragments(
     path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
   );
 
