@@ -1,0 +1,89 @@
+name: Pull Request
+
+on:
+  pull_request:
+  push:
+    branches:
+      - "renovate/*"
+
+jobs:
+  qa-pr:
+    name: Run QA
+    # We don't need to run this on Renovate PRs. We will already test the `renovate/foo` branch.
+    if: github.event_name != 'pull_request' || github.actor != 'renovate[bot]'
+    strategy:
+      matrix:
+        node-version:
+          - 18
+          - 20
+          - 21
+        os-release:
+          - ubuntu-latest
+          - windows-latest
+    runs-on: ${{ matrix.os-release }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+
+      - name: Select NodeJS version
+        uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Lint
+        run: yarn lint
+      - name: Test
+        run: yarn test
+
+  qa-docs:
+    name: QA Documentation
+    # We don't need to run this on Renovate PRs. We will already test the `renovate/foo` branch.
+    if: github.event_name != 'pull_request' || github.actor != 'renovate[bot]'
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+
+      - name: Select Python version
+        uses: actions/setup-python@65d7f2d534ac1bc67fcd62888c5f4f3d2cb2b236 # v4
+        with:
+          python-version: "3.x"
+
+      - name: Install mkdocs-material
+        run: pip install mkdocs-material
+
+      - name: Build documentation
+        run: mkdocs build
+
+  qa-successful-branch:
+    runs-on: ubuntu-22.04
+    needs:
+      - qa-pr
+      - qa-docs
+    if: github.event_name == 'push'
+    steps:
+      - name: Success
+        if: ${{ !(contains(needs.*.result, 'failure')) }}
+        run: exit 0
+      - name: Failure
+        if: ${{ contains(needs.*.result, 'failure') }}
+        run: exit 1
+  qa-successful-pr:
+    runs-on: ubuntu-22.04
+    needs:
+      - qa-pr
+      - qa-docs
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Success
+        if: ${{ !(contains(needs.*.result, 'failure')) }}
+        run: exit 0
+      - name: Failure
+        if: ${{ contains(needs.*.result, 'failure') }}
+        run: exit 1

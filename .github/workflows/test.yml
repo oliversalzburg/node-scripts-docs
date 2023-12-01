@@ -1,21 +1,52 @@
 name: Node.JS Tests
 
 on:
-  pull_request:
   push:
+    branches:
+      - "main"
 
 jobs:
-  test:
-    name: Run Tests
+  qa-main:
+    name: Run QA
     strategy:
       matrix:
-        node-version: [18, 20, 21]
-        os-release: [ubuntu-latest, windows-latest]
+        node-version:
+          - 18
+          - 20
+          - 21
+        os-release:
+          - ubuntu-latest
+          - windows-latest
     runs-on: ${{ matrix.os-release }}
     steps:
-      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
-      - uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4
+      - name: Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+
+      - name: Select NodeJS version
+        uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4
         with:
           node-version: ${{ matrix.node-version }}
-      - run: yarn install
-      - run: yarn test
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Lint
+        run: yarn lint
+      - name: Test
+        run: yarn test
+
+  qa-successful-main:
+    runs-on: ubuntu-22.04
+    needs:
+      - qa-main
+    if: always()
+    steps:
+      - name: Success
+        if: ${{ !(contains(needs.*.result, 'failure')) }}
+        run: exit 0
+      - name: Failure
+        if: ${{ contains(needs.*.result, 'failure') }}
+        run: exit 1
