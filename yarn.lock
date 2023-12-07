@@ -837,10 +837,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oliversalzburg/js-utils@npm:0.0.23":
-  version: 0.0.23
-  resolution: "@oliversalzburg/js-utils@npm:0.0.23"
-  checksum: 892195e2140494fc296b36eb91f068fd23196be0d978cd6293136705b6d59868ea8b34d52cb3fcecc2be9ee10887f5836f3e3ad77a0b47bdae82ce2539a9ba6f
+"@oliversalzburg/js-utils@npm:0.0.25":
+  version: 0.0.25
+  resolution: "@oliversalzburg/js-utils@npm:0.0.25"
+  checksum: ae994a4826c3b55e3c043b2cc8b0c951b81ad9ccab98c8e218ebe78c72a37eee250d7de8654a931166bdf4b527ae54aa9e08be36b0a62c7e60f1e9f20d87f0e9
   languageName: node
   linkType: hard
 
@@ -3745,7 +3745,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "node-scripts-docs@workspace:."
   dependencies:
-    "@oliversalzburg/js-utils": "npm:0.0.23"
+    "@oliversalzburg/js-utils": "npm:0.0.25"
     "@types/jest": "npm:29.5.11"
     "@types/minimist": "npm:1.2.5"
     "@types/node": "npm:20.10.4"
