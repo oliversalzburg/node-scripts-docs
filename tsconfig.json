@@ -20,7 +20,7 @@
     "sourceMap": true,
     "strict": true,
     "target": "ESNext",
-    "types": ["@types/jest", "@types/node"],
+    "types": ["@types/jest", "@types/node"]
   },
-  "include": ["@types", "source"],
+  "include": ["@types", "source"]
 }
