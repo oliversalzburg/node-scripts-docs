@@ -56,10 +56,10 @@ const argv = minimist(process.argv.slice(2));
     console.info("Finding all scripts in all workspaces...");
     const scriptScanner = new ScriptScanner(rootDirectory);
     await scriptScanner.loadManifests();
-    console.info(`Found ${scriptScanner.manifests.length} manifest(s).`);
+    console.info(`Found ${scriptScanner.manifests.length.toString()} manifest(s).`);
     scriptStoreFromScan = await scriptScanner.loadScripts();
     console.info(
-      `Manifests contain ${scriptStoreFromScan.scripts.length} script(s), ${scriptStoreFromScan.globalScripts.length} as global.`,
+      `Manifests contain ${scriptStoreFromScan.scripts.length.toString()} script(s), ${scriptStoreFromScan.globalScripts.length.toString()} as global.`,
     );
   }
 
@@ -68,14 +68,14 @@ const argv = minimist(process.argv.slice(2));
     console.info("Loading existing metadata...");
     scriptStore = new ScriptStore(rootDirectory, scriptStoreName);
     await scriptStore.load();
-    console.info(`Store contains ${scriptStore.scripts.length} script(s).`);
+    console.info(`Store contains ${scriptStore.scripts.length.toString()} script(s).`);
   }
 
   let fragmentStore;
   if (fragmentStoreExists) {
     console.info("Loading existing fragments...");
     fragmentStore = await loadFragments(fragmentStorePath);
-    console.info(`Docs contain ${fragmentStore.fragments.size} fragment(s).`);
+    console.info(`Docs contain ${fragmentStore.fragments.size.toString()} fragment(s).`);
   }
 
   const metadata = scriptStoreFromScan ?? scriptStore;
@@ -123,4 +123,6 @@ const argv = minimist(process.argv.slice(2));
 
   console.log(`Process completed in ${entry.getValue()}.`);
   process.exit(0);
-})().catch(console.error);
+})().catch((error: unknown) => {
+  console.error(error);
+});
