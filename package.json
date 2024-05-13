@@ -37,7 +37,7 @@
     "test:coverage": "node --experimental-vm-modules $(yarn bin jest) --coverage"
   },
   "dependencies": {
-    "@oliversalzburg/js-utils": "0.0.29",
+    "@oliversalzburg/js-utils": "0.0.30",
     "elapsed-time": "0.0.1",
     "globby": "14.0.1",
     "marked": "12.0.2",
