@@ -80,4 +80,5 @@ jobs:
   docs-deploy:
     name: Call Deployment
     needs: qa-successful
+    if: github.ref == 'refs/heads/main'
     uses: ./.github/workflows/docs-deploy.yml
