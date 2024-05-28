@@ -10,21 +10,8 @@ jobs:
     name: Call QA
     uses: ./.github/workflows/test.yml
 
-  qa-successful-tag:
-    needs: qa-tag
-    name: Evaluate QA results
-    if: ( success() || failure() )
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Success
-        if: ${{ !(contains(needs.*.result, 'failure')) }}
-        run: exit 0
-      - name: Failure
-        if: ${{ contains(needs.*.result, 'failure') }}
-        run: exit 1
-
   release:
-    needs: qa-successful-tag
+    needs: qa-tag
     name: Publish action
     runs-on: ubuntu-22.04
     concurrency: lib-publish
@@ -75,6 +62,6 @@ jobs:
 
   docs-deploy:
     name: Call Deployment
-    needs: qa-successful-tag
+    needs: qa-tag
     if: github.ref == 'refs/heads/main'
     uses: ./.github/workflows/docs-deploy.yml

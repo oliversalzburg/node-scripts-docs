@@ -10,21 +10,8 @@ jobs:
     name: Call QA
     uses: ./.github/workflows/test.yml
 
-  qa-successful-main:
-    needs: qa-main
-    name: Evaluate QA results
-    if: ( success() || failure() )
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Success
-        if: ${{ !(contains(needs.*.result, 'failure')) }}
-        run: exit 0
-      - name: Failure
-        if: ${{ contains(needs.*.result, 'failure') }}
-        run: exit 1
-
   pre-relase:
-    needs: qa-successful-main
+    needs: qa-main
     name: Publish
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-22.04
@@ -81,6 +68,6 @@ jobs:
 
   docs-deploy:
     name: Call Deployment
-    needs: qa-successful-main
+    needs: qa-main
     if: github.ref == 'refs/heads/main'
     uses: ./.github/workflows/docs-deploy.yml
