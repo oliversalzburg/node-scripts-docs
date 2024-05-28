@@ -8,6 +8,8 @@ on:
 jobs:
   qa-branch:
     name: Run QA
+    # We don't need to run this on Renovate PRs. We will already test the `renovate/foo` branch.
+    if: github.event_name != 'pull_request' || github.actor != 'renovate[bot]'
     strategy:
       matrix:
         node-version:
@@ -43,6 +45,8 @@ jobs:
 
   qa-docs:
     name: QA Documentation
+    # We don't need to run this on Renovate PRs. We will already test the `renovate/foo` branch.
+    if: github.event_name != 'pull_request' || github.actor != 'renovate[bot]'
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
