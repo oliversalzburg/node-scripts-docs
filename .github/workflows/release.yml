@@ -70,5 +70,6 @@ jobs:
   docs-deploy:
     name: Call Deployment
     needs: qa-tag
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
     uses: ./.github/workflows/docs-deploy.yml
