@@ -58,7 +58,8 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm publish --access=public --provenance --tag=latest
 
-      - uses: oliversalzburg/action-automatic-semantic-releases@bc429dc1af8c036b5f8c11fef7bcb0becfd5064d # v0.0.13
+      - name: Generate GitHub release
+        uses: oliversalzburg/action-automatic-semantic-releases@bc429dc1af8c036b5f8c11fef7bcb0becfd5064d # v0.0.13
         with:
           body_prefix: |
             Published at <https://www.npmjs.com/package/node-scripts-docs/v/${{ env.RELEASE_VERSION }}>.

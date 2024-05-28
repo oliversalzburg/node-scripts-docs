@@ -54,7 +54,8 @@ jobs:
           npm --no-git-tag-version --ignore-scripts version ${RELEASE_VERSION}
           npm publish --access=public --provenance --tag=next
 
-      - uses: oliversalzburg/action-automatic-semantic-releases@bc429dc1af8c036b5f8c11fef7bcb0becfd5064d # v0.0.13
+      - name: Generate GitHub release
+        uses: oliversalzburg/action-automatic-semantic-releases@bc429dc1af8c036b5f8c11fef7bcb0becfd5064d # v0.0.13
         with:
           automatic_release_tag: next
           body_prefix: |
