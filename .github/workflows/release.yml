@@ -60,6 +60,8 @@ jobs:
 
       - uses: oliversalzburg/action-automatic-semantic-releases@bc429dc1af8c036b5f8c11fef7bcb0becfd5064d # v0.0.13
         with:
+          body_prefix: |
+            Published at <https://www.npmjs.com/package/@oliversalzburg/js-utils/v/${{ env.RELEASE_VERSION }}>.
           draft: false
           prerelease: false
           repo_token: ${{ secrets.GITHUB_TOKEN }}
