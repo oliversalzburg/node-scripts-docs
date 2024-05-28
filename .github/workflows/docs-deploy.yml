@@ -3,6 +3,10 @@ name: Deploy Documentation
 on:
   workflow_call:
 
+concurrency:
+  group: docs-deploy
+  cancel-in-progress: true
+
 jobs:
   docs-deploy:
     name: Deploy
