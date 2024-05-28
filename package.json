@@ -34,7 +34,9 @@
     "nsd-debug": "yarn build && node output/node-scripts-docs.js",
     "prepack": "yarn build",
     "test": "node --experimental-vm-modules $(yarn bin jest) source",
-    "test:coverage": "node --experimental-vm-modules $(yarn bin jest) --coverage"
+    "test:coverage": "node --experimental-vm-modules $(yarn bin jest) --coverage",
+    "preversion": "yarn run lint && yarn run build && yarn run test",
+    "postversion": "git push"
   },
   "dependencies": {
     "@oliversalzburg/js-utils": "0.0.39",
