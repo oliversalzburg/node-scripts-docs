@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "node-scripts-docs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Generate documentation for your `package.json` scripts.",
   "license": "MIT",
   "author": "Oliver Salzburg <oliver.salzburg@gmail.com>",
