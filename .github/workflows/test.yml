@@ -80,9 +80,3 @@ jobs:
       - name: Failure
         if: ${{ contains(needs.*.result, 'failure') }}
         run: exit 1
-
-  docs-deploy:
-    name: Call Deployment
-    needs: qa-successful
-    if: github.ref == 'refs/heads/main'
-    uses: ./.github/workflows/docs-deploy.yml

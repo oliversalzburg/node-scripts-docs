@@ -72,3 +72,9 @@ jobs:
           prerelease: false
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           title: v${{ env.RELEASE_VERSION }}
+
+  docs-deploy:
+    name: Call Deployment
+    needs: qa-successful-tag
+    if: github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/docs-deploy.yml
