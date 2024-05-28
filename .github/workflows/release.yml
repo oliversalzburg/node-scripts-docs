@@ -53,6 +53,11 @@ jobs:
       - name: Determine release version
         run: echo "RELEASE_VERSION=$(node .scripts/manifest-version.cjs)" >> $GITHUB_ENV
 
+      - name: Release new version
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access=public --provenance --tag=latest
+
       - uses: oliversalzburg/action-automatic-semantic-releases@bc429dc1af8c036b5f8c11fef7bcb0becfd5064d # v0.0.13
         with:
           draft: false
