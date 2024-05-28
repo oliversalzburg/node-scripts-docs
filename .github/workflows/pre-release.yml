@@ -63,9 +63,3 @@ jobs:
           prerelease: true
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           title: Snapshot Build v${{ env.RELEASE_VERSION }}
-
-  docs-deploy:
-    name: Call Deployment
-    needs: qa-main
-    if: github.ref == 'refs/heads/main'
-    uses: ./.github/workflows/docs-deploy.yml
