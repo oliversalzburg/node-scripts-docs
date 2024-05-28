@@ -1,0 +1,80 @@
+name: Pre-Release
+
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  qa-main:
+    name: Call QA
+    uses: ./.github/workflows/test.yml
+
+  qa-successful-main:
+    needs: qa-main
+    name: Evaluate QA results
+    if: ( success() || failure() )
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Success
+        if: ${{ !(contains(needs.*.result, 'failure')) }}
+        run: exit 0
+      - name: Failure
+        if: ${{ contains(needs.*.result, 'failure') }}
+        run: exit 1
+
+  pre-relase:
+    needs: qa-successful-main
+    name: Publish
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-22.04
+    concurrency: publish
+    permissions:
+      contents: write
+      id-token: write
+      packages: write
+      pull-requests: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+
+      - name: Select NodeJS version
+        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
+        env:
+          # renovate: datasource=docker depName=node versioning=node
+          NODE_VERSION: "20.13.1"
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: https://registry.npmjs.org
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Determine release version
+        run: echo "RELEASE_VERSION=$(node .scripts/manifest-version.cjs --canary=patch)" >> $GITHUB_ENV
+
+      - name: Release dev version for testing
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm --no-git-tag-version --ignore-scripts version ${RELEASE_VERSION}
+          npm publish --access=public --provenance --tag=next
+          npm pack
+
+      - uses: oliversalzburg/action-automatic-semantic-releases@bc429dc1af8c036b5f8c11fef7bcb0becfd5064d # v0.0.13
+        with:
+          automatic_release_tag: next
+          body_prefix: |
+            Published at <https://www.npmjs.com/package/@oliversalzburg/js-utils/v/${{ env.RELEASE_VERSION }}>.
+          draft: false
+          files: "*.tgz"
+          prerelease: true
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          title: Snapshot Build v${{ env.RELEASE_VERSION }}
