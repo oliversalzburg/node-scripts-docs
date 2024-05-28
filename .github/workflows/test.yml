@@ -3,6 +3,9 @@ name: QA
 on:
   pull_request:
   push:
+    branches:
+      - "**" # matches every branch
+      - "!main" # excludes main
   workflow_call:
 
 jobs:
@@ -12,6 +15,7 @@ jobs:
     if: github.event_name != 'pull_request' || github.actor != 'renovate[bot]'
     strategy:
       matrix:
+        # https://endoflife.date/nodejs
         node-version:
           - 18
           - 20
