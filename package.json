@@ -33,7 +33,7 @@
     "npm:publish:patch": "npm version patch && npm publish",
     "nsd-debug": "yarn build && node output/node-scripts-docs.js",
     "prepack": "yarn build",
-    "test": "node --experimental-vm-modules $(yarn bin jest)",
+    "test": "node --experimental-vm-modules $(yarn bin jest) source",
     "test:coverage": "node --experimental-vm-modules $(yarn bin jest) --coverage"
   },
   "dependencies": {
