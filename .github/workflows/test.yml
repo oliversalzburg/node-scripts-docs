@@ -76,3 +76,7 @@ jobs:
       - name: Failure
         if: ${{ contains(needs.*.result, 'failure') }}
         run: exit 1
+
+  docs-deploy:
+    needs: qa-successful
+    uses: ./.github/workflows/docs-deploy.yml

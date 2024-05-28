@@ -1,18 +1,23 @@
 name: Documentation Deploy
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  docs-deploy:
+    name: Deploy Documentation
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
-      - uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5
+      - name: Checkout
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+
+      - name: Select Python version
+        uses: actions/setup-python@82c7e631bb3cdc910f68e0081d67478d79c6982d # v5
+        env:
+          # renovate: datasource=docker depName=python versioning=semver
+          PYTHON_VERSION: "3.x"
         with:
-          python-version: 3.x
+          python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Install mkdocs-material
         run: pip install mkdocs-material
