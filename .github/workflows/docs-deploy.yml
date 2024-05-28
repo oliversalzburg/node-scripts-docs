@@ -1,11 +1,11 @@
-name: Documentation Deploy
+name: Deploy Documentation
 
 on:
   workflow_call:
 
 jobs:
   docs-deploy:
-    name: Deploy Documentation
+    name: Deploy
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout

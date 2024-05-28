@@ -78,5 +78,6 @@ jobs:
         run: exit 1
 
   docs-deploy:
+    name: Call Deployment
     needs: qa-successful
     uses: ./.github/workflows/docs-deploy.yml
