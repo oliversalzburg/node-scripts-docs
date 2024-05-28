@@ -58,7 +58,7 @@ jobs:
         with:
           automatic_release_tag: next
           body_prefix: |
-            Published at <https://www.npmjs.com/package/@oliversalzburg/js-utils/v/${{ env.RELEASE_VERSION }}>.
+            Published at <https://www.npmjs.com/package/node-scripts-docs/v/${{ env.RELEASE_VERSION }}>.
           draft: false
           prerelease: true
           repo_token: ${{ secrets.GITHUB_TOKEN }}
