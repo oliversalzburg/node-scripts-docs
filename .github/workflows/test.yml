@@ -71,7 +71,7 @@ jobs:
       - qa-branch
       - qa-docs
     name: Evaluate QA results
-    if: always()
+    if: ( success() || failure() )
     runs-on: ubuntu-22.04
     steps:
       - name: Success
