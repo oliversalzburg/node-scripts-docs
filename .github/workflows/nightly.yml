@@ -1,20 +1,37 @@
-name: Pre-Release
+name: Nightly
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: "30 2 * * *"
   workflow_dispatch:
 
 jobs:
+  check_date:
+    runs-on: ubuntu-22.04
+    name: Check latest commit
+    outputs:
+      should_run: ${{ steps.should_run.outputs.should_run }}
+    steps:
+      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
+      - name: print latest_commit
+        run: echo ${{ github.sha }}
+
+      - id: should_run
+        continue-on-error: true
+        name: check latest commit is less than a day
+        if: ${{ github.event_name == 'schedule' }}
+        run: test -z $(git rev-list  --after="24 hours"  ${{ github.sha }}) && echo "name=should_run::false" >> $GITHUB_OUTPUT
+
   qa-main:
     name: Call QA
     uses: ./.github/workflows/test.yml
 
   pre-relase:
-    needs: qa-main
+    needs:
+      - check_date
+      - qa-main
     name: Publish
-    if: github.event.commits[1] != null || ( !startsWith(github.event.commits[0].message, 'chore(deps):') && !startsWith(github.event.commits[0].message, 'fix(deps):') )
+    if: ${{ needs.check_date.outputs.should_run != 'false' }}
     runs-on: ubuntu-22.04
     concurrency: publish
     permissions:
