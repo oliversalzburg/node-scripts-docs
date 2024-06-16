@@ -6,6 +6,8 @@ on:
       - main
   workflow_dispatch:
 
+concurrency: pre-release
+
 jobs:
   qa-main:
     name: Call QA
