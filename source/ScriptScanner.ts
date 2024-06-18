@@ -1,6 +1,7 @@
 import { globby } from "globby";
 import fs from "node:fs/promises";
-import path, { join } from "node:path";
+import { resolve } from "node:path";
+import { join } from "node:path/posix";
 import { ScriptStore } from "./ScriptStore.js";
 
 /**
@@ -81,9 +82,7 @@ export class ScriptScanner {
     const scriptStore = new ScriptStore(this.rootDirectory);
     for (const manifestPath of this.manifests) {
       const isRootManifest = manifestPath === "package.json";
-      const manifest = await ScriptScanner.loadManifest(
-        path.resolve(this.rootDirectory, manifestPath),
-      );
+      const manifest = await ScriptScanner.loadManifest(resolve(this.rootDirectory, manifestPath));
       const projectName = manifest.name;
       const projectScripts: Record<string, string> = manifest.scripts ?? {};
 
