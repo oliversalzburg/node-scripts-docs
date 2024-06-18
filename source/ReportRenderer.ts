@@ -2,6 +2,12 @@ import { FragmentStore } from "./FragmentStore.js";
 import { ScriptStore } from "./ScriptStore.js";
 import { ValidationReport } from "./Validator.js";
 
+/**
+ * Renders a validation report into human-readable text.
+ * @param report - The report to render.
+ * @param skipPending - Should pending documentations be excluded from the report?
+ * @returns The rendered report.
+ */
 export const render = (report: ValidationReport, skipPending = true) => {
   const output = new Array<string>();
   if (0 < report.pendingDocumentation.size && !skipPending) {

@@ -3,35 +3,83 @@ import { isDefaultDescription } from "./FragmentRenderer.js";
 import { DocumentationFragment, FragmentStore } from "./FragmentStore.js";
 import { ScriptStore, ScriptStoreEntry } from "./ScriptStore.js";
 
+/**
+ * The result of a validation.
+ */
 export interface ValidationReport {
-  // Scripts for which the description in the fragment doesn't match the metadata.
+  /**
+   * Scripts for which the description in the fragment doesn't match the metadata.
+   */
   changedFragments: Set<ScriptStoreEntry>;
-  // Scripts where the metadata was confusingly inconsistent with the fragment.
+
+  /**
+   * Scripts where the metadata was confusingly inconsistent with the fragment.
+   */
   corruptedMetadataRecords: Set<ScriptStoreEntry>;
-  // Scripts that exist in the metadata, but for which no fragment exists at all.
-  // These could just be new scripts.
+
+  /**
+   * Scripts that exist in the metadata, but for which no fragment exists at all.
+   * These could just be new scripts.
+   */
   missingFragments: Set<ScriptStoreEntry>;
-  // Scripts that aren't in the metadata.
+
+  /**
+   * Scripts that aren't in the metadata.
+   */
   newScripts: Set<ScriptStoreEntry>;
-  // Fragments for which there is no longer a matching script.
+
+  /**
+   * Fragments for which there is no longer a matching script.
+   */
   obsoleteFragments: Set<DocumentationFragment>;
-  // Scripts that have a fragment which is not filled out yet.
+
+  /**
+   * Scripts that have a fragment which is not filled out yet.
+   */
   pendingDocumentation: Set<ScriptStoreEntry>;
-  // Scripts for which the description in the fragment is identical with the metadata.
+
+  /**
+   * Scripts for which the description in the fragment is identical with the metadata.
+   */
   unchangedFragments: Set<ScriptStoreEntry>;
 }
 
+/**
+ * Validates the state of the stores in the environment.
+ */
 export class Validator {
+  /**
+   * The fragments to validate.
+   */
   fragmentStore: FragmentStore;
+
+  /**
+   * The stored metadata.
+   */
   metadata: ScriptStore;
+
+  /**
+   * The current metadata.
+   */
   metadataFromScan: ScriptStore;
 
+  /**
+   * Constructs a new validator.
+   * @param metadata - The stored metadata.
+   * @param metadataFromScan - The current metadata.
+   * @param fragmentStore - The fragments to validate.
+   */
   constructor(metadata: ScriptStore, metadataFromScan: ScriptStore, fragmentStore: FragmentStore) {
     this.metadata = metadata;
     this.metadataFromScan = metadataFromScan;
     this.fragmentStore = fragmentStore;
   }
 
+  /**
+   * Validate and report the results.
+   * @param withLocals - Include project-local scripts?
+   * @returns A validation report.
+   */
   generateReport(withLocals = false): ValidationReport {
     const report: ValidationReport = {
       changedFragments: new Set<ScriptStoreEntry>(),

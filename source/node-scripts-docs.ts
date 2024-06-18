@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { redirectErrorsToConsole } from "@oliversalzburg/js-utils/error/console.js";
 import ElapsedTime from "elapsed-time";
 import minimist from "minimist";
 import fs from "node:fs/promises";
@@ -16,71 +17,71 @@ import { Validator } from "./Validator.js";
 const argv = minimist(process.argv.slice(2));
 
 (async () => {
-  console.info(`node-scripts-docs (${new Date().toISOString()})`);
+  process.stderr.write(`node-scripts-docs (${new Date().toISOString()})\n`);
   const entry = ElapsedTime.new().start();
 
   const rootDirectory = String(argv.cwd ?? argv._[0] ?? process.cwd());
-  console.info(`Working directory: ${rootDirectory}`);
+  process.stderr.write(`Working directory: ${rootDirectory}}\n`);
 
   const withLocalScripts = Boolean(argv["include-locals"]);
 
   const manifestPath = path.resolve(rootDirectory, "package.json");
   const manifestExists = await ScriptScanner.canLoad(manifestPath);
   if (!manifestExists) {
-    console.info("Manifest: package.json (doesn't exist!)");
-    console.error("Manifest not found in working directory. Aborting.");
+    process.stderr.write("Manifest: package.json (doesn't exist!)\n");
+    process.stderr.write("Manifest not found in working directory. Aborting.\n");
     process.exit(1);
   }
   const manifest = await ScriptScanner.loadManifest(manifestPath);
-  console.info(
-    `Manifest: package.json (exists) [${manifest.name}@${manifest.version ?? "<no version>"}]`,
+  process.stderr.write(
+    `Manifest: package.json (exists) [${manifest.name}@${manifest.version ?? "<no version>"}]\n`,
   );
 
   const scriptStoreName = String(argv.store ?? SCRIPTS_METADATA_DEFAULT_FILENAME);
   const scriptStorePath = path.resolve(rootDirectory, scriptStoreName);
   const scriptStoreExists = await ScriptStore.exists(scriptStorePath);
-  console.info(
-    `Metadata store: ${scriptStoreName} (${scriptStoreExists ? "exists" : "doesn't exist"})`,
+  process.stderr.write(
+    `Metadata store: ${scriptStoreName} (${scriptStoreExists ? "exists" : "doesn't exist"})\n`,
   );
 
   const docsLocation = String(argv["docs-location"] ?? DOCS_FRAGMENTS_DEFAULT_LOCATION);
   const fragmentStorePath = path.resolve(rootDirectory, docsLocation);
   const fragmentStoreExists = await FragmentStore.exists(fragmentStorePath);
-  console.info(
-    `Docs location: ${docsLocation} (${fragmentStoreExists ? "exists" : "doesn't exist"})`,
+  process.stderr.write(
+    `Docs location: ${docsLocation} (${fragmentStoreExists ? "exists" : "doesn't exist"})\n`,
   );
 
   const skipScan = Boolean(argv["skip-scan"]);
   let scriptStoreFromScan;
   if (!skipScan) {
-    console.info("Finding all scripts in all workspaces...");
+    process.stderr.write("Finding all scripts in all workspaces...\n");
     const scriptScanner = new ScriptScanner(rootDirectory);
     await scriptScanner.loadManifests();
-    console.info(`Found ${scriptScanner.manifests.length.toString()} manifest(s).`);
+    process.stderr.write(`Found ${scriptScanner.manifests.length.toString()} manifest(s).\n`);
     scriptStoreFromScan = await scriptScanner.loadScripts();
-    console.info(
-      `Manifests contain ${scriptStoreFromScan.scripts.length.toString()} script(s), ${scriptStoreFromScan.globalScripts.length.toString()} as global.`,
+    process.stderr.write(
+      `Manifests contain ${scriptStoreFromScan.scripts.length.toString()} script(s), ${scriptStoreFromScan.globalScripts.length.toString()} as global.\n`,
     );
   }
 
   let scriptStore;
   if (scriptStoreExists) {
-    console.info("Loading existing metadata...");
+    process.stderr.write("Loading existing metadata...\n");
     scriptStore = new ScriptStore(rootDirectory, scriptStoreName);
     await scriptStore.load();
-    console.info(`Store contains ${scriptStore.scripts.length.toString()} script(s).`);
+    process.stderr.write(`Store contains ${scriptStore.scripts.length.toString()} script(s).\n`);
   }
 
   let fragmentStore;
   if (fragmentStoreExists) {
-    console.info("Loading existing fragments...");
+    process.stderr.write("Loading existing fragments...\n");
     fragmentStore = await loadFragments(fragmentStorePath);
-    console.info(`Docs contain ${fragmentStore.fragments.size.toString()} fragment(s).`);
+    process.stderr.write(`Docs contain ${fragmentStore.fragments.size.toString()} fragment(s).\n`);
   }
 
   const metadata = scriptStoreFromScan ?? scriptStore;
   if (!metadata) {
-    console.error("No metadata available. Aborting.");
+    process.stderr.write("No metadata available. Aborting.\n");
     process.exit(1);
   }
 
@@ -94,18 +95,18 @@ const argv = minimist(process.argv.slice(2));
     const report = validator.generateReport(withLocalScripts);
 
     const skipPending = Boolean(argv["skip-pending"]);
-    console.info(render(report, skipPending));
+    process.stderr.write(render(report, skipPending));
   } else {
-    console.info("Skipping change-detection due to --skip-scan.");
+    process.stderr.write("Skipping change-detection due to --skip-scan.\n");
   }
 
   const checkOnly = Boolean(argv["check-only"]);
   if (!checkOnly) {
     if (fragmentStore) {
-      console.info("Augmenting metadata with existing documentation fragment data...");
+      process.stderr.write("Augmenting metadata with existing documentation fragment data...\n");
       const augmenter = new StoreAugmenter(metadata);
       augmenter.augment(fragmentStore);
-      console.info("Augmentation complete.");
+      process.stderr.write("Augmentation complete.\n");
     }
 
     const renderer = new DocumentationRenderer(metadata);
@@ -115,14 +116,12 @@ const argv = minimist(process.argv.slice(2));
     const indexFile = path.resolve(fragmentStorePath, "index.md");
     await fs.writeFile(indexFile, documentation);
 
-    console.info("Flushing metadata...");
+    process.stderr.write("Flushing metadata...\n");
     await metadata.save();
   } else {
-    console.warn("No files were updated, due to --check-only.");
+    process.stderr.write("No files were updated, due to --check-only.\n");
   }
 
-  console.log(`Process completed in ${entry.getValue()}.`);
+  process.stderr.write(`Process completed in ${entry.getValue()}.\n`);
   process.exit(0);
-})().catch((error: unknown) => {
-  console.error(error);
-});
+})().catch(redirectErrorsToConsole(console));
