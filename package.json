@@ -18,11 +18,10 @@
     "nsd": "output/node-scripts-docs.js"
   },
   "scripts": {
-    "build": "yarn run build:tsc && yarn run docs:build",
-    "build:tsc": "tsc",
-    "docs:build": "podman run --rm -v .:/docs docker.io/squidfunk/mkdocs-material build --site-dir=public",
+    "build": "tsc",
+    "docs:build": "podman run --rm -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material build --site-dir=public",
     "docs:scripts": "yarn nsd-debug",
-    "docs:serve": "podman run --rm -it -p 8000:8000 -v .:/docs docker.io/squidfunk/mkdocs-material",
+    "docs:serve": "podman run --rm -it -p 8000:8000 -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material",
     "lint": "yarn run lint:all",
     "lint:all": "yarn run lint:eslint && yarn run lint:prettier && yarn run lint:tsc",
     "lint:eslint": "eslint .",

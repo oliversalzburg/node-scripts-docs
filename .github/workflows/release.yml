@@ -9,6 +9,8 @@ jobs:
   qa-tag:
     name: 🔹 QA
     uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
+    with:
+      has_mkdocs: true
 
   release:
     needs: qa-tag

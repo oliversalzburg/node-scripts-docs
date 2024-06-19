@@ -13,3 +13,5 @@ jobs:
     if: github.event_name != 'pull_request' || github.actor != 'renovate[bot]'
     name: 🔹 QA
     uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
+    with:
+      has_mkdocs: true

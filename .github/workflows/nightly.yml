@@ -27,6 +27,8 @@ jobs:
   qa-main:
     name: 🔹 QA
     uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
+    with:
+      has_mkdocs: true
 
   pre-relase:
     needs:
