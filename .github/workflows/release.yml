@@ -7,8 +7,8 @@ on:
 
 jobs:
   qa-tag:
-    name: Call QA
-    uses: ./.github/workflows/test.yml
+    name: 🔹 QA
+    uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
 
   release:
     needs: qa-tag

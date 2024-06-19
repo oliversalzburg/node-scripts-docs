@@ -25,8 +25,8 @@ jobs:
         run: test -z $(git rev-list  --after="24 hours"  ${{ github.sha }}) && echo "name=should_run::false" >> $GITHUB_OUTPUT
 
   qa-main:
-    name: Call QA
-    uses: ./.github/workflows/test.yml
+    name: 🔹 QA
+    uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
 
   pre-relase:
     needs:
