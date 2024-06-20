@@ -13,7 +13,7 @@ jobs:
     name: 🔹 QA
     uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
     with:
-      has_mkdocs: true
+      has-mkdocs: true
 
   release:
     name: 🔹 Publish
@@ -27,6 +27,6 @@ jobs:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     uses: oliversalzburg/workflows/.github/workflows/publish-npm-package.yml@main
     with:
-      has_mkdocs: true
+      has-mkdocs: true
       is-canary: false
-      with-github-release: true
+      wants-github-release: true

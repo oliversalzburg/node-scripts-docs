@@ -29,7 +29,7 @@ jobs:
       - check-date
     uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
     with:
-      has_mkdocs: true
+      has-mkdocs: true
 
   pre-release:
     if: needs.check_date.outputs.should_run != 'false'
@@ -46,6 +46,6 @@ jobs:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     uses: oliversalzburg/workflows/.github/workflows/publish-npm-package.yml@main
     with:
-      has_mkdocs: true
+      has-mkdocs: true
       is-canary: true
-      with-github-release: true
+      wants-github-release: true

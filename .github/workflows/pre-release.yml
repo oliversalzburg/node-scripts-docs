@@ -6,7 +6,7 @@ on:
       - main
   workflow_dispatch:
     inputs:
-      with-github-release:
+      wants-github-release:
         default: false
         description: Create a GitHub release?
         required: false
@@ -19,7 +19,7 @@ jobs:
     name: 🔹 QA
     uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
     with:
-      has_mkdocs: true
+      has-mkdocs: true
 
   pre-release:
     if: github.ref_name == github.event.repository.default_branch
@@ -34,6 +34,6 @@ jobs:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     uses: oliversalzburg/workflows/.github/workflows/publish-npm-package.yml@main
     with:
-      has_mkdocs: true
+      has-mkdocs: true
       is-canary: true
-      with-github-release: ${{ inputs.with-github-release || false }}
+      wants-github-release: ${{ inputs.wants-github-release || false }}
