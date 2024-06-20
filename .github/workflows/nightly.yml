@@ -2,87 +2,50 @@ name: Nightly
 
 on:
   schedule:
-    - cron: "30 2 * * *"
+    - cron: "13 3 7 * *"
   workflow_dispatch:
 
 concurrency: pre-release
 
 jobs:
-  check_date:
+  check-date:
     runs-on: ubuntu-22.04
     name: Check latest commit
     outputs:
       should_run: ${{ steps.should_run.outputs.should_run }}
     steps:
-      - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
-      - name: print latest_commit
-        run: echo ${{ github.sha }}
+      - name: Checkout
+        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
 
-      - id: should_run
+      - name: Check if we had commits in the past month
         continue-on-error: true
-        name: check latest commit is less than a day
+        id: should_run
         if: ${{ github.event_name == 'schedule' }}
-        run: test -z $(git rev-list  --after="24 hours"  ${{ github.sha }}) && echo "name=should_run::false" >> $GITHUB_OUTPUT
+        run: test -z $(git rev-list --after="1 month" ${{ github.sha }}) && echo "name=should_run::false" >> $GITHUB_OUTPUT
 
-  qa-main:
+  qa:
     name: 🔹 QA
+    needs:
+      - check-date
     uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
     with:
       has_mkdocs: true
 
-  pre-relase:
+  pre-release:
+    if: needs.check_date.outputs.should_run != 'false'
+    name: 🔹 Publish
     needs:
-      - check_date
-      - qa-main
-    name: Publish
-    if: ${{ needs.check_date.outputs.should_run != 'false' }}
-    runs-on: ubuntu-22.04
-    concurrency: publish
+      - check-date
+      - qa
     permissions:
       contents: write
       id-token: write
       packages: write
       pull-requests: read
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
-
-      - name: Select NodeJS version
-        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
-        env:
-          # renovate: datasource=docker depName=node versioning=node
-          NODE_VERSION: "20.14.0"
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          registry-url: https://registry.npmjs.org
-
-      - name: Enable Corepack
-        run: corepack enable
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Build
-        run: yarn build
-
-      - name: Determine release version
-        run: echo "RELEASE_VERSION=$(node .scripts/manifest-version.cjs --canary=patch)" >> $GITHUB_ENV
-
-      - name: Release dev version for testing
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          npm --no-git-tag-version --ignore-scripts version ${RELEASE_VERSION}
-          npm publish --access=public --provenance --tag=next
-
-      - name: Generate GitHub release
-        uses: oliversalzburg/action-automatic-semantic-releases@bc429dc1af8c036b5f8c11fef7bcb0becfd5064d # v0.0.13
-        with:
-          automatic_release_tag: next
-          body_prefix: |
-            Published at <https://www.npmjs.com/package/node-scripts-docs/v/${{ env.RELEASE_VERSION }}>.
-          draft: false
-          prerelease: true
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          title: Snapshot Build v${{ env.RELEASE_VERSION }}
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    uses: oliversalzburg/workflows/.github/workflows/publish-npm-package.yml@main
+    with:
+      has_mkdocs: true
+      is-canary: true
+      with-github-release: true

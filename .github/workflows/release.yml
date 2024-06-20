@@ -4,75 +4,29 @@ on:
   push:
     tags:
       - "v*"
+  workflow_dispatch:
+
+concurrency: release
 
 jobs:
-  qa-tag:
+  qa:
     name: 🔹 QA
     uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
     with:
       has_mkdocs: true
 
   release:
-    needs: qa-tag
-    name: Publish action
-    runs-on: ubuntu-22.04
-    concurrency: lib-publish
+    name: 🔹 Publish
+    needs: qa
     permissions:
       contents: write
       id-token: write
       packages: write
       pull-requests: read
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
-
-      - name: Select NodeJS version
-        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
-        env:
-          # renovate: datasource=docker depName=node versioning=node
-          NODE_VERSION: "20.14.0"
-        with:
-          node-version: ${{ env.NODE_VERSION }}
-          registry-url: https://registry.npmjs.org
-
-      - name: Enable Corepack
-        run: corepack enable
-
-      # Yarn dependencies cannot be cached until yarn is installed
-      # WORKAROUND: https://github.com/actions/setup-node/issues/531
-      - name: Extract cached dependencies
-        uses: actions/setup-node@60edb5dd545a775178f52524783378180af0d1f8 # v4
-        with:
-          cache: yarn
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Build
-        run: yarn build
-
-      - name: Determine release version
-        run: echo "RELEASE_VERSION=$(node .scripts/manifest-version.cjs)" >> $GITHUB_ENV
-
-      - name: Release new version
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish --access=public --provenance --tag=latest
-
-      - name: Generate GitHub release
-        uses: oliversalzburg/action-automatic-semantic-releases@bc429dc1af8c036b5f8c11fef7bcb0becfd5064d # v0.0.13
-        with:
-          body_prefix: |
-            Published at <https://www.npmjs.com/package/node-scripts-docs/v/${{ env.RELEASE_VERSION }}>.
-          draft: false
-          prerelease: false
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          title: v${{ env.RELEASE_VERSION }}
-
-  docs-deploy:
-    name: Call Deployment
-    needs: qa-tag
-    permissions:
-      contents: write
-    uses: ./.github/workflows/docs-deploy.yml
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    uses: oliversalzburg/workflows/.github/workflows/publish-npm-package.yml@main
+    with:
+      has_mkdocs: true
+      is-canary: false
+      with-github-release: true
