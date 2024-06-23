@@ -2023,9 +2023,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsdoc@npm:48.2.13":
-  version: 48.2.13
-  resolution: "eslint-plugin-jsdoc@npm:48.2.13"
+"eslint-plugin-jsdoc@npm:48.2.15":
+  version: 48.2.15
+  resolution: "eslint-plugin-jsdoc@npm:48.2.15"
   dependencies:
     "@es-joy/jsdoccomment": "npm:~0.43.1"
     are-docs-informative: "npm:^0.0.2"
@@ -2037,7 +2037,7 @@ __metadata:
     spdx-expression-parse: "npm:^4.0.0"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
-  checksum: 10c0/dffe67e9879c7114fefa0b53e721f7c907ea78b2439a5999af4d9685ccc48ff22f991789fae8b7256f363a88973c7116b22cdc59da0f747a68cc92e1d36b2557
+  checksum: 10c0/44dfbdbf4899f7fa34da3219e76f1d686b71cce0f0ccbd34b70f1f2720c8e848d0e8e86196154d64d746d9d94d314616b5e429661c1b277aa96eb9fa1a648ed1
   languageName: node
   linkType: hard
 
@@ -3893,7 +3893,7 @@ __metadata:
     elapsed-time: "npm:0.0.1"
     eslint: "npm:9.5.0"
     eslint-config-prettier: "npm:9.1.0"
-    eslint-plugin-jsdoc: "npm:48.2.13"
+    eslint-plugin-jsdoc: "npm:48.2.15"
     eslint-plugin-tsdoc: "npm:0.3.0"
     globals: "npm:15.6.0"
     globby: "npm:14.0.1"
