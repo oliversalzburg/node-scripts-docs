@@ -39,7 +39,7 @@
     "@oliversalzburg/js-utils": "0.0.50",
     "elapsed-time": "0.0.1",
     "globby": "14.0.1",
-    "marked": "13.0.0",
+    "marked": "13.0.1",
     "minimist": "1.2.8",
     "tslib": "2.6.3"
   },
