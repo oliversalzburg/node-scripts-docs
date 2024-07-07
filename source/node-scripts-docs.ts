@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { redirectErrorsToConsole } from "@oliversalzburg/js-utils/error/console.js";
+import { redirectErrorsToConsole } from "@oliversalzburg/js-utils/errors/console.js";
 import ElapsedTime from "elapsed-time";
 import minimist from "minimist";
 import fs from "node:fs/promises";
@@ -16,7 +16,7 @@ import { Validator } from "./Validator.js";
 
 const argv = minimist(process.argv.slice(2));
 
-(async () => {
+const main = async () => {
   process.stderr.write(`node-scripts-docs (${new Date().toISOString()})\n`);
   const entry = ElapsedTime.new().start();
 
@@ -124,4 +124,6 @@ const argv = minimist(process.argv.slice(2));
 
   process.stderr.write(`Process completed in ${entry.getValue()}.\n`);
   process.exit(0);
-})().catch(redirectErrorsToConsole(console));
+};
+
+main().catch(redirectErrorsToConsole(console));

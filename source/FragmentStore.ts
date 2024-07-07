@@ -1,5 +1,5 @@
-import { InvalidOperationError } from "@oliversalzburg/js-utils/error/InvalidOperationError.js";
-import { isNil } from "@oliversalzburg/js-utils/nil.js";
+import { isNil } from "@oliversalzburg/js-utils/data/nil.js";
+import { InvalidOperationError } from "@oliversalzburg/js-utils/errors/InvalidOperationError.js";
 import { Tokens, marked } from "marked";
 import fs from "node:fs/promises";
 import path from "node:path";
