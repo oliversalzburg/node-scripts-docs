@@ -1,4 +1,4 @@
-import { mustExist } from "@oliversalzburg/js-utils/nil.js";
+import { mustExist } from "@oliversalzburg/js-utils/data/nil.js";
 import { isDefaultDescription } from "./FragmentRenderer.js";
 import { DocumentationFragment, FragmentStore } from "./FragmentStore.js";
 import { ScriptStore, ScriptStoreEntry } from "./ScriptStore.js";
