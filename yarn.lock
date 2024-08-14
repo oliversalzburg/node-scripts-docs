@@ -865,9 +865,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oliversalzburg/eslint-config@npm:1.0.1":
-  version: 1.0.1
-  resolution: "@oliversalzburg/eslint-config@npm:1.0.1"
+"@oliversalzburg/eslint-config@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@oliversalzburg/eslint-config@npm:1.0.2"
   peerDependencies:
     "@eslint/js": ^9.5.0
     eslint-config-prettier: ^9.1.0
@@ -875,7 +875,7 @@ __metadata:
     eslint-plugin-tsdoc: ^0.3.0
     globals: ^15.6.0
     typescript-eslint: ^8.0.1
-  checksum: 10c0/3a894b562e5dc72e3af2d584a65a2c1a8622edd56181fd9931c6f28f2127f950a2b44de5983c1ea0f0d7132a3e5c4f73ff67381f384cdb77dbd4bc46a601b311
+  checksum: 10c0/d794bfd0fe34278cf1cfb8902be03a84a84f26f1db391e534f20b639c6cbafffa4c8e5f435ba32dc1544a9495b3749a6f324f1bafed92e8ecddb964d4a922df3
   languageName: node
   linkType: hard
 
@@ -2036,9 +2036,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsdoc@npm:50.2.1":
-  version: 50.2.1
-  resolution: "eslint-plugin-jsdoc@npm:50.2.1"
+"eslint-plugin-jsdoc@npm:50.2.2":
+  version: 50.2.2
+  resolution: "eslint-plugin-jsdoc@npm:50.2.2"
   dependencies:
     "@es-joy/jsdoccomment": "npm:~0.48.0"
     are-docs-informative: "npm:^0.0.2"
@@ -2053,7 +2053,7 @@ __metadata:
     synckit: "npm:^0.9.1"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
-  checksum: 10c0/65186e025b518b2ed0616683adbf16e321ccaf89c065912e98773130ea8cd7dff857aa1087be38120c9dc91c418291aa8a4e3f526a1e0fac3a3d8dd3692f3425
+  checksum: 10c0/f41d30246f6a4b6acb55e8cd75cf4fc256315e141ab25f7740fa6fa58cdd24e08cb672b4a350da93aeb126d210bd25981310a50f97cfb108f6a7ce8668b6b90a
   languageName: node
   linkType: hard
 
@@ -3946,7 +3946,7 @@ __metadata:
   resolution: "node-scripts-docs@workspace:."
   dependencies:
     "@eslint/js": "npm:9.9.0"
-    "@oliversalzburg/eslint-config": "npm:1.0.1"
+    "@oliversalzburg/eslint-config": "npm:1.0.2"
     "@oliversalzburg/js-utils": "npm:0.0.59"
     "@types/jest": "npm:29.5.12"
     "@types/minimist": "npm:1.2.5"
@@ -3954,7 +3954,7 @@ __metadata:
     elapsed-time: "npm:0.0.1"
     eslint: "npm:9.9.0"
     eslint-config-prettier: "npm:9.1.0"
-    eslint-plugin-jsdoc: "npm:50.2.1"
+    eslint-plugin-jsdoc: "npm:50.2.2"
     eslint-plugin-tsdoc: "npm:0.3.0"
     globals: "npm:15.9.0"
     globby: "npm:14.0.2"
