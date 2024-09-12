@@ -17,10 +17,7 @@ export const isDefaultDescription = (description: string) => {
  * @param rawDescription - The description of the script.
  * @returns A documentation fragment for the provided script.
  */
-export const makeDocumentation = (
-  scriptMeta: ScriptStoreEntry,
-  rawDescription?: string | undefined,
-) => {
+export const makeDocumentation = (scriptMeta: ScriptStoreEntry, rawDescription?: string) => {
   const description = rawDescription ?? DOCUMENTATION_PENDING_DEFAULT;
   const descriptionIndented = description.replace(/^(?!\s*$)/gm, " ".repeat(4));
 
