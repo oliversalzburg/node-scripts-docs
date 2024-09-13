@@ -874,9 +874,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oliversalzburg/eslint-config@npm:1.0.3":
-  version: 1.0.3
-  resolution: "@oliversalzburg/eslint-config@npm:1.0.3"
+"@oliversalzburg/eslint-config@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@oliversalzburg/eslint-config@npm:1.1.0"
   peerDependencies:
     "@eslint/js": ^9.5.0
     eslint-config-prettier: ^9.1.0
@@ -884,7 +884,7 @@ __metadata:
     eslint-plugin-tsdoc: ^0.3.0
     globals: ^15.6.0
     typescript-eslint: ^8.0.1
-  checksum: 10c0/4dbd7fc7833b16885336f3ff327993e90e853e5e93cf7fc689b21482cdb37328c2e92b0e70489f883c37b4f721243ff7f76cdb099de9d30123f0e5fa9b4a3947
+  checksum: 10c0/505a6b335e1cac451fedf3b1bf9e0fbffcb0cefcb10f668d4f956b5e4e29869bac68b6dba0509f4a5ba22b9b588dc852a11acdbd6071dd9dc273665e7c0f8f42
   languageName: node
   linkType: hard
 
@@ -3925,7 +3925,7 @@ __metadata:
   resolution: "node-scripts-docs@workspace:."
   dependencies:
     "@eslint/js": "npm:9.10.0"
-    "@oliversalzburg/eslint-config": "npm:1.0.3"
+    "@oliversalzburg/eslint-config": "npm:1.1.0"
     "@oliversalzburg/js-utils": "npm:0.1.0"
     "@types/jest": "npm:29.5.13"
     "@types/minimist": "npm:1.2.5"
