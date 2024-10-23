@@ -46,7 +46,7 @@
   "devDependencies": {
     "@eslint/js": "9.13.0",
     "@oliversalzburg/eslint-config": "1.1.0",
-    "@types/jest": "29.5.13",
+    "@types/jest": "29.5.14",
     "@types/minimist": "1.2.5",
     "@types/node": "20.16.15",
     "eslint": "9.13.0",
