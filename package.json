@@ -48,7 +48,7 @@
     "@oliversalzburg/eslint-config": "1.1.0",
     "@types/jest": "29.5.14",
     "@types/minimist": "1.2.5",
-    "@types/node": "22.9.0",
+    "@types/node": "22.9.1",
     "eslint": "9.15.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-jsdoc": "50.5.0",
