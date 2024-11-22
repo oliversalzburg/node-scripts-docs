@@ -3639,12 +3639,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:15.0.1":
-  version: 15.0.1
-  resolution: "marked@npm:15.0.1"
+"marked@npm:15.0.2":
+  version: 15.0.2
+  resolution: "marked@npm:15.0.2"
   bin:
     marked: bin/marked.js
-  checksum: 10c0/711253c4d29fa94428c987317921987339088c201cc6b8db72ba1ceb27f7cdafd3f7a8e3eb5e0107108e1f749c459b80f5fe144a507695191f968b6efa945f04
+  checksum: 10c0/6c288ac2b41f1b75671b6a06eea4d5f37bf49d42e93a4a175a7e0331d2fc339cdaef937429cf5e4d0e85b2a65926385cab28bdb4c90ac9f96fdc52cab4018466
   languageName: node
   linkType: hard
 
@@ -3901,7 +3901,7 @@ __metadata:
     globby: "npm:14.0.2"
     jest: "npm:29.7.0"
     lint-staged: "npm:15.2.10"
-    marked: "npm:15.0.1"
+    marked: "npm:15.0.2"
     minimist: "npm:1.2.8"
     prettier: "npm:3.3.3"
     prettier-package-json: "npm:2.8.0"
