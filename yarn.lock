@@ -815,22 +815,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@microsoft/tsdoc-config@npm:0.17.0":
-  version: 0.17.0
-  resolution: "@microsoft/tsdoc-config@npm:0.17.0"
+"@microsoft/tsdoc-config@npm:0.17.1":
+  version: 0.17.1
+  resolution: "@microsoft/tsdoc-config@npm:0.17.1"
   dependencies:
-    "@microsoft/tsdoc": "npm:0.15.0"
+    "@microsoft/tsdoc": "npm:0.15.1"
     ajv: "npm:~8.12.0"
     jju: "npm:~1.4.0"
     resolve: "npm:~1.22.2"
-  checksum: 10c0/9aa51b5b0fa93ad5c6a40ed1acf1f25c625b616efe29f2e5fa22ee9bddea12a4a39c833726e11ab592f20cfc9b8c3865978864dd02711d457fa971df3c091847
+  checksum: 10c0/a686355796f492f27af17e2a17d615221309caf4d9f9047a5a8f17f8625c467c4c81e2a7923ddafd71b892631d5e5013c4b8cc49c5867d3cc1d260fd90c1413d
   languageName: node
   linkType: hard
 
-"@microsoft/tsdoc@npm:0.15.0":
-  version: 0.15.0
-  resolution: "@microsoft/tsdoc@npm:0.15.0"
-  checksum: 10c0/6beaf6e01ff54daeba69862cb3d27e03bbabfe299d23d0fade885f5b29bf98af01cecc746d23875fe60ba89514e3b630b71140b1b18d37301096f7a1e35451aa
+"@microsoft/tsdoc@npm:0.15.1":
+  version: 0.15.1
+  resolution: "@microsoft/tsdoc@npm:0.15.1"
+  checksum: 10c0/09948691fac56c45a0d1920de478d66a30371a325bd81addc92eea5654d95106ce173c440fea1a1bd5bb95b3a544b6d4def7bb0b5a846c05d043575d8369a20c
   languageName: node
   linkType: hard
 
@@ -883,17 +883,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oliversalzburg/eslint-config@npm:1.1.0":
-  version: 1.1.0
-  resolution: "@oliversalzburg/eslint-config@npm:1.1.0"
+"@oliversalzburg/eslint-config@npm:1.2.0":
+  version: 1.2.0
+  resolution: "@oliversalzburg/eslint-config@npm:1.2.0"
   peerDependencies:
     "@eslint/js": ^9.5.0
     eslint-config-prettier: ^9.1.0
     eslint-plugin-jsdoc: ^50.0.0
-    eslint-plugin-tsdoc: ^0.3.0
+    eslint-plugin-tsdoc: ^0.3.0 || ^0.4.0
     globals: ^15.6.0
     typescript-eslint: ^8.0.1
-  checksum: 10c0/505a6b335e1cac451fedf3b1bf9e0fbffcb0cefcb10f668d4f956b5e4e29869bac68b6dba0509f4a5ba22b9b588dc852a11acdbd6071dd9dc273665e7c0f8f42
+  checksum: 10c0/1b46a7e91f95f7c4bf29fd80cc984bfebefc00f7fc84c67d49251e80e3f00e826a47fb98feb0424b1559631a162ee9abaa5bb41d387a6013d45f49873c91bd2e
   languageName: node
   linkType: hard
 
@@ -2026,13 +2026,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-tsdoc@npm:0.3.0":
-  version: 0.3.0
-  resolution: "eslint-plugin-tsdoc@npm:0.3.0"
+"eslint-plugin-tsdoc@npm:0.4.0":
+  version: 0.4.0
+  resolution: "eslint-plugin-tsdoc@npm:0.4.0"
   dependencies:
-    "@microsoft/tsdoc": "npm:0.15.0"
-    "@microsoft/tsdoc-config": "npm:0.17.0"
-  checksum: 10c0/2ee35c661ad9cd3032ec40a4f7b02c04dddd3ecc40afcd8ea509b744c8bedafb408b0a0466e6f28ef771645fa55bf4600a4ad534723f36fc149ef92dc1f6719e
+    "@microsoft/tsdoc": "npm:0.15.1"
+    "@microsoft/tsdoc-config": "npm:0.17.1"
+  checksum: 10c0/c65b67b789597683456cd346414451618b9a2ed40f4d6b02223426914ba83c37083c8d330d15808ff5e448c755bdb254ff0ffb1971688304168ed8d22dbcc7d3
   languageName: node
   linkType: hard
 
@@ -3887,7 +3887,7 @@ __metadata:
   resolution: "node-scripts-docs@workspace:."
   dependencies:
     "@eslint/js": "npm:9.15.0"
-    "@oliversalzburg/eslint-config": "npm:1.1.0"
+    "@oliversalzburg/eslint-config": "npm:1.2.0"
     "@oliversalzburg/js-utils": "npm:0.1.1"
     "@types/jest": "npm:29.5.14"
     "@types/minimist": "npm:1.2.5"
@@ -3896,7 +3896,7 @@ __metadata:
     eslint: "npm:9.15.0"
     eslint-config-prettier: "npm:9.1.0"
     eslint-plugin-jsdoc: "npm:50.5.0"
-    eslint-plugin-tsdoc: "npm:0.3.0"
+    eslint-plugin-tsdoc: "npm:0.4.0"
     globals: "npm:15.12.0"
     globby: "npm:14.0.2"
     jest: "npm:29.7.0"
