@@ -44,12 +44,12 @@
     "tslib": "2.8.1"
   },
   "devDependencies": {
-    "@eslint/js": "9.15.0",
+    "@eslint/js": "9.16.0",
     "@oliversalzburg/eslint-config": "1.2.0",
     "@types/jest": "29.5.14",
     "@types/minimist": "1.2.5",
     "@types/node": "22.10.1",
-    "eslint": "9.15.0",
+    "eslint": "9.16.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-jsdoc": "50.6.0",
     "eslint-plugin-tsdoc": "0.4.0",
