@@ -36,7 +36,7 @@
     "postversion": "git push"
   },
   "dependencies": {
-    "@oliversalzburg/js-utils": "0.1.2",
+    "@oliversalzburg/js-utils": "0.2.2",
     "elapsed-time": "0.0.1",
     "globby": "14.0.2",
     "marked": "15.0.3",
