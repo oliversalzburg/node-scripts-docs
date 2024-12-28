@@ -35,6 +35,9 @@
     "preversion": "yarn run lint && yarn run build && yarn run test",
     "postversion": "git push"
   },
+  "resolutions": {
+    "prettier": "3.3.3"
+  },
   "dependencies": {
     "@oliversalzburg/js-utils": "0.2.2",
     "elapsed-time": "0.0.1",
@@ -42,6 +45,14 @@
     "marked": "15.0.4",
     "minimist": "1.2.8",
     "tslib": "2.8.1"
+  },
+  "peerDependencies": {
+    "prettier": "<=3.3.3"
+  },
+  "peerDependenciesMeta": {
+    "prettier": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@eslint/js": "9.17.0",

@@ -3863,6 +3863,11 @@ __metadata:
     tslib: "npm:2.8.1"
     typescript: "npm:5.7.2"
     typescript-eslint: "npm:8.18.2"
+  peerDependencies:
+    prettier: <=3.3.3
+  peerDependenciesMeta:
+    prettier:
+      optional: true
   bin:
     nsd: output/node-scripts-docs.js
   languageName: unknown
