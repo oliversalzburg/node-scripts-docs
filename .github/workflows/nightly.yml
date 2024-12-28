@@ -13,6 +13,8 @@ jobs:
     name: Check latest commit
     outputs:
       should_run: ${{ steps.should_run.outputs.should_run }}
+    permissions:
+      contents: read
     steps:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
@@ -27,6 +29,9 @@ jobs:
     name: 🔹 QA
     needs:
       - check-date
+    permissions:
+      contents: read
+      packages: read
     uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
     with:
       has-mkdocs: true

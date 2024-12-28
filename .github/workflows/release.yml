@@ -11,6 +11,9 @@ concurrency: release
 jobs:
   qa:
     name: 🔹 QA
+    permissions:
+      contents: read
+      packages: read
     uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
     with:
       has-mkdocs: true
