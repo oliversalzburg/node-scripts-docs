@@ -39,7 +39,7 @@
     "prettier": "3.3.3"
   },
   "dependencies": {
-    "@oliversalzburg/js-utils": "0.2.2",
+    "@oliversalzburg/js-utils": "0.2.3",
     "elapsed-time": "0.0.1",
     "globby": "14.1.0",
     "marked": "15.0.7",
