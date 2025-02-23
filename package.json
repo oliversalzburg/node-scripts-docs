@@ -23,9 +23,8 @@
     "docs:scripts": "yarn nsd-debug",
     "docs:serve": "podman run --rm -it -p 8000:8000 -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material",
     "lint": "yarn run lint:all",
-    "lint:all": "yarn run lint:eslint && yarn run lint:prettier && yarn run lint:tsc",
-    "lint:eslint": "eslint .",
-    "lint:prettier": "prettier --check .",
+    "lint:all": "yarn run lint:biome && yarn run lint:tsc",
+    "lint:biome": "biome check .",
     "lint:tsc": "tsc --noEmit",
     "nextversion": "./.scripts/manifest-version.cjs",
     "nsd-debug": "yarn build && node output/node-scripts-docs.js",
@@ -35,9 +34,6 @@
     "preversion": "yarn run lint && yarn run build && yarn run test",
     "postversion": "git push"
   },
-  "resolutions": {
-    "prettier": "3.3.3"
-  },
   "dependencies": {
     "@oliversalzburg/js-utils": "0.2.3",
     "elapsed-time": "0.0.1",
@@ -46,44 +42,18 @@
     "minimist": "1.2.8",
     "tslib": "2.8.1"
   },
-  "peerDependencies": {
-    "prettier": "<=3.3.3"
-  },
-  "peerDependenciesMeta": {
-    "prettier": {
-      "optional": true
-    }
-  },
   "devDependencies": {
-    "@eslint/js": "9.21.0",
-    "@oliversalzburg/eslint-config": "2.0.0",
+    "@biomejs/biome": "1.9.4",
+    "@biomejs/cli-linux-x64": "1.9.4",
     "@types/jest": "29.5.14",
     "@types/minimist": "1.2.5",
     "@types/node": "22.13.5",
-    "eslint": "9.21.0",
-    "eslint-config-prettier": "10.0.1",
-    "eslint-plugin-jsdoc": "50.6.3",
-    "eslint-plugin-tsdoc": "0.4.0",
-    "globals": "16.0.0",
     "jest": "29.7.0",
     "lint-staged": "15.4.3",
-    "prettier": "3.3.3",
-    "prettier-package-json": "2.8.0",
-    "prettier-plugin-organize-imports": "4.1.0",
-    "prettier-plugin-sh": "0.15.0",
     "ts-jest": "29.2.5",
-    "typescript": "5.7.3",
-    "typescript-eslint": "8.24.1"
+    "typescript": "5.7.3"
   },
-  "keywords": [
-    "documentation",
-    "mkdocs",
-    "monorepo",
-    "npm",
-    "package.json",
-    "scripts",
-    "yarn"
-  ],
+  "keywords": ["documentation", "mkdocs", "monorepo", "npm", "package.json", "scripts", "yarn"],
   "engines": {
     "node": ">=18"
   },

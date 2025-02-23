@@ -1,4 +1,5 @@
 export default {
-  "package.json": "yarn prettier-package-json --write",
-  "*.{js,json,md,sh,ts,yml}": "prettier --write",
+  "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}": [
+    "biome check --write --organize-imports-enabled=false --no-errors-on-unmatched",
+  ],
 };
