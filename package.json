@@ -52,7 +52,15 @@
     "ts-jest": "29.2.5",
     "typescript": "5.7.3"
   },
-  "keywords": ["documentation", "mkdocs", "monorepo", "npm", "package.json", "scripts", "yarn"],
+  "keywords": [
+    "documentation",
+    "mkdocs",
+    "monorepo",
+    "npm",
+    "package.json",
+    "scripts",
+    "yarn"
+  ],
   "engines": {
     "node": ">=18"
   },
