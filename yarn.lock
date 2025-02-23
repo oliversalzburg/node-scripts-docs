@@ -457,7 +457,6 @@ __metadata:
 "@biomejs/cli-linux-x64@npm:1.9.4":
   version: 1.9.4
   resolution: "@biomejs/cli-linux-x64@npm:1.9.4"
-  checksum: 10c0/83237732ac8da1b44e124e2c5663495ae4877805b3064221ab851e5691c3bc7365775629aaea2ac811ff9dc171d02c788669252a2a6dc94159407fa9980c7256
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
@@ -3146,7 +3145,6 @@ __metadata:
   resolution: "node-scripts-docs@workspace:."
   dependencies:
     "@biomejs/biome": "npm:1.9.4"
-    "@biomejs/cli-linux-x64": "npm:1.9.4"
     "@oliversalzburg/js-utils": "npm:0.2.3"
     "@types/jest": "npm:29.5.14"
     "@types/minimist": "npm:1.2.5"
