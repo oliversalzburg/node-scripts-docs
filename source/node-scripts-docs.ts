@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
+import fs from "node:fs/promises";
+import path from "node:path";
 import { redirectErrorsToConsole } from "@oliversalzburg/js-utils/errors/console.js";
 import ElapsedTime from "elapsed-time";
 import minimist from "minimist";
-import fs from "node:fs/promises";
-import path from "node:path";
 import { DocumentationRenderer } from "./DocumentationRenderer.js";
 import { loadFragments } from "./FragmentScanner.js";
 import { DOCS_FRAGMENTS_DEFAULT_LOCATION, FragmentStore } from "./FragmentStore.js";

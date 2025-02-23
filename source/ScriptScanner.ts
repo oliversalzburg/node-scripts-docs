@@ -1,7 +1,7 @@
-import { globby } from "globby";
 import fs from "node:fs/promises";
 import { resolve } from "node:path";
 import { join } from "node:path/posix";
+import { globby } from "globby";
 import { ScriptStore } from "./ScriptStore.js";
 
 /**

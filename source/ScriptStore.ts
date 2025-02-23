@@ -1,7 +1,7 @@
-import { isNil, mustExist } from "@oliversalzburg/js-utils/data/nil.js";
-import { InvalidOperationError } from "@oliversalzburg/js-utils/errors/InvalidOperationError.js";
 import fs from "node:fs/promises";
 import path from "node:path";
+import { isNil, mustExist } from "@oliversalzburg/js-utils/data/nil.js";
+import { InvalidOperationError } from "@oliversalzburg/js-utils/errors/InvalidOperationError.js";
 
 export const SCRIPTS_METADATA_DEFAULT_FILENAME = "package.json-scripts.json";
 
