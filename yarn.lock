@@ -3159,7 +3159,7 @@ __metadata:
     tslib: "npm:2.8.1"
     typescript: "npm:5.7.3"
   bin:
-    nsd: output/node-scripts-docs.js
+    nsd: output/main.js
   languageName: unknown
   linkType: soft
 
