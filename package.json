@@ -15,23 +15,11 @@
   },
   "type": "module",
   "bin": {
-    "nsd": "output/node-scripts-docs.js"
+    "nsd": "output/main.js"
   },
   "scripts": {
-    "build": "tsc",
-    "docs:build": "podman run --rm -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material build --site-dir=public",
-    "docs:scripts": "yarn nsd-debug",
-    "docs:serve": "podman run --rm -it -p 8000:8000 -v ${PWD}:/docs docker.io/squidfunk/mkdocs-material",
-    "lint": "yarn run lint:all",
-    "lint:all": "yarn run lint:biome && yarn run lint:tsc",
-    "lint:biome": "biome check .",
-    "lint:tsc": "tsc --noEmit",
-    "nextversion": "./.scripts/manifest-version.cjs",
-    "nsd-debug": "yarn build && node output/node-scripts-docs.js",
-    "prepack": "yarn build",
-    "test": "node --experimental-vm-modules $(yarn bin jest) source",
-    "test:coverage": "node --experimental-vm-modules $(yarn bin jest) --coverage",
-    "preversion": "yarn run lint && yarn run build && yarn run test",
+    "prepack": "make",
+    "preversion": "make lint test",
     "postversion": "git push"
   },
   "dependencies": {
