@@ -839,10 +839,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oliversalzburg/js-utils@npm:0.2.3":
-  version: 0.2.3
-  resolution: "@oliversalzburg/js-utils@npm:0.2.3"
-  checksum: 10c0/15eb02b796bc5878b335f57675f3fc9cdd23ec70db71f83d48e814705b47f9bb15986375b822c58a8e396e391ad6a2a055e11bbf2f01e783db08fd4e6926ce1d
+"@oliversalzburg/js-utils@npm:0.2.8":
+  version: 0.2.8
+  resolution: "@oliversalzburg/js-utils@npm:0.2.8"
+  checksum: 10c0/f42c46176852109fffdd2c4e4d8bb3b8c6fec8f5fce3659424148350ca39238aa61af02bc06af2fe3fa74b57e3b194b74b90457f9820f19f331127e68fa27c88
   languageName: node
   linkType: hard
 
@@ -3145,7 +3145,7 @@ __metadata:
   resolution: "node-scripts-docs@workspace:."
   dependencies:
     "@biomejs/biome": "npm:1.9.4"
-    "@oliversalzburg/js-utils": "npm:0.2.3"
+    "@oliversalzburg/js-utils": "npm:0.2.8"
     "@types/jest": "npm:29.5.14"
     "@types/minimist": "npm:1.2.5"
     "@types/node": "npm:22.13.5"
