@@ -1,6 +1,6 @@
 .PHONY: default build clean docs git-hook pretty lint test run
 
-default: clean build
+default: build
 
 build: output
 
@@ -13,11 +13,11 @@ docs:
 git-hook:
 	echo "make pretty" > .git/hooks/pre-commit
 
-pretty:
+lint: node_modules
 	yarn biome check --write --no-errors-on-unmatched
 	npm pkg fix
 
-lint:
+lint: node_modules
 	yarn biome check .
 	yarn tsc --noEmit
 
