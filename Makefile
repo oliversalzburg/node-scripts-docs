@@ -21,10 +21,10 @@ lint:
 	yarn biome check .
 	yarn tsc --noEmit
 
-test: clean build
+test: build
 	node --experimental-vm-modules $(shell yarn bin jest) --coverage source
 
-run: clean build
+run: build
 	node ./output/main.js
 
 
