@@ -3,13 +3,13 @@
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
-    "composite": true,
     "declaration": true,
     "declarationMap": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
     "incremental": true,
+    "isolatedModules": true,
     "lib": ["ESNext"],
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
@@ -20,7 +20,8 @@
     "sourceMap": true,
     "strict": true,
     "target": "ESNext",
-    "types": ["@types/jest", "@types/node"]
+    "types": ["@types/jest", "@types/node"],
+    "useDefineForClassFields": true
   },
   "include": ["@types", "source"]
 }
