@@ -1,17 +1,21 @@
-.PHONY: default build clean docs pretty lint test run
+.PHONY: default build clean docs git-hook pretty lint test run
 
 default: clean build
 
 build: output
 
 clean:
-	rm -rf ./output tsconfig.tsbuildinfo
+	rm --force --recursive node_modules output tsconfig.tsbuildinfo
 
 docs:
 	podman run --rm --volume ${PWD}:/docs docker.io/squidfunk/mkdocs-material build --site-dir=public
 
+git-hook:
+	echo "make pretty" > .git/hooks/pre-commit
+
 pretty:
 	yarn biome check --write --no-errors-on-unmatched
+	npm pkg fix
 
 lint:
 	yarn biome check .
