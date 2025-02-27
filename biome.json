@@ -99,7 +99,8 @@
       "packages/*/lib/",
       "packages/*/output/",
       "packages/*/public/",
-      "public/"
+      "public/",
+      "package.json"
     ]
   },
   "javascript": {
