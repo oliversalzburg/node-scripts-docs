@@ -2738,12 +2738,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"marked@npm:15.0.8":
-  version: 15.0.8
-  resolution: "marked@npm:15.0.8"
+"marked@npm:15.0.9":
+  version: 15.0.9
+  resolution: "marked@npm:15.0.9"
   bin:
     marked: bin/marked.js
-  checksum: 10c0/79c4958047e1d7405eea3a21d56aa9adf1e579f603711472458b269db02764b1b6cb4acd8d7ecfe368126763af491ebf1283918676c47c397a45d24dac6f7ca4
+  checksum: 10c0/0aed013e2e5fd07fdbb8b5341668d1c36bb36a6fce1772ab41ead62e0eac6a3e71c77c95b5f852a878cc49140a3c1db3363dca551379cea50a6c2a3518e02e40
   languageName: node
   linkType: hard
 
@@ -2964,7 +2964,7 @@ __metadata:
     elapsed-time: "npm:0.0.1"
     globby: "npm:14.1.0"
     jest: "npm:29.7.0"
-    marked: "npm:15.0.8"
+    marked: "npm:15.0.9"
     minimist: "npm:1.2.8"
     ts-jest: "npm:29.3.2"
     tslib: "npm:2.8.1"
