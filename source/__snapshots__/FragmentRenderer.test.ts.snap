@@ -7,12 +7,12 @@ exports[`renders fragment with existing description 1`] = `
 -   Source:
 
     \`\`\`shell
-    yarn nsd-debug --include-locals
+    npm exec -- nsd-debug --include-locals
     \`\`\`
 
 -   Description:
 
-    Build the latest sources and then use the build output to execute your command. Parameters are passed through by \`yarn\`.
+    Build the latest sources and then use the build output to execute your command. Parameters are passed through by \`npm exec\`.
 "
 `;
 
@@ -23,7 +23,7 @@ exports[`renders fragment without description 1`] = `
 -   Source:
 
     \`\`\`shell
-    yarn nsd-debug --include-locals
+    npm exec -- nsd-debug --include-locals
     \`\`\`
 
 -   Description:

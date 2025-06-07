@@ -1,6 +1,5 @@
 /.github/
-/.vscode/
-/.yarn/
+/.vscod
 /@types/
 /coverage/
 /docs/
@@ -10,7 +9,6 @@
 /.editorconfig
 /.gitattributes
 /.gitignore
-/.yarnrc.yml
 /biome.json
 /jest.config.js
 /lint-staged.config.js
@@ -18,4 +16,3 @@
 /package.json-scripts.json
 /renovate.json
 /tsconfig.*
-/yarn.lock

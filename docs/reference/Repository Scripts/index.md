@@ -13,19 +13,6 @@
 
     _documentation pending_
 
-## prepack
-
--   Project: `node-scripts-docs`
--   Source:
-
-    ```shell
-    make
-    ```
-
--   Description:
-
-    _documentation pending_
-
 ## preversion
 
 -   Project: `node-scripts-docs`

@@ -12,14 +12,6 @@
     {
       "manifestPath": "package.json",
       "projectName": "node-scripts-docs",
-      "scriptName": "prepack",
-      "scriptCode": "make",
-      "isGlobal": false,
-      "isRootManifest": true
-    },
-    {
-      "manifestPath": "package.json",
-      "projectName": "node-scripts-docs",
       "scriptName": "preversion",
       "scriptCode": "make lint test",
       "isGlobal": false,

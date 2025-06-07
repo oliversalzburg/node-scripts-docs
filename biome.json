@@ -84,7 +84,6 @@
     },
     "ignore": [
       "_site/",
-      ".yarn/",
       ".git/",
       "build/",
       "coverage/",
