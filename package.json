@@ -35,7 +35,7 @@
     "@types/minimist": "1.2.5",
     "@types/node": "22.15.31",
     "jest": "29.7.0",
-    "ts-jest": "29.3.4",
+    "ts-jest": "29.4.0",
     "typescript": "5.8.3"
   },
   "keywords": [
