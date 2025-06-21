@@ -22,13 +22,13 @@ it("detects changed fragment", () => {
 
   const storeScriptsCached = new ScriptStore("test/fixtures/default");
   storeScriptsCached.scripts.push({
+    description: "previous description",
     isGlobal: false,
     isRootManifest: true,
     manifestPath: "package.json",
     projectName: "default",
     scriptCode: "tsc",
     scriptName: "build",
-    description: "previous description",
   });
 
   const validator = new Validator(storeScriptsCached, storeScripts, storeFragments);
@@ -121,13 +121,13 @@ it("detects unchanged+pending fragment", () => {
 
   const storeScriptsCached = new ScriptStore("test/fixtures/default");
   storeScriptsCached.scripts.push({
+    description: DOCUMENTATION_PENDING_DEFAULT,
     isGlobal: false,
     isRootManifest: true,
     manifestPath: "package.json",
     projectName: "default",
     scriptCode: "tsc",
     scriptName: "build",
-    description: DOCUMENTATION_PENDING_DEFAULT,
   });
 
   const validator = new Validator(storeScriptsCached, storeScripts, storeFragments);
@@ -238,13 +238,13 @@ it("detects obsolete fragment", () => {
 
   const storeScriptsCached = new ScriptStore("test/fixtures/default");
   storeScriptsCached.scripts.push({
+    description: "Excellent documentation",
     isGlobal: false,
     isRootManifest: true,
     manifestPath: "package.json",
     projectName: "default",
     scriptCode: "tsc",
     scriptName: "build",
-    description: "Excellent documentation",
   });
 
   const validator = new Validator(storeScriptsCached, storeScripts, storeFragments);
