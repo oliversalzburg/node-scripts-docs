@@ -22,7 +22,7 @@
     "postversion": "git push"
   },
   "dependencies": {
-    "@oliversalzburg/js-utils": "0.4.3",
+    "@oliversalzburg/js-utils": "0.5.0",
     "elapsed-time": "0.0.1",
     "globby": "14.1.0",
     "marked": "16.1.1",
