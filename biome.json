@@ -27,7 +27,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["@types/**", "data/**", "!lib/**", "source/**", "*.*", "!package.json"]
+    "includes": ["@types/**", "data/**", "!lib", "source/**", "*.*", "!package.json"]
   },
   "formatter": {
     "attributePosition": "auto",
