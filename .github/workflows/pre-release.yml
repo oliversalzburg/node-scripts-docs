@@ -14,7 +14,7 @@ jobs:
     permissions:
       contents: read
       packages: read
-    uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
+    uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@1ba99b645bcdde631e6a535a8578e82edce3c562 # main
 
   pre-release:
     if: github.event_name == 'workflow_dispatch'
@@ -28,7 +28,7 @@ jobs:
       pull-requests: read
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-    uses: oliversalzburg/workflows/.github/workflows/publish-npm-package.yml@main
+    uses: oliversalzburg/workflows/.github/workflows/publish-npm-package.yml@1ba99b645bcdde631e6a535a8578e82edce3c562 # main
     with:
       draft-only: true
       has-mkdocs: true

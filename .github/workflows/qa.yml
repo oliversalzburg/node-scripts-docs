@@ -13,6 +13,6 @@ jobs:
     permissions:
       contents: read
       packages: read
-    uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@main
+    uses: oliversalzburg/workflows/.github/workflows/qa-npm-package.yml@1ba99b645bcdde631e6a535a8578e82edce3c562 # main
     with:
       has-mkdocs: true
