@@ -1,11 +1,18 @@
 import path from "node:path";
+import { snapshot, type TestContext, test } from "node:test";
 import { DocumentationRenderer } from "./DocumentationRenderer.js";
 import { loadFragments } from "./FragmentScanner.js";
 import { DOCS_FRAGMENTS_DEFAULT_LOCATION } from "./FragmentStore.js";
 import { ScriptScanner } from "./ScriptScanner.js";
 import { StoreAugmenter } from "./StoreAugmenter.js";
 
-it("renders a script store as expected", async () => {
+snapshot.setResolveSnapshotPath((filename) =>
+	filename !== undefined
+		? `${filename.replace("/output/", "/source/")}.snapshot`
+		: "",
+);
+
+test("renders a script store as expected", async (t: TestContext) => {
 	const storeFragments = await loadFragments(
 		path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
 	);
@@ -18,6 +25,6 @@ it("renders a script store as expected", async () => {
 	augmenter.augment(storeFragments);
 
 	const renderer = new DocumentationRenderer(storeScripts);
-	expect(renderer.render()).toMatchSnapshot();
-	expect(renderer.render(true)).toMatchSnapshot();
+	t.assert.snapshot(renderer.render());
+	t.assert.snapshot(renderer.render(true));
 });

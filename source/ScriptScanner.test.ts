@@ -1,39 +1,45 @@
+import { snapshot, type TestContext, test } from "node:test";
 import { ScriptScanner } from "./ScriptScanner.js";
 
-it("finds existing manifests (simple project)", async () => {
+snapshot.setResolveSnapshotPath((filename) =>
+	filename !== undefined
+		? `${filename.replace("/output/", "/source/")}.snapshot`
+		: "",
+);
+
+test("finds existing manifests (simple project)", async (t: TestContext) => {
 	const scanner = new ScriptScanner("test/fixtures/default");
 	const manifests = await scanner.findManifests();
-	expect(manifests).toEqual(["package.json"]);
+	t.assert.deepStrictEqual(manifests, ["package.json"]);
 });
 
-it("finds existing manifests (monorepo)", async () => {
+test("finds existing manifests (monorepo)", async (t: TestContext) => {
 	const scanner = new ScriptScanner("test/fixtures/monorepo");
 	const manifests = await scanner.findManifests();
-	expect(manifests).toEqual(
-		expect.arrayContaining([
-			"package.json",
-			"packages/some-project/package.json",
-		]),
-	);
+	t.assert.deepStrictEqual(manifests, [
+		"packages/some-project/package.json",
+		"package.json",
+	]);
 });
 
-it("loads existing manifests (simple project)", async () => {
+test("loads existing manifests (simple project)", async (t: TestContext) => {
 	const scanner = new ScriptScanner("test/fixtures/default");
 	await scanner.loadManifests();
 	const store = await scanner.loadScripts();
-	expect(store.scripts).toMatchSnapshot();
+	t.assert.snapshot(store.scripts);
 });
 
-it("loads existing manifests (monorepo)", async () => {
+test("loads existing manifests (monorepo)", async (t: TestContext) => {
 	const scanner = new ScriptScanner("test/fixtures/monorepo");
 	await scanner.loadManifests();
 	const store = await scanner.loadScripts();
-	expect(store.scripts).toMatchSnapshot();
+	t.assert.snapshot(store.scripts);
 });
 
-it("signals file can be loaded", async () => {
-	expect(
+test("signals file can be loaded", async (t: TestContext) => {
+	t.assert.strictEqual(
 		await ScriptScanner.canLoad("test/fixtures/default/package.json"),
-	).toBe(true);
-	expect(await ScriptScanner.canLoad("invalid")).toBe(false);
+		true,
+	);
+	t.assert.strictEqual(await ScriptScanner.canLoad("invalid"), false);
 });

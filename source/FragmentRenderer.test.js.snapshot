@@ -1,0 +1,7 @@
+exports[`renders fragment with existing description 1`] = `
+"## docs:scripts\\n\\n-   Project: \`node-scripts-docs\`\\n-   Source:\\n\\n    \`\`\`shell\\n    npm exec -- nsd-debug --include-locals\\n    \`\`\`\\n\\n-   Description:\\n\\n    Build the latest sources and then use the build output to execute your command. Parameters are passed through by \`npm exec\`.\\n"
+`;
+
+exports[`renders fragment without description 1`] = `
+"## docs:scripts\\n\\n-   Project: \`node-scripts-docs\`\\n-   Source:\\n\\n    \`\`\`shell\\n    npm exec -- nsd-debug --include-locals\\n    \`\`\`\\n\\n-   Description:\\n\\n    _documentation pending_\\n"
+`;

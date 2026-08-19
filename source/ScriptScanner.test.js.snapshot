@@ -1,0 +1,169 @@
+exports[`loads existing manifests (monorepo) 1`] = `
+[
+  {
+    "manifestPath": "package.json",
+    "projectName": "monorepo",
+    "scriptName": "build",
+    "scriptCode": "tsc",
+    "isGlobal": false,
+    "isRootManifest": true
+  },
+  {
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
+    "scriptName": "build",
+    "scriptCode": "tsc",
+    "isGlobal": false,
+    "isRootManifest": false
+  },
+  {
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
+    "scriptName": "docs:build",
+    "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
+    "isGlobal": true,
+    "isRootManifest": false
+  },
+  {
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
+    "scriptName": "docs:scripts",
+    "scriptCode": "yarn nsd-debug --include-locals",
+    "isGlobal": true,
+    "isRootManifest": false
+  },
+  {
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
+    "scriptName": "docs:serve",
+    "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material",
+    "isGlobal": true,
+    "isRootManifest": false
+  },
+  {
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
+    "scriptName": "npm:publish",
+    "scriptCode": "yarn build && npm publish",
+    "isGlobal": true,
+    "isRootManifest": false
+  },
+  {
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
+    "scriptName": "npm:publish:patch",
+    "scriptCode": "yarn build && npm version patch && npm publish",
+    "isGlobal": true,
+    "isRootManifest": false
+  },
+  {
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
+    "scriptName": "nsd-debug",
+    "scriptCode": "yarn build && node output/node-scripts-docs.js",
+    "isGlobal": false,
+    "isRootManifest": false
+  },
+  {
+    "manifestPath": "package.json",
+    "projectName": "monorepo",
+    "scriptName": "test",
+    "scriptCode": "jest",
+    "isGlobal": false,
+    "isRootManifest": true
+  },
+  {
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
+    "scriptName": "test",
+    "scriptCode": "jest",
+    "isGlobal": false,
+    "isRootManifest": false
+  },
+  {
+    "manifestPath": "packages/some-project/package.json",
+    "projectName": "some-project",
+    "scriptName": "test:coverage",
+    "scriptCode": "jest --coverage",
+    "isGlobal": true,
+    "isRootManifest": false
+  }
+]
+`;
+
+exports[`loads existing manifests (simple project) 1`] = `
+[
+  {
+    "manifestPath": "package.json",
+    "projectName": "default",
+    "scriptName": "build",
+    "scriptCode": "tsc",
+    "isGlobal": false,
+    "isRootManifest": true
+  },
+  {
+    "manifestPath": "package.json",
+    "projectName": "default",
+    "scriptName": "docs:build",
+    "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material build --site-dir=public",
+    "isGlobal": true,
+    "isRootManifest": true
+  },
+  {
+    "manifestPath": "package.json",
+    "projectName": "default",
+    "scriptName": "docs:scripts",
+    "scriptCode": "yarn nsd-debug --include-locals",
+    "isGlobal": true,
+    "isRootManifest": true
+  },
+  {
+    "manifestPath": "package.json",
+    "projectName": "default",
+    "scriptName": "docs:serve",
+    "scriptCode": "docker run --rm -it -p 8000:8000 -v \${PWD}:/docs squidfunk/mkdocs-material",
+    "isGlobal": true,
+    "isRootManifest": true
+  },
+  {
+    "manifestPath": "package.json",
+    "projectName": "default",
+    "scriptName": "npm:publish",
+    "scriptCode": "yarn build && npm publish",
+    "isGlobal": true,
+    "isRootManifest": true
+  },
+  {
+    "manifestPath": "package.json",
+    "projectName": "default",
+    "scriptName": "npm:publish:patch",
+    "scriptCode": "yarn build && npm version patch && npm publish",
+    "isGlobal": true,
+    "isRootManifest": true
+  },
+  {
+    "manifestPath": "package.json",
+    "projectName": "default",
+    "scriptName": "nsd-debug",
+    "scriptCode": "yarn build && node output/node-scripts-docs.js",
+    "isGlobal": false,
+    "isRootManifest": true
+  },
+  {
+    "manifestPath": "package.json",
+    "projectName": "default",
+    "scriptName": "test",
+    "scriptCode": "jest",
+    "isGlobal": false,
+    "isRootManifest": true
+  },
+  {
+    "manifestPath": "package.json",
+    "projectName": "default",
+    "scriptName": "test:coverage",
+    "scriptCode": "jest --coverage",
+    "isGlobal": true,
+    "isRootManifest": true
+  }
+]
+`;

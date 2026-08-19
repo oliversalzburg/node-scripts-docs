@@ -1,0 +1,15 @@
+exports[`renders empty report as expected 1`] = `
+""
+`;
+
+exports[`renders empty report as expected 2`] = `
+""
+`;
+
+exports[`renders report as expected 1`] = `
+" --- Pending documentation --- \\n  pending→default\\n\\n --- Missing fragments (will be generated) --- \\n  .missing.md (missing)\\n\\n --- Outdated metadata (will be updated) --- \\n  corrupted→default\\n\\n --- Obsolete fragments (delete manually) --- \\n  .obsolete.md\\n\\n --- Detected changes --- \\n  .changed.md (changed)\\n\\n --- New scripts --- \\n  new→default\\n"
+`;
+
+exports[`renders report as expected 2`] = `
+" --- Missing fragments (will be generated) --- \\n  .missing.md (missing)\\n\\n --- Outdated metadata (will be updated) --- \\n  corrupted→default\\n\\n --- Obsolete fragments (delete manually) --- \\n  .obsolete.md\\n\\n --- Detected changes --- \\n  .changed.md (changed)\\n\\n --- New scripts --- \\n  new→default\\n"
+`;

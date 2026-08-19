@@ -1,4 +1,5 @@
 import path from "node:path";
+import { type TestContext, test } from "node:test";
 import { DOCUMENTATION_PENDING_DEFAULT } from "./FragmentRenderer.js";
 import {
 	DOCS_FRAGMENTS_DEFAULT_LOCATION,
@@ -8,7 +9,7 @@ import { ScriptStore } from "./ScriptStore.js";
 import { StoreAugmenter } from "./StoreAugmenter.js";
 import { Validator } from "./Validator.js";
 
-it("detects changed fragment", () => {
+test("detects changed fragment", (t: TestContext) => {
 	const storeFragments = new FragmentStore(
 		path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
 	);
@@ -40,18 +41,21 @@ it("detects changed fragment", () => {
 		storeFragments,
 	);
 	const report = validator.generateReport(true);
-	expect(report.changedFragments.size).toStrictEqual(1);
-	expect(report.corruptedMetadataRecords.size).toStrictEqual(0);
-	expect(report.missingFragments.size).toStrictEqual(0);
-	expect(report.newScripts.size).toStrictEqual(0);
-	expect(report.obsoleteFragments.size).toStrictEqual(0);
-	expect(report.pendingDocumentation.size).toStrictEqual(0);
-	expect(report.unchangedFragments.size).toStrictEqual(0);
+	t.assert.strictEqual(report.changedFragments.size, 1);
+	t.assert.strictEqual(report.corruptedMetadataRecords.size, 0);
+	t.assert.strictEqual(report.missingFragments.size, 0);
+	t.assert.strictEqual(report.newScripts.size, 0);
+	t.assert.strictEqual(report.obsoleteFragments.size, 0);
+	t.assert.strictEqual(report.pendingDocumentation.size, 0);
+	t.assert.strictEqual(report.unchangedFragments.size, 0);
 
-	expect(report.changedFragments.has(storeScripts.scripts[0])).toBe(true);
+	t.assert.strictEqual(
+		report.changedFragments.has(storeScripts.scripts[0]),
+		true,
+	);
 });
 
-it("detects new script", () => {
+test("detects new script", (t: TestContext) => {
 	const storeFragments = new FragmentStore(
 		path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
 	);
@@ -70,18 +74,18 @@ it("detects new script", () => {
 		storeFragments,
 	);
 	const report = validator.generateReport(true);
-	expect(report.changedFragments.size).toStrictEqual(0);
-	expect(report.corruptedMetadataRecords.size).toStrictEqual(0);
-	expect(report.missingFragments.size).toStrictEqual(0);
-	expect(report.newScripts.size).toStrictEqual(1);
-	expect(report.obsoleteFragments.size).toStrictEqual(0);
-	expect(report.pendingDocumentation.size).toStrictEqual(0);
-	expect(report.unchangedFragments.size).toStrictEqual(0);
+	t.assert.strictEqual(report.changedFragments.size, 0);
+	t.assert.strictEqual(report.corruptedMetadataRecords.size, 0);
+	t.assert.strictEqual(report.missingFragments.size, 0);
+	t.assert.strictEqual(report.newScripts.size, 1);
+	t.assert.strictEqual(report.obsoleteFragments.size, 0);
+	t.assert.strictEqual(report.pendingDocumentation.size, 0);
+	t.assert.strictEqual(report.unchangedFragments.size, 0);
 
-	expect(report.newScripts.has(storeScripts.scripts[0])).toBe(true);
+	t.assert.strictEqual(report.newScripts.has(storeScripts.scripts[0]), true);
 });
 
-it("detects missing fragment", () => {
+test("detects missing fragment", (t: TestContext) => {
 	const storeFragments = new FragmentStore(
 		path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
 	);
@@ -108,18 +112,21 @@ it("detects missing fragment", () => {
 		storeFragments,
 	);
 	const report = validator.generateReport(true);
-	expect(report.changedFragments.size).toStrictEqual(0);
-	expect(report.corruptedMetadataRecords.size).toStrictEqual(0);
-	expect(report.missingFragments.size).toStrictEqual(1);
-	expect(report.newScripts.size).toStrictEqual(0);
-	expect(report.obsoleteFragments.size).toStrictEqual(0);
-	expect(report.pendingDocumentation.size).toStrictEqual(0);
-	expect(report.unchangedFragments.size).toStrictEqual(0);
+	t.assert.strictEqual(report.changedFragments.size, 0);
+	t.assert.strictEqual(report.corruptedMetadataRecords.size, 0);
+	t.assert.strictEqual(report.missingFragments.size, 1);
+	t.assert.strictEqual(report.newScripts.size, 0);
+	t.assert.strictEqual(report.obsoleteFragments.size, 0);
+	t.assert.strictEqual(report.pendingDocumentation.size, 0);
+	t.assert.strictEqual(report.unchangedFragments.size, 0);
 
-	expect(report.missingFragments.has(storeScripts.scripts[0])).toBe(true);
+	t.assert.strictEqual(
+		report.missingFragments.has(storeScripts.scripts[0]),
+		true,
+	);
 });
 
-it("detects unchanged+pending fragment", () => {
+test("detects unchanged+pending fragment", (t: TestContext) => {
 	const storeFragments = new FragmentStore(
 		path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
 	);
@@ -151,19 +158,25 @@ it("detects unchanged+pending fragment", () => {
 		storeFragments,
 	);
 	const report = validator.generateReport(true);
-	expect(report.changedFragments.size).toStrictEqual(0);
-	expect(report.corruptedMetadataRecords.size).toStrictEqual(0);
-	expect(report.missingFragments.size).toStrictEqual(0);
-	expect(report.newScripts.size).toStrictEqual(0);
-	expect(report.obsoleteFragments.size).toStrictEqual(0);
-	expect(report.pendingDocumentation.size).toStrictEqual(1);
-	expect(report.unchangedFragments.size).toStrictEqual(1);
+	t.assert.strictEqual(report.changedFragments.size, 0);
+	t.assert.strictEqual(report.corruptedMetadataRecords.size, 0);
+	t.assert.strictEqual(report.missingFragments.size, 0);
+	t.assert.strictEqual(report.newScripts.size, 0);
+	t.assert.strictEqual(report.obsoleteFragments.size, 0);
+	t.assert.strictEqual(report.pendingDocumentation.size, 1);
+	t.assert.strictEqual(report.unchangedFragments.size, 1);
 
-	expect(report.pendingDocumentation.has(storeScripts.scripts[0])).toBe(true);
-	expect(report.unchangedFragments.has(storeScripts.scripts[0])).toBe(true);
+	t.assert.strictEqual(
+		report.pendingDocumentation.has(storeScripts.scripts[0]),
+		true,
+	);
+	t.assert.strictEqual(
+		report.unchangedFragments.has(storeScripts.scripts[0]),
+		true,
+	);
 });
 
-it("detects corrupted metadata", () => {
+test("detects corrupted metadata", (t: TestContext) => {
 	const storeFragments = new FragmentStore(
 		path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
 	);
@@ -194,20 +207,21 @@ it("detects corrupted metadata", () => {
 		storeFragments,
 	);
 	const report = validator.generateReport(true);
-	expect(report.changedFragments.size).toStrictEqual(0);
-	expect(report.corruptedMetadataRecords.size).toStrictEqual(1);
-	expect(report.missingFragments.size).toStrictEqual(0);
-	expect(report.newScripts.size).toStrictEqual(0);
-	expect(report.obsoleteFragments.size).toStrictEqual(0);
-	expect(report.pendingDocumentation.size).toStrictEqual(0);
-	expect(report.unchangedFragments.size).toStrictEqual(0);
+	t.assert.strictEqual(report.changedFragments.size, 0);
+	t.assert.strictEqual(report.corruptedMetadataRecords.size, 1);
+	t.assert.strictEqual(report.missingFragments.size, 0);
+	t.assert.strictEqual(report.newScripts.size, 0);
+	t.assert.strictEqual(report.obsoleteFragments.size, 0);
+	t.assert.strictEqual(report.pendingDocumentation.size, 0);
+	t.assert.strictEqual(report.unchangedFragments.size, 0);
 
-	expect(report.corruptedMetadataRecords.has(storeScripts.scripts[0])).toBe(
+	t.assert.strictEqual(
+		report.corruptedMetadataRecords.has(storeScripts.scripts[0]),
 		true,
 	);
 });
 
-it("detects obsolete fragment", () => {
+test("detects obsolete fragment", (t: TestContext) => {
 	const storeFragments = new FragmentStore(
 		path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
 	);
@@ -238,18 +252,18 @@ it("detects obsolete fragment", () => {
 		storeFragments,
 	);
 	const report = validator.generateReport(true);
-	expect(report.changedFragments.size).toStrictEqual(0);
-	expect(report.corruptedMetadataRecords.size).toStrictEqual(0);
-	expect(report.missingFragments.size).toStrictEqual(0);
-	expect(report.newScripts.size).toStrictEqual(0);
-	expect(report.obsoleteFragments.size).toStrictEqual(1);
-	expect(report.pendingDocumentation.size).toStrictEqual(0);
-	expect(report.unchangedFragments.size).toStrictEqual(0);
+	t.assert.strictEqual(report.changedFragments.size, 0);
+	t.assert.strictEqual(report.corruptedMetadataRecords.size, 0);
+	t.assert.strictEqual(report.missingFragments.size, 0);
+	t.assert.strictEqual(report.newScripts.size, 0);
+	t.assert.strictEqual(report.obsoleteFragments.size, 1);
+	t.assert.strictEqual(report.pendingDocumentation.size, 0);
+	t.assert.strictEqual(report.unchangedFragments.size, 0);
 
-	expect(report.obsoleteFragments.has(fragment)).toBe(true);
+	t.assert.strictEqual(report.obsoleteFragments.has(fragment), true);
 });
 
-it("detects obsolete fragment", () => {
+test("detects obsolete fragment", (t: TestContext) => {
 	const storeFragments = new FragmentStore(
 		path.join("test/fixtures/default", DOCS_FRAGMENTS_DEFAULT_LOCATION),
 	);
@@ -282,13 +296,16 @@ it("detects obsolete fragment", () => {
 		storeFragments,
 	);
 	const report = validator.generateReport(true);
-	expect(report.changedFragments.size).toStrictEqual(0);
-	expect(report.corruptedMetadataRecords.size).toStrictEqual(0);
-	expect(report.missingFragments.size).toStrictEqual(0);
-	expect(report.newScripts.size).toStrictEqual(0);
-	expect(report.obsoleteFragments.size).toStrictEqual(0);
-	expect(report.pendingDocumentation.size).toStrictEqual(0);
-	expect(report.unchangedFragments.size).toStrictEqual(1);
+	t.assert.strictEqual(report.changedFragments.size, 0);
+	t.assert.strictEqual(report.corruptedMetadataRecords.size, 0);
+	t.assert.strictEqual(report.missingFragments.size, 0);
+	t.assert.strictEqual(report.newScripts.size, 0);
+	t.assert.strictEqual(report.obsoleteFragments.size, 0);
+	t.assert.strictEqual(report.pendingDocumentation.size, 0);
+	t.assert.strictEqual(report.unchangedFragments.size, 1);
 
-	expect(report.unchangedFragments.has(storeScripts.scripts[0])).toBe(true);
+	t.assert.strictEqual(
+		report.unchangedFragments.has(storeScripts.scripts[0]),
+		true,
+	);
 });

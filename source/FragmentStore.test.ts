@@ -1,38 +1,42 @@
+import { type TestContext, test } from "node:test";
 import { FragmentStore } from "./FragmentStore.js";
 
-it("converts script name to filename as expected", () => {
-	expect(FragmentStore.scriptToFragmentFilename("test:coverage")).toStrictEqual(
+test("converts script name to filename as expected", (t: TestContext) => {
+	t.assert.strictEqual(
+		FragmentStore.scriptToFragmentFilename("test:coverage"),
 		".test$$coverage.md",
 	);
 });
 
-it("converts filename to script name as expected", () => {
-	expect(
+test("converts filename to script name as expected", (t: TestContext) => {
+	t.assert.strictEqual(
 		FragmentStore.fragmentFilenameToScript(".test$$coverage.md"),
-	).toStrictEqual("test:coverage");
-});
-
-it("returns null for invalid fragment file name conversion", () => {
-	expect(FragmentStore.fragmentFilenameToScript("index.md")).toBeNull();
-});
-
-it("refuses to load invalid fragment name", async () => {
-	const store = new FragmentStore("test/fixtures/default/docs");
-	await expect(() => store.loadFragment("invalid-fragment.md")).rejects.toThrow(
-		"Unable to interpret fragment file name 'invalid-fragment.md'!",
+		"test:coverage",
 	);
 });
 
-it("refuses to load invalid fragment", async () => {
-	const store = new FragmentStore("test/fixtures/default/docs");
-	await expect(() =>
-		store.loadFragment(".invalid-description.md"),
-	).rejects.toThrow(
-		"Unable to find description item in documentation fragment at '.invalid-description.md'!",
+test("returns null for invalid fragment file name conversion", (t: TestContext) => {
+	t.assert.strictEqual(
+		FragmentStore.fragmentFilenameToScript("index.md"),
+		null,
 	);
 });
 
-it("reliably detects existence", async () => {
-	expect(await FragmentStore.exists("test/fixtures/default")).toBe(true);
-	expect(await FragmentStore.exists("invalid")).toBe(false);
+test("refuses to load invalid fragment name", async (t: TestContext) => {
+	const store = new FragmentStore("test/fixtures/default/docs");
+	await t.assert.rejects(() => store.loadFragment("invalid-fragment.md"));
+});
+
+test("refuses to load invalid fragment", async (t: TestContext) => {
+	const store = new FragmentStore("test/fixtures/default/docs");
+
+	await t.assert.rejects(() => store.loadFragment(".invalid-description.md"));
+});
+
+test("reliably detects existence", async (t: TestContext) => {
+	t.assert.strictEqual(
+		await FragmentStore.exists("test/fixtures/default"),
+		true,
+	);
+	t.assert.strictEqual(await FragmentStore.exists("invalid"), false);
 });

@@ -1,12 +1,19 @@
+import { snapshot, type TestContext, test } from "node:test";
 import { isDefaultDescription, makeDocumentation } from "./FragmentRenderer.js";
 import type { ScriptStoreEntry } from "./ScriptStore.js";
 
-it("identifies pending description", () => {
-	expect(isDefaultDescription("_documentation pending_")).toBe(true);
-	expect(isDefaultDescription("Some description")).toBe(false);
+snapshot.setResolveSnapshotPath((filename) =>
+	filename !== undefined
+		? `${filename.replace("/output/", "/source/")}.snapshot`
+		: "",
+);
+
+test("identifies pending description", (t: TestContext) => {
+	t.assert.strictEqual(isDefaultDescription("_documentation pending_"), true);
+	t.assert.strictEqual(isDefaultDescription("Some description"), false);
 });
 
-it("renders fragment with existing description", () => {
+test("renders fragment with existing description", (t: TestContext) => {
 	const meta: ScriptStoreEntry = {
 		description:
 			"Build the latest sources and then use the build output to execute your command. Parameters are passed through by `npm exec`.",
@@ -18,10 +25,10 @@ it("renders fragment with existing description", () => {
 		scriptName: "docs:scripts",
 	};
 	const fragment = makeDocumentation(meta, meta.description);
-	expect(fragment).toMatchSnapshot();
+	t.assert.snapshot(fragment);
 });
 
-it("renders fragment without description", () => {
+test("renders fragment without description", (t: TestContext) => {
 	const meta: ScriptStoreEntry = {
 		isGlobal: true,
 		isRootManifest: true,
@@ -31,5 +38,5 @@ it("renders fragment without description", () => {
 		scriptName: "docs:scripts",
 	};
 	const fragment = makeDocumentation(meta, meta.description);
-	expect(fragment).toMatchSnapshot();
+	t.assert.snapshot(fragment);
 });

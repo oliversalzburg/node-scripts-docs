@@ -1,6 +1,13 @@
+import { snapshot, type TestContext, test } from "node:test";
 import { render } from "./ReportRenderer.js";
 
-it("renders empty report as expected", () => {
+snapshot.setResolveSnapshotPath((filename) =>
+	filename !== undefined
+		? `${filename.replace("/output/", "/source/")}.snapshot`
+		: "",
+);
+
+test("renders empty report as expected", (t: TestContext) => {
 	const report = {
 		changedFragments: new Set([]),
 		corruptedMetadataRecords: new Set([]),
@@ -11,11 +18,11 @@ it("renders empty report as expected", () => {
 		unchangedFragments: new Set([]),
 	};
 
-	expect(render(report, false)).toMatchSnapshot();
-	expect(render(report)).toMatchSnapshot();
+	t.assert.snapshot(render(report, false));
+	t.assert.snapshot(render(report));
 });
 
-it("renders report as expected", () => {
+test("renders report as expected", (t: TestContext) => {
 	const report = {
 		changedFragments: new Set([
 			{
@@ -91,6 +98,6 @@ it("renders report as expected", () => {
 		]),
 	};
 
-	expect(render(report, false)).toMatchSnapshot();
-	expect(render(report)).toMatchSnapshot();
+	t.assert.snapshot(render(report, false));
+	t.assert.snapshot(render(report));
 });

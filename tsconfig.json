@@ -14,7 +14,7 @@
 		"sourceMap": true,
 		"target": "esnext",
 		"tsBuildInfoFile": "output/tsconfig.tsbuildinfo",
-		"types": ["jest", "node"]
+		"types": ["node"]
 	},
 	"include": ["@types", "source"]
 }
