@@ -1,10 +1,11 @@
+import path from "node:path";
 import { snapshot, type TestContext, test } from "node:test";
 import { isDefaultDescription, makeDocumentation } from "./FragmentRenderer.js";
 import type { ScriptStoreEntry } from "./ScriptStore.js";
 
 snapshot.setResolveSnapshotPath((filename) =>
 	filename !== undefined
-		? `${filename.replace("/output/", "/source/")}.snapshot`
+		? `${filename.replace(`${path.sep}output${path.sep}`, `${path.sep}source${path.sep}`)}.snapshot`
 		: "",
 );
 

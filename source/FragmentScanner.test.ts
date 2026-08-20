@@ -5,7 +5,7 @@ import { DOCS_FRAGMENTS_DEFAULT_LOCATION } from "./FragmentStore.js";
 
 snapshot.setResolveSnapshotPath((filename) =>
 	filename !== undefined
-		? `${filename.replace("/output/", "/source/")}.snapshot`
+		? `${filename.replace(`${path.sep}output${path.sep}`, `${path.sep}source${path.sep}`)}.snapshot`
 		: "",
 );
 

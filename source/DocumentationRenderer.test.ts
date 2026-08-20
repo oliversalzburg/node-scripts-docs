@@ -8,7 +8,7 @@ import { StoreAugmenter } from "./StoreAugmenter.js";
 
 snapshot.setResolveSnapshotPath((filename) =>
 	filename !== undefined
-		? `${filename.replace("/output/", "/source/")}.snapshot`
+		? `${filename.replace(`${path.sep}output${path.sep}`, `${path.sep}source${path.sep}`)}.snapshot`
 		: "",
 );
 
