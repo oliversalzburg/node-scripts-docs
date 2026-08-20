@@ -25,7 +25,7 @@ lint : node_modules/.package-lock.json
 	npm exec -- tsc
 
 test : output/tsconfig.tsbuildinfo
-	node --enable-source-maps --no-strip-types --test
+	node --enable-source-maps --test "output/*.test.js"
 update-snapshots : output/tsconfig.tsbuildinfo
 	node --test --test-update-snapshots
 
