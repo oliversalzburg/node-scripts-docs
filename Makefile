@@ -22,7 +22,7 @@ pretty : node_modules/.package-lock.json
 
 lint : node_modules/.package-lock.json
 	npm exec -- biome check .
-	npm exec -- tsc --noEmit
+	npm exec -- tsc
 
 test : output/tsconfig.tsbuildinfo
 	node --enable-source-maps --test
