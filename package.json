@@ -24,7 +24,7 @@
   "dependencies": {
     "@oliversalzburg/js-utils": "0.6.0",
     "elapsed-time": "0.0.1",
-    "globby": "16.2.3",
+    "globby": "16.2.4",
     "marked": "18.0.9",
     "minimist": "1.2.8",
     "tslib": "2.8.1"
